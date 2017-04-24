@@ -92,3 +92,4 @@
             * [on](components/channel-client-on.md)
             * [publish](components/channel-client-publish.md)
             * [unsubsribe](components/channel-client-unsubsribe.md)
+        * [例子-集群推送](components/channel-examples.md)
