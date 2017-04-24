@@ -80,3 +80,4 @@
     * [跟踪系统调用](debug/strace.md)
 * [常用组件](components.md)
     * [globalData数据共享组件](components/global-data.md)
+        * [GlobalDataServer](components/global-data-server.md)
