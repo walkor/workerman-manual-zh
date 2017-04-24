@@ -62,3 +62,4 @@
         * [destroy](tcp-connection/destroy.md)
         * [pauseRecv](tcp-connection/pause-recv.md)
         * [resumeRecv](tcp-connection/resume-recv.md)
+        * [pipe](tcp-connection/pipe.md)
