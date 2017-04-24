@@ -40,3 +40,4 @@
         * [onConnect](worker/on-connect.md)
         * [onMessage](worker/on-message.md)
         * [onClose](worker/on-close.md)
+        * [onBufferFull](worker/on-buffer-full.md)
