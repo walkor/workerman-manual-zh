@@ -12,3 +12,4 @@
     * [开发前必读](development/before-development.md)
     * [目录结构](development/directory-structure.md)
     * [开发规范](development/standard.md)
+    * [基本流程](development/process.md)
