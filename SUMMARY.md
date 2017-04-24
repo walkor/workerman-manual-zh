@@ -89,3 +89,4 @@
         * [ChannelServer](components/channel-server.md)
         * [channelClient](components/channel-client.md)
             * [connect](components/channel-client-connect.md)
+            * [on](components/channel-client-on.md)
