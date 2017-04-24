@@ -66,3 +66,4 @@
 * [AsyncTcpConnection](async-tcp-connection.md)
     * [构造函数](async-tcp-connection/construct.md)
     * [connect](async-tcp-connection/connect.md)
+    * [reconnect](async-tcp-connection/reconnect.md)
