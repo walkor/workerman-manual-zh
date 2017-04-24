@@ -50,3 +50,4 @@
 * [TcpConnection](tcp-connection.md)
     * [属性](tcp-connection/property.md)
         * [onMessage](tcp-connection/on-message.md)
+        * [onClose](tcp-connection/on-close.md)
