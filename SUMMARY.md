@@ -45,3 +45,4 @@
         * [onError](worker/on-error.md)
     * [接口](worker/method.md)
         * [runAll](worker/run-all.md)
+        * [stopAll](worker/stop-all.md)
