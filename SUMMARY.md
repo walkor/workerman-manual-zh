@@ -85,3 +85,4 @@
             * [add](components/global-data-client-add.md)
             * [cas](components/global-data-client-cas.md)
             * [increment](components/global-data-client-increment.md)
+    * [Channel分布式通讯组件](Channel分布式通讯组件.md)
