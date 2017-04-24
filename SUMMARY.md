@@ -81,7 +81,7 @@
 * [常用组件](components.md)
     * [globalData数据共享组件](components/global-data.md)
         * [GlobalDataServer](components/global-data-server.md)
-        * [GlobalDataClient](components/global-data-client)
+        * [GlobalDataClient](components/global-data-client.md)
             * [add](components/global-data-client/add.md)
             * [cas](components/global-data-client/cas.md)
             * [increment](components/global-data-client/increment.md)
