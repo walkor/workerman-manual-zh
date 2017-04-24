@@ -14,3 +14,4 @@
     * [开发规范](development/standard.md)
     * [基本流程](development/process.md)
 * [通讯协议](protocols.md)
+    * [通讯协议作用](protocols/why-protocols.md)
