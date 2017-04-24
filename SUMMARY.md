@@ -24,3 +24,4 @@
         * [count](worker/count.md)
         * [name](worker/name.md)
         * [user](worker/user.md)
+        * [reloadable](worker/reloadable.md)
