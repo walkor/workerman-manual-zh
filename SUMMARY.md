@@ -23,3 +23,4 @@
         * [id](worker/workerid.md)
         * [count](worker/count.md)
         * [name](worker/name.md)
+        * [user](worker/user.md)
