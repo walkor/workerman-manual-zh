@@ -2,3 +2,4 @@
 * [原理](principle.md)
 * [序言](preface.md)
 * [入门指引](getting-started.md)
+    * [特性](feature.md)
