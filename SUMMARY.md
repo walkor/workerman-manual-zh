@@ -26,3 +26,4 @@
         * [user](worker/user.md)
         * [reloadable](worker/reloadable.md)
         * [transport](worker/transport.md)
+        * [connections](worker/connections.md)
