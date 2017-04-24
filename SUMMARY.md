@@ -41,3 +41,4 @@
         * [onMessage](worker/on-message.md)
         * [onClose](worker/on-close.md)
         * [onBufferFull](worker/on-buffer-full.md)
+        * [onBufferDrain](worker/on-buffer-drain.md)
