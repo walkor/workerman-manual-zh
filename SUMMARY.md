@@ -82,3 +82,4 @@
     * [globalData数据共享组件](components/global-data.md)
         * [GlobalDataServer](components/global-data-server.md)
         * [GlobalDataClient](components/global-data-client)
+        * [add](components/global-data-client/add.md)
