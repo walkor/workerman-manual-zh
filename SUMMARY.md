@@ -32,3 +32,4 @@
         * [pidFile](worker/pid_file.md)
         * [logFile](worker/log-file.md)
         * [globalEvent](worker/global-event.md)
+        * [reusePort](worker/reuse-port.md)
