@@ -37,3 +37,4 @@
     * [回调属性](worker/callback.md)
         * [onWorkerStart](worker/on_worker_start.md)
         * [onWorkerReload](worker/on-worker-reload.md)
+        * [onConnect](worker/on-connect.md)
