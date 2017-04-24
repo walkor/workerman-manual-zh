@@ -5,3 +5,4 @@
     * [特性](feature.md)
     * [简单的开发示例](simple-example.md)
 * [安装](install.md)
+    * [环境要求](requirement.md)
