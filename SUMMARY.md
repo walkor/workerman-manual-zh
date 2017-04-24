@@ -55,3 +55,4 @@
         * [onBufferDrain](tcp-connection/on-buffer-drain.md)
         * [onError](tcp-connection/on-error.md)
     * [接口](tcp-connection/methods.md)
+        * [send](tcp-connection/send.md)
