@@ -91,3 +91,4 @@
             * [connect](components/channel-client-connect.md)
             * [on](components/channel-client-on.md)
             * [publish](components/channel-client-publish.md)
+            * [unsubsribe](components/channel-client-unsubsribe.md)
