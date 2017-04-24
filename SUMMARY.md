@@ -75,3 +75,4 @@
 * [WebServer](web-server.md)
 * [调试](debug.md)
     * [基本调试](debug/base.md)
+    * [查看运行状态](debug/status.md)
