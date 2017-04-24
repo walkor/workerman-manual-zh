@@ -23,7 +23,7 @@
         * [id](worker/workerid.md)
         * [count](worker/count.md)
         * [name](worker/name.md)
+        * [connections](worker/connections.md)
         * [user](worker/user.md)
         * [reloadable](worker/reloadable.md)
         * [transport](worker/transport.md)
-        * [connections](worker/connections.md)
