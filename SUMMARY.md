@@ -86,3 +86,4 @@
             * [cas](components/global-data-client-cas.md)
             * [increment](components/global-data-client-increment.md)
     * [Channel分布式通讯组件](components/channel.md)
+        * [ChannelServer](components/channel-server.md)
