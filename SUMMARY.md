@@ -63,7 +63,7 @@
         * [pauseRecv](tcp-connection/pause-recv.md)
         * [resumeRecv](tcp-connection/resume-recv.md)
         * [pipe](tcp-connection/pipe.md)
-* [AsyncTcpConnection](async-tcp-connection.md)
+* [AsyncTcpConnection类](async-tcp-connection.md)
     * [构造函数](async-tcp-connection/construct.md)
     * [connect](async-tcp-connection/connect.md)
     * [reconnect](async-tcp-connection/reconnect.md)
