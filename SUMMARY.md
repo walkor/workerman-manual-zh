@@ -18,3 +18,4 @@
     * [定制通讯协议](protocols/how-protocols.md)
     * [一些例子](protocols/example.md)
 * [Worker类](worker.md)
+    * [构造函数](worker/construct.md)
