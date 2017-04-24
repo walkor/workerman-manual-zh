@@ -57,3 +57,4 @@
     * [接口](tcp-connection/methods.md)
         * [send](tcp-connection/send.md)
         * [getRemoteIp](tcp-connection/get-remote-ip.md)
+        * [getRemotePort](tcp-connection/get-remote-port.md)
