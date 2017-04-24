@@ -38,3 +38,4 @@
         * [onWorkerStart](worker/on_worker_start.md)
         * [onWorkerReload](worker/on-worker-reload.md)
         * [onConnect](worker/on-connect.md)
+        * [onMessage](worker/on-message.md)
