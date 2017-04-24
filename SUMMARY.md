@@ -5,6 +5,6 @@
     * [特性](feature.md)
     * [简单的开发示例](simple-example.md)
 * [安装](install.md)
-    * [环境要求](requirement.md)
+    * [环境要求](install/requirement.md)
     * [下载安装](install/install.md)
     * [启动停止](install/start-and-stop.md)
