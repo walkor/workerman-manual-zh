@@ -30,3 +30,4 @@
         * [daemonize](worker/daemonize.md)
         * [stdoutFile](worker/stdout_file.md)
         * [pidFile](worker/pid_file.md)
+        * [logFile](worker/log-file.md)
