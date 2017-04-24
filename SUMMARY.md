@@ -33,3 +33,4 @@
         * [logFile](worker/log-file.md)
         * [globalEvent](worker/global-event.md)
         * [reusePort](worker/reuse-port.md)
+        * [protocol](worker/worker-protocol.md)
