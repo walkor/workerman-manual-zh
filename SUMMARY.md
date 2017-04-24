@@ -27,3 +27,4 @@
         * [connections](worker/connections.md)
         * [reloadable](worker/reloadable.md)
         * [transport](worker/transport.md)
+        * [daemonize](worker/daemonize.md)
