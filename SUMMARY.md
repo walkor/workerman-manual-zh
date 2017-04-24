@@ -19,3 +19,4 @@
     * [一些例子](protocols/example.md)
 * [Worker类](worker.md)
     * [构造函数](worker/construct.md)
+    * [属性](worker/property.md)
