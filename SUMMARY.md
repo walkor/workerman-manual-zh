@@ -48,7 +48,7 @@
         * [stopAll](worker/stop-all.md)
         * [listen](worker/listen.md)
 * [TcpConnection](tcp-connection.md)
-    * [属性](tcp-connection/property.md)
+    * [属性](tcp-connection/properties.md)
         * [onMessage](tcp-connection/on-message.md)
         * [onClose](tcp-connection/on-close.md)
         * [onBufferFull](tcp-connection/on-buffer-full.md)
