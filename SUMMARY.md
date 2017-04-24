@@ -28,3 +28,4 @@
         * [reloadable](worker/reloadable.md)
         * [transport](worker/transport.md)
         * [daemonize](worker/daemonize.md)
+        * [stdoutFile](worker/stdout_file.md)
