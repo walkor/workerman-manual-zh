@@ -84,3 +84,4 @@
         * [GlobalDataClient](components/global-data-client)
             * [add](components/global-data-client/add.md)
             * [cas](components/global-data-client/cas.md)
+            * [increment](components/global-data-client/increment.md)
