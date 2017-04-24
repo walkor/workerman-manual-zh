@@ -39,3 +39,4 @@
         * [onWorkerReload](worker/on-worker-reload.md)
         * [onConnect](worker/on-connect.md)
         * [onMessage](worker/on-message.md)
+        * [onClose](worker/on-close.md)
