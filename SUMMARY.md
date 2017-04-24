@@ -9,3 +9,4 @@
     * [下载安装](install/install.md)
     * [启动停止](install/start-and-stop.md)
 * [开发流程](development.md)
+    * [开发前必读](development/before-development.md)
