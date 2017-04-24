@@ -79,3 +79,4 @@
     * [网络抓包](debug/tcpdump.md)
     * [跟踪系统调用](debug/strace.md)
 * [常用组件](components.md)
+    * [globalData数据共享组件](components/global-data.md)
