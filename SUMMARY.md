@@ -59,3 +59,4 @@
         * [getRemoteIp](tcp-connection/get-remote-ip.md)
         * [getRemotePort](tcp-connection/get-remote-port.md)
         * [close](tcp-connection/close.md)
+        * [destroy](tcp-connection/destroy.md)
