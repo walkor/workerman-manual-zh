@@ -88,3 +88,4 @@
     * [Channel分布式通讯组件](components/channel.md)
         * [ChannelServer](components/channel-server.md)
         * [channelClient](components/channel-client.md)
+            * [connect](components/channel-client-connect.md)
