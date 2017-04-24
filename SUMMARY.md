@@ -1,1 +1,1 @@
-* [空白目录](default.md)
+* [版权信息](license.md)
