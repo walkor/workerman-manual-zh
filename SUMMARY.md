@@ -95,7 +95,7 @@
         * [例子-集群推送](components/channel-examples.md)
     * [FileMonitor文件监控组件](components/file-monitor.md)
     * [MySQL组件](components/mysql.md)
-        * [workerman-mysql](component/workerman-mysql.md)
+        * [workerman/mysql](component/workerman-mysql.md)
         * [react/mysql(异步)](components/react-mysql.md)
     * [redis组件](redis.md)
         * [react/redis](component/react-redis.md)
