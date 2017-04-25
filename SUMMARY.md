@@ -108,3 +108,4 @@
         * [react/dns](component/react-dns.md)
     * [进程控制组件](components/process.md)
         * [react/child-process](component/react-child-process.md)
+* [常见问题](faq.md)
