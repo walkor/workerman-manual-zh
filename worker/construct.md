@@ -15,7 +15,7 @@ Worker::__construct([string $listen , array $context])
 
 如果有设置监听```$listen```参数，则会执行socket监听。
 
-``` $listen ```的格式为 <协议>://<监听地址>
+$listen 的格式为 <协议>://<监听地址>
 
 **<协议> 可以为以下格式：**
 
