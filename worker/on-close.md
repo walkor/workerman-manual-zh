@@ -10,7 +10,7 @@ callback Worker::$onClose
 
 ## 回调函数的参数
 
-``` $connection ```
+ ``` $connection ```
 
 连接对象，连接对象的说明见下一节
 
