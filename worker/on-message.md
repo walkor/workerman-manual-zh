@@ -8,11 +8,11 @@ callback Worker::$onMessage
 
 ## 回调函数的参数
 
-``` $connection ```
+ ``` $connection ```
 
 连接对象，连接对象的说明见下一节
 
-``` $data ```
+ ``` $data ```
 
 客户端连接上发来的数据，如果Worker指定了协议，则$data是对应协议decode（解码）了的数据
 
