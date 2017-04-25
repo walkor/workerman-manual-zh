@@ -145,3 +145,4 @@
     * [作为ws/wss客户端](faq/as-wss-client.md)
 * [附录](appendices.md)
     * [Linux内核调优](appendices/kernel-optimization.md)
+    * [压力测试](appendices/stress-test.md)
