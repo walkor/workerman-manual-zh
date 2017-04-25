@@ -127,3 +127,4 @@
     * [如何实现异步任务](faq/async-task.md)
     * [status里send_fail的原因](faq/about-send-fail.md)
     * [Windows下开发Linux下部署](faq/windows-to-linux.md)
+    * [是否支持socket.io](faq/socketio-support.md)
