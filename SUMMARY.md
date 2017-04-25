@@ -120,3 +120,4 @@
     * [启动失败](faq/workerman-start-fail.md)
     * [停止失败](faq/stop-fail.md)
     * [支持多少并发](faq/how-many-connections.md)
+    * [更改代码不生效](faq/change-code-not-work.md)
