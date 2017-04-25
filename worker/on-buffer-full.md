@@ -17,7 +17,7 @@ callback Worker::$onBufferFull
 
 ## 回调函数的参数
 
-``` $connection ```
+ ``` $connection ```
 
 连接对象
 
