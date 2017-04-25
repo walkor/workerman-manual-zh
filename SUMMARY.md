@@ -125,3 +125,4 @@
     * [如何主动推送消息](faq/active-push.md)
     * [在其它项目中推送](faq/push-in-other-project.md)
     * [如何实现异步任务](faq/async-task.md)
+    * [status里send_fail的原因](faq/about-send-fail.md)
