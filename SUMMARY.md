@@ -132,3 +132,4 @@
     * [与nginx  apache的关系](faq/relationship-with-apache-nginx.md)
     * [禁用函数检查](faq/disable-function-check.md)
     * [平滑重启原理](faq/reload-principle.md)
+    * [为Flash开843端口](faq/843-port-for-flash-socket-policy-file.md)
