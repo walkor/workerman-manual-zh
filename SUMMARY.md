@@ -99,3 +99,4 @@
         * [react/mysql(异步)](components/react-mysql.md)
     * [redis组件](redis.md)
         * [react/redis](component/react-redis.md)
+    * [异步http组件](components/async-http.md)
