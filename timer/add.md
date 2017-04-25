@@ -7,20 +7,20 @@ int \Workerman\Lib\Timer::add(float $time_interval, callable $callback [,$args =
 注意：定时器是在当前进程中运行的，workerman中不会创建新的进程或者线程去运行定时器。
 
 ### 参数
-``` time_interval ```
+ ``` time_interval ```
 
 多长时间执行一次，单位秒，支持小数，可以精确到0.001，即精确到毫秒级别。
 
 
-``` callback ```
+ ``` callback ```
 
 回调函数```注意：如果回调函数是类的方法，则方法必须是public属性```
 
-``` args ```
+ ``` args ```
 
 回调函数的参数，必须为数组，数组元素为参数值
 
-``` persistent ```
+ ``` persistent ```
 
 是否是持久的，如果只想定时执行一次，则传递false（只执行一次的任务在执行完毕后会自动销毁，不必调用```Timer::del()```）。默认是true，即一直定时执行。
 
