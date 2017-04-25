@@ -104,3 +104,4 @@
     * [异步消息队列组件](components/async-message-queue.md)
         * [react/zmq](components/react-zmq.md)
         * [react/stomp](components/react-stomp.md)
+    * [异步dns组件](components/async-dns.md)
