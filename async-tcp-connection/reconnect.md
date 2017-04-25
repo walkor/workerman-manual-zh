@@ -3,7 +3,7 @@
 void AsyncTcpConnection::reConnect(float $delay = 0)
 ```
 
-``` (要求Workerman版本>=3.3.5) ```
+ ``` (要求Workerman版本>=3.3.5) ```
 
 重连。一般在```onClose```回调中调用，实现断线重连。
 
@@ -11,7 +11,7 @@ void AsyncTcpConnection::reConnect(float $delay = 0)
 
 
 ### 参数
-``` $delay ```
+ ``` $delay ```
 
 延迟多久后执行重连。单位为秒，支持小数，可精确到毫秒。
 
