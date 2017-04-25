@@ -144,3 +144,4 @@
     * [workerman作为客户端](faq/use-workerman-as-client-side.md)
     * [作为ws/wss客户端](faq/as-wss-client.md)
 * [附录](appendices.md)
+    * [Linux内核调优](appendices/kernel-optimization.md)
