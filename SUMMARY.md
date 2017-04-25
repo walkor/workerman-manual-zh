@@ -114,3 +114,4 @@
     * [运行多个workerman](faq/running-concurent.md)
     * [支持哪些协议](faq/protocols.md)
     * [如何设置进程数](faq/processes-count.md)
+    * [查看客户端连接数](faq/connection-status.md)
