@@ -140,3 +140,4 @@
     * [关闭未认证的链接](faq/close-unauthed-connections.md)
     * [传输加密-ssl/tsl](faq/ssl-support.md)
     * [创建wss服务](faq/secure-websocket-server.md)
+    * [创建https服务](faq/secure-http-server.md)
