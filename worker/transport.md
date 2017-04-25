@@ -6,7 +6,7 @@ string Worker::$transport
 
 设置当前Worker实例所使用的传输层协议，目前只支持3种(tcp、udp、ssl)。不设置默认为tcp。
 
-``` 注意：ssl需要Workerman版本>=3.3.7 ```
+ ``` 注意：ssl需要Workerman版本>=3.3.7 ```
 
 
 ## 范例 1
