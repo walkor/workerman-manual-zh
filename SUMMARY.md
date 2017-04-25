@@ -93,3 +93,4 @@
             * [publish](components/channel-client-publish.md)
             * [unsubsribe](components/channel-client-unsubsribe.md)
         * [例子-集群推送](components/channel-examples.md)
+    * [FileMonitor文件监控组件](components/file-monitor.md)
