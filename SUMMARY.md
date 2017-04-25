@@ -110,3 +110,4 @@
         * [react/child-process](component/react-child-process.md)
 * [常见问题](faq.md)
     * [是否支持多线程](about-multi-thread.md)
+    * [与其它框架整合](faq/work-with-other-framework.md)
