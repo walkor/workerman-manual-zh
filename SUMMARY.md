@@ -124,3 +124,4 @@
     * [向指定客户端发送数据](faq/send-data-to-client.md)
     * [如何主动推送消息](faq/active-push.md)
     * [在其它项目中推送](faq/push-in-other-project.md)
+    * [如何实现异步任务](faq/async-task.md)
