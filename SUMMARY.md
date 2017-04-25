@@ -106,3 +106,4 @@
         * [react/stomp](components/react-stomp.md)
     * [异步dns组件](components/async-dns.md)
         * [react/dns](component/react-dns.md)
+    * [进程控制组件](components/react-child-process.md)
