@@ -23,7 +23,7 @@ Linux系统可以使用以下脚本测试本机PHP环境是否满足WorkerMan运
 如果php是通过yum安装的，则命令行运行 ```yum install php-process```即可安装pcntl和posix扩展。
 
 
-如果安装失败或者php本身不是用yum安装的请参考手册[附录-安装扩展](http://doc3.workerman.net/appendices/install-extension.html)一节中方法三源码编译安装。
+如果安装失败或者php本身不是用yum安装的请参考手册[附录-安装扩展](/315304)一节中方法三源码编译安装。
 
 **debian/ubuntu/mac os系统**<br>
 参考手册[附录-安装扩展](http://doc3.workerman.net/appendices/install-extension.html)一节中方法三源码编译安装。
