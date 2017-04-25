@@ -128,3 +128,4 @@
     * [status里send_fail的原因](faq/about-send-fail.md)
     * [Windows下开发Linux下部署](faq/windows-to-linux.md)
     * [是否支持socket.io](faq/socketio-support.md)
+    * [终端关闭导致workerman关闭](终端关闭导致workerman关闭.md)
