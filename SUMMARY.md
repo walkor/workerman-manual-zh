@@ -129,3 +129,4 @@
     * [Windows下开发Linux下部署](faq/windows-to-linux.md)
     * [是否支持socket.io](faq/socketio-support.md)
     * [终端关闭导致workerman关闭](faq/ssh-close-and-workerman-stop.md)
+    * [与nginx  apache的关系](faq/relationship-with-apache-nginx.md)
