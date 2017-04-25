@@ -101,3 +101,4 @@
         * [react/redis](component/react-redis.md)
     * [异步http组件](components/async-http.md)
         * [react/http-client](components/react-http-client.md)
+    * [component/async-message-queue](components/async-message-queue.md)
