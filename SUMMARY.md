@@ -113,3 +113,4 @@
     * [与其它框架整合](faq/work-with-other-framework.md)
     * [运行多个workerman](faq/running-concurent.md)
     * [支持哪些协议](faq/protocols.md)
+    * [如何设置进程数](faq/processes-count.md)
