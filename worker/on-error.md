@@ -12,7 +12,7 @@ callback Worker::$onError
 (code:WORKERMAN_SEND_FAIL msg:client closed)```
 
 
-2、在触发onBufferFull后，仍然调用Connection::send，并且发送缓冲区仍然是满的状态```，导致发送失败
+2、在触发onBufferFull后，仍然调用Connection::send，并且发送缓冲区仍然是满的状态导致发送失败```
 (code:WORKERMAN_SEND_FAIL msg:send buffer full and drop package)```
 
 
@@ -22,15 +22,15 @@ callback Worker::$onError
 
 ## 回调函数的参数
 
-``` $connection ```
+ ``` $connection ```
 
 连接对象，连接对象的说明见下一节
 
-``` $code ```
+ ``` $code ```
 
 错误码
 
-``` $msg ```
+ ``` $msg ```
 
 错误消息
 
