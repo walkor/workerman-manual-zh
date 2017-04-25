@@ -5,7 +5,7 @@ boolean \Workerman\Lib\Timer::del(int $timer_id)
 删除某个定时器
 
 ### 参数
-``` timer_id ```
+ ``` timer_id ```
 
 定时器的id，即add接口返回的整型
 
