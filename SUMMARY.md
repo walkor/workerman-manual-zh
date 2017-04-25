@@ -117,3 +117,4 @@
     * [查看客户端连接数](faq/connection-status.md)
     * [对象和资源的持久化](faq/persistent-data-and-resources.md)
     * [例子无法工作](faq/demo-not-work.md)
+    * [启动失败](faq/workerman-start-fail.md)
