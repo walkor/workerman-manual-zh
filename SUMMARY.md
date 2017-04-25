@@ -53,6 +53,7 @@
         * [protocol](tcp-connection/protocol.md)
         * [worker](tcp-connection/worker.md)
         * [maxSendBufferSize](tcp-connection/max-send-buffer-size.md)
+        * [defaultMaxSendBufferSize](tcp-connection/default-max-send-buffer-size.md)
     * [回调属性](tcp-connection/callbacks.md)
         * [onMessage](tcp-connection/on-message.md)
         * [onClose](tcp-connection/on-close.md)
