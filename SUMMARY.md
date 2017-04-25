@@ -111,3 +111,4 @@
 * [常见问题](faq.md)
     * [是否支持多线程](faq/about-multi-thread.md)
     * [与其它框架整合](faq/work-with-other-framework.md)
+    * [运行多个workerman](faq/running-concurent.md)
