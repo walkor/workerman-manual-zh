@@ -49,6 +49,7 @@
         * [listen](worker/listen.md)
 * [TcpConnection类](tcp-connection.md)
     * [属性](properties.md)
+        * [id](properties/id.md)
     * [回调属性](tcp-connection/callbacks.md)
         * [onMessage](tcp-connection/on-message.md)
         * [onClose](tcp-connection/on-close.md)
