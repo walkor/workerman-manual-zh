@@ -115,6 +115,7 @@
     * [支持哪些协议](faq/protocols.md)
     * [如何设置进程数](faq/processes-count.md)
     * [查看客户端连接数](faq/connection-status.md)
+    * [心跳](faq/heartbeat.md)
     * [对象和资源的持久化](faq/persistent-data-and-resources.md)
     * [例子无法工作](faq/demo-not-work.md)
     * [启动失败](faq/workerman-start-fail.md)
@@ -134,4 +135,3 @@
     * [平滑重启原理](faq/reload-principle.md)
     * [为Flash开843端口](faq/843-port-for-flash-socket-policy-file.md)
     * [如何广播数据](faq/how-to-broadcast.md)
-    * [心跳](faq/heartbeat.md)
