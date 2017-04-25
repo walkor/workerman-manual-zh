@@ -134,3 +134,4 @@
     * [平滑重启原理](faq/reload-principle.md)
     * [为Flash开843端口](faq/843-port-for-flash-socket-policy-file.md)
     * [如何广播数据](faq/how-to-broadcast.md)
+    * [心跳](faq/heartbeat.md)
