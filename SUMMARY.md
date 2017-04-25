@@ -149,4 +149,3 @@
     * [安装扩展](appendices/install-extension.md)
     * [websocket协议](appendices/about-websocket.md)
     * [ws协议](appendices/about-ws.md)
-    * [ws协议](appendices/about-text.md)
