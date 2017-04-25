@@ -12,7 +12,7 @@ callback Worker::$onBufferDrain
 
 ## 回调函数的参数
 
-``` $connection ```
+ ``` $connection ```
 
 连接对象
 
