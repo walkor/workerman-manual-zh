@@ -97,3 +97,4 @@
     * [MySQL组件](components/mysql.md)
         * [workerman-mysql](component/workerman-mysql.md)
         * [react/mysql](components/react-mysql.md)
+    * [redis](redis.md)
