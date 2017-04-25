@@ -36,19 +36,19 @@ pid     memory  listening                worker_name           connections total
 
 WorkerMan的版本```version:3.0.3```
 
-启动时间```2015-02-21 18:05:47```，运行了```run 86 days 22 hours```
+启动时间 ```2015-02-21 18:05:47```，运行了```run 86 days 22 hours```
 
 服务器负载 ```load average: 0, 0, 0```
 
-```3 workers```（3种进程，包括ChatGateway、ChatBusinessWorker、WebServer进程）
+ ```3 workers```（3种进程，包括ChatGateway、ChatBusinessWorker、WebServer进程）
 
-``` 10 processes ```(共10个进程)
+ ``` 10 processes ```(共10个进程)
 
-``` worker_name ```(worker进程名)
+ ``` worker_name ```(worker进程名)
 
-``` exit_status ```（worker进程退出状态码）
+ ``` exit_status ```（worker进程退出状态码）
 
-``` exit_count ```（该状态码的退出次数）
+ ``` exit_count ```（该状态码的退出次数）
 
 
 一般来说exit_status为0表示为正常退出，如果为其它值，代表进程是异常退出的，并产生一条类似```WORKER EXIT UNEXPECTED```错误信息，错误信息会记录到[Worker::logFile](/worker-development/log-file.html)指定的文件中。
