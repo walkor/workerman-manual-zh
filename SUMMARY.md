@@ -147,3 +147,4 @@
     * [Linux内核调优](appendices/kernel-optimization.md)
     * [压力测试](appendices/stress-test.md)
     * [安装扩展](appendices/install-extension.md)
+    * [websocket协议](appendices/about-websocket.md)
