@@ -10,16 +10,16 @@ AsyncTcpConnection可以让Workerman作为客户端向远程服务端发起异�
 参数:``` remote_address ```
 
 连接的地址，例如<br>
-``` tcp://www.baidu.com:80 ```<br>
-``` ssl://www.baidu.com:443 ```<br>
-``` ws://echo.websocket.org:80 ```<br>
-``` frame://192.168.1.1:8080 ```<br>
-``` text://192.168.1.1:8080 ```<br>
+ ``` tcp://www.baidu.com:80 ```<br>
+ ``` ssl://www.baidu.com:443 ```<br>
+ ``` ws://echo.websocket.org:80 ```<br>
+ ``` frame://192.168.1.1:8080 ```<br>
+ ``` text://192.168.1.1:8080 ```<br>
 
 <br>
 参数:``` $context_option ```
 
-```此参数要求（workerman >= 3.3.5）```
+ ```此参数要求（workerman >= 3.3.5）```
 
 
 用来设置socket上下文，例如利用```bindto```设置以哪个(网卡)ip和端口访问外部网络，设置ssl证书等。
