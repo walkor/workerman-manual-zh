@@ -8,11 +8,11 @@ mixed Connection::send(mixed $data [,$raw = false])
 
 ## 参数
 
-``` $data ```
+ ``` $data ```
 
 要发送的数据，如果在初始化Worker类时指定了协议，则会自动调用协议的encode方法,完成协议打包工作后发送给客户端
 
-``` $raw ```
+ ``` $raw ```
 是否发送原始数据，即不调用协议的encode方法，默认是false，即自动调用协议的encode方法
 
 ## 返回值
