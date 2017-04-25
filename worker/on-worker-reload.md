@@ -19,7 +19,7 @@ callback Worker::$onWorkerReload
 
 ## 回调函数的参数
 
-``` $worker ```
+ ``` $worker ```
 
 即Worker对象
 
