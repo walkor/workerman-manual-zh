@@ -119,3 +119,4 @@
     * [例子无法工作](faq/demo-not-work.md)
     * [启动失败](faq/workerman-start-fail.md)
     * [停止失败](faq/stop-fail.md)
+    * [支持多少并发](faq/how-many-connections.md)
