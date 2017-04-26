@@ -8,16 +8,16 @@ bool \GlobalData\Client::cas(string $key, mixed $old_value, mixed $new_value)
 
 ## 参数
 
-``` $key ```
+ ``` $key ```
 
 键值。（例如```$global->abc```，```abc```就是键值）
 
-``` $old_value ```
+ ``` $old_value ```
 
 老数据
 
 
-``` $new_value ```
+ ``` $new_value ```
 
 新数据
 
@@ -43,7 +43,7 @@ cas接口在改变一个值之前，<br>
 如果有更改，则不替换，返回false。否则替换返回true。<br>
 见下面示例。
 
-**注意： **  <br>
+ **注意：** 
 有些共享数据被并发覆盖是没问题的，例如竞拍系统某拍卖物当前最大报价，例如某商品当前库存等。
 
 
