@@ -9,7 +9,7 @@ array Worker::$connections
 array(id=>connection, id=>connection, ...)
 ```
 
-此属性中存储了**当前进程**的所有的客户端连接对象，其中id为connection的id编号，详情见手册[TcpConnection的id属性](/315338)。
+此属性中存储了**当前进程**的所有的客户端连接对象，其中id为connection的id编号，详情见手册[TcpConnection的id属性](315338)。
 
  ```$connections``` 在广播时或者根据连接id获得连接对象非常有用。
 
