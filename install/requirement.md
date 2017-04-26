@@ -9,7 +9,7 @@ Windows用户只能使用windows版本的Workerman(```Workerman-for-win```)。
 
 3、安装使用以及注意事项参见[**这里**](http://www.workerman.net/windows)。
 
-``` ====本页面以下只适用于Linux用户，Windows用户请忽略。 ====```
+ ``` ====本页面以下只适用于Linux用户，Windows用户请忽略。 ====```
 
 
 ## Linux用户(含Mac OS)
@@ -22,7 +22,7 @@ Linux用户只能使用Linux版本的Workerman。
 ### Linux环境检查脚本
 Linux用户可以运行以下脚本检查本地环境是否满足WorkerMan要求
 
-```curl -Ss http://www.workerman.net/check.php | php```
+ ```curl -Ss http://www.workerman.net/check.php | php```
 
 如果脚本中全部提示ok，则代表满足WorkerMan运行环境
 
