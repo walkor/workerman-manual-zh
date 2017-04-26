@@ -56,7 +56,7 @@ Worker::runAll();
 **建议用GatewayWorker**<br>
 在workerman基础上开发的GatewayWoker框架提供了更方便推送机制，包括组播、广播等，可以设置多进程甚至可以多服务器部署，如果需要给客户端推送数据，建议使用GatewayWorker框架。
 
-GatewayWorker手册地址 http://www.workerman.net/gatewaydoc/<br>
-GatewayWorker下载地址(linux版本) http://www.workerman.net/download/GatewayWorker.zip<br>
+GatewayWorker手册地址 http://www.workerman.net/gatewaydoc/ <br>
+GatewayWorker下载地址(linux版本) http://www.workerman.net/download/GatewayWorker.zip <br>
 GatewayWorker下载地址(windows版本) http://www.workerman.net/download/GatewayWorker-for-win.zip
 
