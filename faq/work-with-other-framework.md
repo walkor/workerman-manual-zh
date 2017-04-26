@@ -27,7 +27,7 @@
 把Workerman作为一个可以向浏览器推送的通道，仅仅在需要向浏览器推送数据时才调用Workerman接口完成推送。业务逻辑全部在ThinkPHP中完成。
 
 
-ThinkPHP如何调用Workerman socket接口推送数据参考[见常见问题-在其它项目中推送](/faq/push-in-other-project.html)一节
+ThinkPHP如何调用Workerman socket接口推送数据参考[见常见问题-在其它项目中推送](315240)一节
 
 **ThinkPHP官方已经支持了workerman，参见[ThinkPHP5手册](http://www.kancloud.cn/manual/thinkphp5/235128)**
 
