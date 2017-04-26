@@ -7,12 +7,12 @@ bool \GlobalData\Client::increment(string $key[, int $step = 1])
 
 ## 参数
 
-``` $key ```
+ ``` $key ```
 
 键值。（例如```$global->abc```，```abc```就是键值）
 
 
-``` $value ```
+ ``` $value ```
 
 要将元素的值增加的大小。
 
