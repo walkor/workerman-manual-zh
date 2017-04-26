@@ -181,7 +181,7 @@ Worker::runAll();
 ```
 
 启动后端服务
-```php push.php start -d```
+ ```php push.php start -d```
 
 前端接收推送的js代码
 ```javascript
