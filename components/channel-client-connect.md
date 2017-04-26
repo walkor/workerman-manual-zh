@@ -6,11 +6,11 @@ void \Channel\Client::connect([string $listen_ip = '127.0.0.1', int $listen_port
 连接Channel/Server
 
 ### 参数
-``` listen_ip ```
+ ``` listen_ip ```
 
 Channel/Server 监听的ip地址，不传默认是```127.0.0.1```
 
-``` listen_port ```
+ ``` listen_port ```
 
 Channel/Server监听的端口，不传默认是2206
 
