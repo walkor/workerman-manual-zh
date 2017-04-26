@@ -5,11 +5,11 @@ WorkerMan实际上就是一个PHP代码包，如果你的PHP环境已经装好�
 
 windows用户需要使用windows版本的workerman，windows版本workerman本身**不依赖任何扩展**，只需要配置好PHP环境变量即可，**windows版本workerman安装及注意事项参见[windows用户必看](http://www.workerman.net/windows)。**
 
-``` ===本页面以下仅适用于Linux版本workerman，windows用户请忽略=== ```
+ ``` ===本页面以下仅适用于Linux版本workerman，windows用户请忽略=== ```
 
 # Linux系统环境检测
 Linux系统可以使用以下脚本测试本机PHP环境是否满足WorkerMan运行要求。
-```curl -Ss http://www.workerman.net/check.php | php```
+ ```curl -Ss http://www.workerman.net/check.php | php```
 
 上面脚本如果全部显示ok，则代表满足WorkerMan要求，直接到[官网](http://www.workerman.net/)下载例子即可运行。
 
@@ -23,10 +23,10 @@ Linux系统可以使用以下脚本测试本机PHP环境是否满足WorkerMan运
 如果php是通过yum安装的，则命令行运行 ```yum install php-process```即可安装pcntl和posix扩展。
 
 
-如果安装失败或者php本身不是用yum安装的请参考手册[附录-安装扩展](/315304)一节中方法三源码编译安装。
+如果安装失败或者php本身不是用yum安装的请参考手册[附录-安装扩展](315304)一节中方法三源码编译安装。
 
 **debian/ubuntu/mac os系统**<br>
-参考手册[附录-安装扩展](/315304)一节中方法三源码编译安装。
+参考手册[附录-安装扩展](315304)一节中方法三源码编译安装。
 
 
 ## 安装event或者libevent扩展：
@@ -109,7 +109,7 @@ echo extension=event.so > /etc/php.d/event.ini
 git clone https://github.com/walkor/Workerman
 ```
 
-5、参考[入门指引--简单开发实例部分](/315113)写入口文件运行。<br>
+5、参考[入门指引--简单开发实例部分](315113)写入口文件运行。<br>
 或者从[官网](http://www.workerman.net/)下载打包好的demo运行。
 
 
@@ -141,15 +141,15 @@ echo extension=event.so > /etc/php5/cli/conf.d/event.ini
 git clone https://github.com/walkor/Workerman
 ```
 
-5、参考[入门指引--简单开发实例部分](/315113)写入口文件运行。<br>
+5、参考[入门指引--简单开发实例部分](315113)写入口文件运行。<br>
 或者从[官网](http://www.workerman.net/)下载打包好的demo运行。
 
 ### mac os 系统安装教程
 **方法1：**mac系统自带PHP Cli，但是可能缺少```pcntl```扩展。
 
-1、参考手册[附录-安装扩展](http://doc3.workerman.net/appendices/install-extension.html)一节中方法三源码编译安装```pcntl```扩展。
+1、参考手册[附录-安装扩展](315304)一节中方法三源码编译安装```pcntl```扩展。
 
-2、参考手册[附录-安装扩展](http://doc3.workerman.net/appendices/install-extension.html)一节中方法四利用phpize安装```event```扩展（可省略）。
+2、参考手册[附录-安装扩展](315304)一节中方法四利用phpize安装```event```扩展（作为开发机此可省略）。
 
 3、通过http://www.workerman.net/download/workermanzip 下载WorkerMan主程序，或者到[官网](http://www.workerman.net/)下载例子运行。
 
