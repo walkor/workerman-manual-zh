@@ -7,11 +7,11 @@ void \Channel\Client::publish(string $event_name, mixed $event_data)
 发布某个事件，所有这个事件的订阅者会收到这个事件并触发```on($event_name, $callback)```注册的回调```$callback```
 
 ### 参数
-``` $event_name ```
+ ``` $event_name ```
 
 发布的事件名称，可以是任意的字符串。如果事件没有任何订阅者，事件将被忽略。
 
-``` $event_data ```
+ ``` $event_data ```
 
 事件相关的数据，可以是数字、字符串或者数组
 
