@@ -10,11 +10,11 @@ void \Channel\Server::__construct([string $listen_ip = '0.0.0.0', int $listen_po
 实例化一个\Channel\Server服务端
 
 ### 参数
-``` listen_ip ```
+ ``` listen_ip ```
 
 监听的本机ip地址，不传默认是```0.0.0.0```
 
-``` listen_port ```
+ ``` listen_port ```
 
 监听的端口，不传默认是2206
 
