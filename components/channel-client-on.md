@@ -7,11 +7,11 @@ void \Channel\Client::on(string $event_name, callback $callback_function)
 
 ## 回调函数的参数
 
-``` $event_name ```
+ ``` $event_name ```
 
 订阅的事件名称，可以是任意的字符串。
 
-``` $callback_function ```
+ ``` $callback_function ```
 
 事件发生时触发的回调函数。函数原型为```callback_function(mixed $event_data)```。```$event_data```是事件发布(publish)时传递的事件数据。
 
