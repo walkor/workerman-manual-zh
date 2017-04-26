@@ -174,7 +174,7 @@ brew install php70-event
 
 
 ## Event扩展说明
-[Event扩展](http://php.net/manual/zh/book.event.php)不是必须的，当业务需要支撑上万并发连接时，推荐安装Event，能够支持巨大的并发连接。如果业务并发连接比较低，例如1000并发连接，则可以不用安装。
+[Event扩展](http://php.net/manual/zh/book.event.php)不是必须的，当业务需要支撑大于1000的并发连接时，推荐安装Event，能够支持巨大的并发连接。如果业务并发连接比较低，例如1000以下并发连接，则可以不用安装。
 
 如果无法安装[Event扩展](http://php.net/manual/zh/book.event.php)，可以用[libevent扩展](http://php.net/manual/zh/book.libevent.php)代替，注意目前libevent扩展不支持php7，php7用户只能使用Event扩展。
 
