@@ -82,7 +82,7 @@ Worker::runAll();
 
  **测试**
 
-```shell
+```
 mysql -uroot -P4406 -h127.0.0.1 -p
 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -98,6 +98,5 @@ owners.
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 mysql>
-
- ```
+```
 
