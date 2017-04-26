@@ -7,7 +7,7 @@
 
 ![workerman-thinkphp](http://www.workerman.net/img/doc/workerman-work-with-thinkphp.png)
 
-与其它mvc框架结合建议以上图的方式(ThinkPHP为例)：
+与其它mvc框架结合**建议**以上图的方式(ThinkPHP为例)：
 
 1、ThinkPHP与Workerman是两个独立的系统，独立部署(可部署在不同服务器)，互不干扰。
 
