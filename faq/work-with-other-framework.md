@@ -29,3 +29,5 @@
 
 ThinkPHP如何调用Workerman socket接口推送数据参考[见常见问题-在其它项目中推送](/faq/push-in-other-project.html)一节
 
+ThinkPHP官方已经支持了workerman，参见[ThinkPHP5手册](http://www.kancloud.cn/manual/thinkphp5/235128)
+
