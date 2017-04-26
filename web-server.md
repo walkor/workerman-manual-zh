@@ -37,7 +37,8 @@ WorkerMan是常驻内存的运行机制，只要PHP文件被载入编译过一�
 WorkerMan运行在PHP CLI模式下，PHP CLI模式下无法使用HTTP相关的函数，例如```header、setcookie、session_start```等函数，请使用```/Workerman/Protocols/Http.php```文件中的```header、setcookie、sessionStart```等方法替换。
 
 ### 5、Web入口文件
-WorkerMan的WebServer默认使用index.php作为Web入口文件，例如配置```$webserver->setRoot('www.example.com', '/home/www/');```，则www.example.com的入口文件为```/home/www/index.php```。当url访问的文件（包括静态文件和PHP文件）不存在时，会自动调用入口文件index.php
+WorkerMan的WebServer默认使用index.php作为Web入口文件，例如配置```$webserver->setRoot('www.example.com', '/home/www/');```，则www.example.com
+的入口文件为```/home/www/index.php```。当url访问的文件（包括静态文件和PHP文件）不存在时，会自动调用入口文件index.php
 
 ### 6、可用的超全局变量
 可用的超全局变量有```$_SERVER、$_GET、$_POST、$_FILES、$_COOKIE、$_SESSION、$_REQUEST```。
