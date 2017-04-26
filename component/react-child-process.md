@@ -35,7 +35,7 @@ $worker->onWorkerStart = function() {
     });
 };
 
-Worker::runAll();
+Worker::runAll(); 
 ```
 
 ## 文档：
