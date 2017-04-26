@@ -51,6 +51,7 @@ $task = new Worker();
 // 进程启动时异步建立一个到www.baidu.com连接对象，并发送数据获取数据
 $task->onWorkerStart = function($task)
 {
+    // 不支持直接指定http，但是可以用tcp模拟http协议发送数据
     $connection_to_baidu = new AsyncTcpConnection('tcp://www.baidu.com:80');
     // 当连接建立成功时，发送http请求数据
     $connection_to_baidu->onConnect = function($connection_to_baidu)
