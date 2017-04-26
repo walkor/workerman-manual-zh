@@ -7,12 +7,12 @@ bool \GlobalData\Client::add(string $key, mixed $value)
 
 ## 参数
 
-``` $key ```
+ ``` $key ```
 
 键值。（例如```$global->abc```，```abc```就是键值）
 
 
-``` $value ```
+ ``` $value ```
 
 存储的值。
 
