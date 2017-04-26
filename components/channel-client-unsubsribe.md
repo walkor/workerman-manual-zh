@@ -7,7 +7,7 @@ void \Channel\Client::unsubscribe(string $event_name)
 取消订阅某个事件，这个事件发生时将不会再触发```on($event_name, $callback)```注册的回调```$callback```
 
 ### 参数
-``` $event_name ```
+ ``` $event_name ```
 
 事件名称
 
