@@ -51,14 +51,14 @@ WorkerMan的版本```version:3.0.3```
  ``` exit_count ```（该状态码的退出次数）
 
 
-一般来说exit_status为0表示为正常退出，如果为其它值，代表进程是异常退出的，并产生一条类似```WORKER EXIT UNEXPECTED```错误信息，错误信息会记录到[Worker::logFile](/315140)指定的文件中。
+一般来说exit_status为0表示为正常退出，如果为其它值，代表进程是异常退出的，并产生一条类似```WORKER EXIT UNEXPECTED```错误信息，错误信息会记录到[Worker::logFile](315140)指定的文件中。
 
 **常见的exit_status及其含义如下：**
 
 * 0：表示正常退出，运行reload平滑重启后会出现值为0的退出码，是正常现象。注意在程序中调用exit或die也会导致退出码为0，并产生一条```WORKER EXIT UNEXPECTED```错误信息，workerman中不允许业务代码调用exit或者die语句。
 * 9：表示进程被SIGKILL信号杀死了。这个退出码主要发生在stop以及reload平滑重启时，导致这个退出码的原因是由于子进程没有在规定时间内响应主进程reload信号(例如mysql、curl等长时间阻塞等待或者业务死循环等)，被主进程强制使用SIGKILL信号杀死。注意，当在linux命令行中使用kill命令发送SIGKILL信号给子进程也会导致这个退出码。
-* 65280：导致这个退出码的原因是业务代码有致命错误，例如调用了不存在的函数、语法错误等，具体错误信息会记录到[Worker::logFile](/315140)指定的文件中，也可以在[php.ini](http://php.net/manual/zh/ini.list.php)中[error_log](http://php.net/manual/zh/errorfunc.configuration.php#ini.error-log)指定的文件中(如果有指定的话)找到。
-* 64000：导致这个退出码的原因是业务代码抛出了异常，但业务没有捕获这个异常，导致进程退出。如果workerman以debug方式运行时异常调用栈会打印到终端，daemon方式运行时异常调用栈会记录到[Worker::stdoutFile](/315138)指定的文件中。
+* 65280：导致这个退出码的原因是业务代码有致命错误，例如调用了不存在的函数、语法错误等，具体错误信息会记录到[Worker::logFile](315140)指定的文件中，也可以在[php.ini](http://php.net/manual/zh/ini.list.php)中[error_log](http://php.net/manual/zh/errorfunc.configuration.php#ini.error-log)指定的文件中(如果有指定的话)找到。
+* 64000：导致这个退出码的原因是业务代码抛出了异常，但业务没有捕获这个异常，导致进程退出。如果workerman以debug方式运行时异常调用栈会打印到终端，daemon方式运行时异常调用栈会记录到[Worker::stdoutFile](315138)指定的文件中。
 
 
 ## PROCESS STATUS
@@ -67,15 +67,15 @@ pid：进程pid
 
 memory：该进程当前占用内存（不包括php自身可执行文件的占用的内存）
 
-listening：传输层协议及监听ip端口。如果不监听任何端口则显示none。参见[Worker类构造函数](/315128l)
+listening：传输层协议及监听ip端口。如果不监听任何端口则显示none。参见[Worker类构造函数](315128l)
 
-worker_name：该进程运行的服务服务名，见[Worker类name属性](/315132)
+worker_name：该进程运行的服务服务名，见[Worker类name属性](315132)
 
-connections:该进程当前有多少个TCP连接对象实例。注意：每个客户端连接是一个[TcpConnection](/315157)连接对象实例，同时每个[AsyncTcpConnection](/315173)连接也是一个连接对象实例，所以connections的计数不一定与客户端连接数相等，例如GatewayWorker中Gateway进程的connections计数包含了客户端连接数和Gateway与Worker内部通讯连接数。
+connections:该进程当前有多少个TCP连接对象实例。注意：每个客户端连接是一个[TcpConnection](315157)连接对象实例，同时每个[AsyncTcpConnection](315173)连接也是一个连接对象实例，所以connections的计数不一定与客户端连接数相等，例如GatewayWorker中Gateway进程的connections计数包含了客户端连接数和Gateway与Worker内部通讯连接数。
 
 total_request：表示该进程从启动到现在一共接收了多少个请求。这里的请求数不仅包含客户端发来的请求，也包含Workerman内部通讯请求，例如GatewayWorker架构里Gateway与BusinessWorker之间的通讯请求。
 
-send_fail：该进程向客户端发送数据失败次数，失败原因一般为客户端连接断开，此项不为0一般属于正常状态，参见[手册常见问题send_fail原因](/315284)
+send_fail：该进程向客户端发送数据失败次数，失败原因一般为客户端连接断开，此项不为0一般属于正常状态，参见[手册常见问题send_fail原因](315284)
 
 throw_exception：该进程内业务未捕获的异常数量
 
