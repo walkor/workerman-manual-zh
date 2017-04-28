@@ -1,5 +1,4 @@
 * [序言](preface.md)
-* [版权信息](license.md)
 * [原理](principle.md)
 * [入门指引](getting-started.md)
     * [特性](feature.md)
@@ -158,3 +157,4 @@
     * [ws协议](appendices/about-ws.md)
     * [text协议](appendices/about-text.md)
     * [frame协议](appendices/about-frame.md)
+* [版权信息](license.md)
