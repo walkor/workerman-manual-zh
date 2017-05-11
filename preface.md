@@ -3,25 +3,31 @@
 **Workerman，让你看到PHP的真正强大之处。**
 
 ## Workerman是什么？
-Workerman是一款纯PHP开发的开源高性能的PHP socket 服务器框架。被广泛的用于手机app、移动通讯，微信小程序，手游服务端、网络游戏、PHP聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。 支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。
+Workerman是一款纯PHP开发的开源高性能的PHP socket 服务框架。
+
+Workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，能维持上万并发链接，支持长链接，支持支持Websocket、HTTP等协议，支持自定义协议。拥有定时器、异步socket客户端、异步Mysql、异步Redis、异步Http、异步消息队列等众多高性能组件。
+
+被广泛的用于手机app、移动通讯，微信小程序，手游服务端、网络游戏、PHP聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。 
 
 # Workerman应用的几个方向
 
 1、即时通讯
-例如网页即时聊天、即时消息推送、手机app消息推送、PC软件消息推送等等
+例如网页即时聊天、即时消息推送、微信小程序、手机app消息推送、PC软件消息推送等等
+[[示例 workerman-chat聊天室](http://www.workerman.net/workerman-chat) 、 [web消息推送](http://www.workerman.net/web-sender) 、 [小蝌蚪聊天室](http://www.workerman.net/workerman-todpole)]
 
 2、物联网
-例如Workerman与打印机通讯、与单片机通讯、智能手环、智能家居等等
+例如Workerman与打印机通讯、与单片机通讯、智能手环、智能家居、共享单车等等。
+[客户案例如 易联云、易泊时代等]
 
 3、游戏服务器
-例如棋牌游戏、
+例如棋牌游戏、MMORPG游戏等等。[[示例 browserquest-php](http://www.workerman.net/browserquest)]
 
 4、SOA服务化
-将业务解耦，分成不同的服务，
+利用Workerman将现有业务不同功能单元封装起来，以服务的形式对外提供统一的接口，达到系统松耦合、易维护、高可用、易伸缩。[[示例 workerman-json-rpc](http://www.workerman.net/workerman-jsonrpc)、 [workerman-thrift](http://www.workerman.net/workerman-thrift)]
 
-workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，能维持上万并发链接，并提供异步socket客户端、定时器等接口，自带一个WebServer。
 
-内核极简，通过组件扩充功能。拥有异步Mysql、异步Redis、异步Http、异步消息队列等众多高性能组件。
+
+内核极简，通过组件扩充功能。
 
 秉承极简、稳定、高性能的开发理念。
 
