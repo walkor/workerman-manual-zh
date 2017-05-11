@@ -1,13 +1,14 @@
 # 序言
 
-**Workerman，让你看到PHP的真正强大之处。**
+**Workerman，PHP不仅仅是WEB。**
 
 ## Workerman是什么？
 Workerman是一款纯PHP开发的开源高性能的PHP socket 服务框架。
 
-Workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，能维持上万并发链接，本身常住内存，拥有超高的性能。支持长链接，支持支持Websocket、HTTP等协议，支持自定义协议。拥有定时器、异步socket客户端、异步Mysql、异步Redis、异步Http、异步消息队列等众多高性能组件。
+Workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，能维持上万并发链接，本身常住内存，拥有超高的性能。同时支持TCP、UDP、UNIXSOCKET。支持长链接，支持Websocket、HTTP、WSS、HTTPS协以及各种自定义协议。拥有定时器、异步socket客户端、异步Mysql、异步Redis、异步Http、异步消息队列等众多高性能组件。
 
 # Workerman应用的一些方向
+Workerman不同于传统MVC框架，Workerman不仅可以用于Web开发，同时还有更广阔的应用领域，例如即时通讯类、物联网、游戏、服务治理、其它服务器或者中间件，这无疑大大提高了PHP开发者的视野。目前这些领域的PHP开发者奇缺，如果想在PHP领域有自己的技术优势，不满足于每天的增删改查工作，或者想向架构师方向或者技术大牛的方向发展，Workerman都是非值得学习的框架。
 
 1、即时通讯
 例如网页即时聊天、即时消息推送、微信小程序、手机app消息推送、PC软件消息推送等等
@@ -24,7 +25,7 @@ Workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，�
 利用Workerman将现有业务不同功能单元封装起来，以服务的形式对外提供统一的接口，达到系统松耦合、易维护、高可用、易伸缩。[[示例 workerman-json-rpc](http://www.workerman.net/workerman-jsonrpc)、 [workerman-thrift](http://www.workerman.net/workerman-thrift)]
 
 5、开发一些其它服务器或者中间件
-例如 开发[http代理](https://github.com/walkor/php-http-proxy)，[sock5代理](https://github.com/walkor/php-socks5)，[分布式通讯组件](https://github.com/walkor/Channel)，[分布式变量共享组件](https://github.com/walkor/GlobalData)，[消息队列](https://github.com/walkor/workerman-queue)等等
+例如 [GatewayWorker](http://www.workerman.net/gatewaydoc/)，[PHPSocket.IO](http://www.workerman.net/phpsocket_io)，[http代理](https://github.com/walkor/php-http-proxy)，[sock5代理](https://github.com/walkor/php-socks5)，[分布式通讯组件](https://github.com/walkor/Channel)，[分布式变量共享组件](https://github.com/walkor/GlobalData)，[消息队列](https://github.com/walkor/workerman-queue)，[异步MySQL组件](http://www.kancloud.cn/walkor/workerman/315213)，[异步redis组件](http://www.kancloud.cn/walkor/workerman/315215)，[异步http组件](http://www.kancloud.cn/walkor/workerman/315217)，[异步消息队列组件](http://www.kancloud.cn/walkor/workerman/315219)，[异步dns组件](http://www.kancloud.cn/walkor/workerman/315930)，[文件监控组件](http://www.kancloud.cn/walkor/workerman/315203)等等
 
 显然传统的mvc框架很难实现以上的功能，所以这就是workerman诞生的原因。
 
@@ -33,7 +34,15 @@ Workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，�
 极简、稳定、高性能、分布式。
 
 ### **极简**
-PHP以简单易用著称，同样Workerman仅仅向外暴露几个接口。内核极简，仅仅有几个文件。
+小即是美，Workerman内核极简，仅有几个php文件并且只暴露几个接口，学习起来非常简单。所有其它功能通过组件的方式扩展。
+
+Workerman拥有完善的文档+权威的主页+活跃的社区+数个千人QQ群+众多的高性能组件+N多的例子，这一切都让开发者用来来更得心应手。
+
+### **稳定**
+Workerman已经开源数年，被很多上市公司大规模使用，超级稳定。有些服务2年多没重启过仍然在飞速运行。没有coredump、没有内存泄漏、没有bug。
+
+### **高性能**
+传统的PHP框架具有
 
 什么时候该用Workerman？
 
