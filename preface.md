@@ -12,15 +12,17 @@ Workerman不是重复造轮子，它不是一个MVC框架，而是一个更底�
 # Workerman的一些应用方向
 Workerman不同于传统MVC框架，Workerman不仅可以用于Web开发，同时还有更广阔的应用领域，例如即时通讯类、物联网、游戏、服务治理、其它服务器或者中间件，这无疑大大提高了PHP开发者的视野。目前这些领域的PHP开发者奇缺，如果想在PHP领域有自己的技术优势，不满足于每天的增删改查工作，或者想向架构师方向或者技术大牛的方向发展，Workerman都是非值得学习的框架。建议开发者不仅会用，而且能基于Workerman开发出属于自己的开源项目，提升技能增加自己的影响力，比如[Beanbun多进程网络爬虫框架](https://github.com/kiddyuchina/Beanbun)就是一个很好的例子，刚刚上线不久就获得众多好评。
 
-1、即时通讯
+Workerman的一些应用方向如下：
+
+1、即时通讯类
 例如网页即时聊天、即时消息推送、微信小程序、手机app消息推送、PC软件消息推送等等
 [[示例 workerman-chat聊天室](http://www.workerman.net/workerman-chat) 、 [web消息推送](http://www.workerman.net/web-sender) 、 [小蝌蚪聊天室](http://www.workerman.net/workerman-todpole)]
 
-2、物联网
+2、物联网类
 例如Workerman与打印机通讯、与单片机通讯、智能手环、智能家居、共享单车等等。
 [客户案例如 易联云、易泊时代等]
 
-3、游戏服务器
+3、游戏服务器类
 例如棋牌游戏、MMORPG游戏等等。[[示例 browserquest-php](http://www.workerman.net/browserquest)]
 
 4、SOA服务化
@@ -29,7 +31,7 @@ Workerman不同于传统MVC框架，Workerman不仅可以用于Web开发，同�
 5、开发一些其它服务器或者中间件
 例如 [GatewayWorker](http://www.workerman.net/gatewaydoc/)，[PHPSocket.IO](http://www.workerman.net/phpsocket_io)，[http代理](https://github.com/walkor/php-http-proxy)，[sock5代理](https://github.com/walkor/php-socks5)，[分布式通讯组件](https://github.com/walkor/Channel)，[分布式变量共享组件](https://github.com/walkor/GlobalData)，[消息队列](https://github.com/walkor/workerman-queue)，[异步MySQL组件](http://www.kancloud.cn/walkor/workerman/315213)，[异步redis组件](http://www.kancloud.cn/walkor/workerman/315215)，[异步http组件](http://www.kancloud.cn/walkor/workerman/315217)，[异步消息队列组件](http://www.kancloud.cn/walkor/workerman/315219)，[异步dns组件](http://www.kancloud.cn/walkor/workerman/315930)，[文件监控组件](http://www.kancloud.cn/walkor/workerman/315203)，还有很多第三方开发的组件框架等等
 
-显然传统的mvc框架很难实现以上的功能，所以这就是workerman诞生的原因。
+显然传统的mvc框架很难实现以上的功能，所以也就是workerman诞生的原因。
 
 # 理念
 极简、稳定、高性能、分布式。
