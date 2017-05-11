@@ -1,14 +1,24 @@
 # 序言
 
-Workerman，让你看到PHP的真正强大之处。
+**Workerman，让你看到PHP的真正强大之处。**
 
 ## Workerman是什么？
 Workerman是一款纯PHP开发的开源高性能的PHP socket 服务器框架。被广泛的用于手机app、移动通讯，微信小程序，手游服务端、网络游戏、PHP聊天室、硬件通讯、智能家居、车联网、物联网等领域的开发。 支持TCP长连接，支持Websocket、HTTP等协议，支持自定义协议。拥有异步Mysql、异步Redis、异步Http、异步消息队列等众多高性能组件。
 
-## 传统PHP的框架的缺点
+workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，能维持上万并发链接，并提供异步socket客户端、定时器等接口，自带一个WebServer。
+
+内核极简，通过组件扩充功能。目前支持的组件有异步MySQL组件、异步异步redis、一步dns、异步消息队列客户端、异步http、分布式数据共组件globalData、分布式通讯组件Channel、文件监控自动热更新组件等等。
+
+秉承极简、稳定、高性能的开发理念。
+
+什么时候该用Workerman？
+
+## 传统PHP架构
+传统PHP架构一般是用Apache+mod_php或者nginx+php-fpm.
+## 传统PHP架构的缺点(以nginx+php-fpm为例)
 1、性能比较差
-fpm初始化一切又销毁一切的开销。
-nginx的开销
+php-fpm初始化一切又销毁一切的开销。
+nginx的本身开销
 nginx到phpfpm的通讯开销
 2、无法应对http以外的协议
 websocket 
