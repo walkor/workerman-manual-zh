@@ -46,7 +46,7 @@ Workerman已经开源数年，被很多上市公司大规模使用，超级稳�
 Workerman因为常住内存，不依赖apache/php-fpm，具有超高的性能，比起传统的MVC框架，性能要高数十倍，PHP7下通过ab压力测试QPS也略高于nginx。
 
 ### **分布式**
-现在早已经不是单枪匹马的时代了，单台服务器性能再强悍也有极限，随着用户爆发式增长你发现单机无法满足需要了，这时候分布式多服务器部署才是王道。Workerman直接提供了一套直接可用的长链接分布式通讯框架[GatewayWorker](http://www.workerman.net/gatewaydoc/)，加服务器只需要简单配置下然后启动即可，业务代码不用任何更改，系统承载能力成倍增加，如果你是开发TCP长链接应用，建议直接用[GatewayWorker](http://www.workerman.net/gatewaydoc/)，它是对Workerman的一个包装，针对长链接应用提供了更丰富的接口以及更便捷分布式处理能力。
+现在早已经不是单枪匹马的时代了，单台服务器性能再强悍也有极限，随着用户爆发式增长你发现单机无法满足需要了，这时候分布式多服务器部署才是王道。Workerman直接提供了一套长链接分布式通讯方案[GatewayWorker框架](http://www.workerman.net/gatewaydoc/)，加服务器只需要简单配置下然后启动即可，业务代码不用任何更改，系统承载能力成倍增加。如果你是开发TCP长链接应用，建议直接用[GatewayWorker](http://www.workerman.net/gatewaydoc/)，它是对Workerman的一个包装，针对长链接应用提供了更丰富的接口以及强悍的分布式处理能力。
 
 
 传统的PHP应用程序基本上是在Apache等Web容器中运行的，浏览器与Web容器采用HTTP协议通信，然而在很多实际项目中HTTP协议无法满足我们的需求，尤其是在服务端和客户端要保持长连接，做实时双向通讯时，HTTP协议显得力不从心。例如即时IM通讯，游戏服务器通讯，与硬件传感器通讯等等，开发这些应用程序我们无法直接使用nginx/apache + PHP来实现，也更无法使用传统的PHP框架来做。这就迫使我们寻找一种新的解决方案，这时候WorkerMan就是你的最佳选择。
