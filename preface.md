@@ -5,6 +5,8 @@
 ## Workerman是什么？
 Workerman是一款纯PHP开发的开源高性能的PHP socket 服务框架。
 
+Workerman不是重复造轮子，它不是一个MVC框架，而是PHP框架领域的一次创新。
+
 Workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，能维持上万并发链接，本身常住内存，拥有超高的性能。同时支持TCP、UDP、UNIXSOCKET。支持长链接，支持Websocket、HTTP、WSS、HTTPS协以及各种自定义协议。拥有定时器、异步socket客户端、异步Mysql、异步Redis、异步Http、异步消息队列等众多高性能组件。
 
 # Workerman应用的一些方向
