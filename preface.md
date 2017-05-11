@@ -50,11 +50,6 @@ Workerman因为常住内存，本身不依赖apache/php-fpm，具有超高的性
 ### **分布式**
 现在早已经不是单枪匹马的时代了，单台服务器性能再强悍也有极限，分布式多服务器部署才是王道。Workerman直接提供了一套长链接分布式通讯方案[GatewayWorker框架](http://www.workerman.net/gatewaydoc/)，加服务器只需要简单配置下然后启动即可，业务代码零更改，系统承载能力成倍增加。如果你是开发TCP长链接应用，建议直接用[GatewayWorker](http://www.workerman.net/gatewaydoc/)，它是对Workerman的一个包装，针对长链接应用提供了更丰富的接口以及强悍的分布式处理能力。
 
-
-传统的PHP应用程序基本上是在Apache等Web容器中运行的，浏览器与Web容器采用HTTP协议通信，然而在很多实际项目中HTTP协议无法满足我们的需求，尤其是在服务端和客户端要保持长连接，做实时双向通讯时，HTTP协议显得力不从心。例如即时IM通讯，游戏服务器通讯，与硬件传感器通讯等等，开发这些应用程序我们无法直接使用nginx/apache + PHP来实现，也更无法使用传统的PHP框架来做。这就迫使我们寻找一种新的解决方案，这时候WorkerMan就是你的最佳选择。
-
-WorkerMan是一款纯PHP开发的开源的高性能的PHP socket服务器框架，基于WorkerMan开发者可以开发出各种网络服务器，例如基于websocket的服务器、游戏服务器、移动通讯服务器、智能家居服务端、物联网服务、web服务器、RPC服务器等等。几乎任何基于TCP/UDP通讯的服务端都可以用WorkerMan来开发。WorkerMan使得开发者摆脱PHP只能用于Web开发的束缚，向更广阔的前景发展。
-
 # 本手册作用范围
 WorkerMan有分为Linux版本[WorkerMan](https://github.com/walkor/workerman)和Windows版本[WorkerMan-for-win](https://github.com/walkor/workerman-for-win)，windows版本说明参见[这里](http://www.workerman.net/windows)。Linux版本可用于开发调试及正式环境部署，而由于PHP-CLI在windows系统无法实现多进程以及守护进程，所以windows版本Workerman建议仅作开发调试使用。
 
