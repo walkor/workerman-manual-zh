@@ -1,6 +1,6 @@
 # 序言
 
-**Workerman，PHP不仅仅是WEB。**
+**Workerman，让PHP不仅仅做WEB。**
 
 ## Workerman是什么？
 Workerman是一款纯PHP开发的开源高性能的PHP socket 服务框架。
@@ -42,23 +42,8 @@ Workerman拥有完善的文档+权威的主页+活跃的社区+数个千人QQ群
 Workerman已经开源数年，被很多上市公司大规模使用，超级稳定。有些服务2年多没重启过仍然在飞速运行。没有coredump、没有内存泄漏、没有bug。
 
 ### **高性能**
-传统的PHP框架具有
+Workerman因为常住内存，不依赖apache/php-fpm，具有超高的性能，比起传统的MVC框架，性能要高数十倍，PHP7下通过压力测试QPS略高于nginx。
 
-什么时候该用Workerman？
-
-## 传统PHP架构
-传统PHP架构一般是用Apache+mod_php或者nginx+php-fpm.
-## 传统PHP架构的缺点(以nginx+php-fpm为例)
-1、性能比较差
-php-fpm初始化一切又销毁一切的开销。
-nginx的本身开销
-nginx到phpfpm的通讯开销
-2、无法应对http以外的协议
-websocket 
-
-3、无法常住内存
-
-4、无法与客户端保持长链接
 
 传统的PHP应用程序基本上是在Apache等Web容器中运行的，浏览器与Web容器采用HTTP协议通信，然而在很多实际项目中HTTP协议无法满足我们的需求，尤其是在服务端和客户端要保持长连接，做实时双向通讯时，HTTP协议显得力不从心。例如即时IM通讯，游戏服务器通讯，与硬件传感器通讯等等，开发这些应用程序我们无法直接使用nginx/apache + PHP来实现，也更无法使用传统的PHP框架来做。这就迫使我们寻找一种新的解决方案，这时候WorkerMan就是你的最佳选择。
 
