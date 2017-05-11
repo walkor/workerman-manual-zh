@@ -53,7 +53,7 @@ Workerman因为常住内存，本身不依赖apache/nginx/php-fpm，没有容器
 # 本手册作用范围
 WorkerMan有分为Linux版本[WorkerMan](https://github.com/walkor/workerman)和Windows版本[WorkerMan-for-win](https://github.com/walkor/workerman-for-win)，windows版本说明参见[这里](http://www.workerman.net/windows)。Linux版本可用于开发调试及正式环境部署，而由于PHP-CLI在windows系统无法实现多进程以及守护进程，所以windows版本Workerman建议仅作开发调试使用。
 
-注意：Windows版本WorkerMan无法在Linux平台使用，同时Linux版本WorkerMan也无法在。
+注意：Windows版本WorkerMan无法在Linux平台使用，同时Linux版本WorkerMan也无法在Windows平台使用。
 
 # windows用户（必读）
 
