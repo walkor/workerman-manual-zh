@@ -5,9 +5,9 @@
 ## Workerman是什么？
 Workerman是一款纯PHP开发的开源高性能的PHP socket 服务框架。
 
-Workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，能维持上万并发链接，支持长链接，支持支持Websocket、HTTP等协议，支持自定义协议。拥有定时器、异步socket客户端、异步Mysql、异步Redis、异步Http、异步消息队列等众多高性能组件。
+Workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，能维持上万并发链接，本身常住内存，拥有超高的性能。支持长链接，支持支持Websocket、HTTP等协议，支持自定义协议。拥有定时器、异步socket客户端、异步Mysql、异步Redis、异步Http、异步消息队列等众多高性能组件。
 
-# Workerman应用的几个方向
+# Workerman应用的一些方向
 
 1、即时通讯
 例如网页即时聊天、即时消息推送、微信小程序、手机app消息推送、PC软件消息推送等等
@@ -23,11 +23,20 @@ Workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，�
 4、SOA服务化
 利用Workerman将现有业务不同功能单元封装起来，以服务的形式对外提供统一的接口，达到系统松耦合、易维护、高可用、易伸缩。[[示例 workerman-json-rpc](http://www.workerman.net/workerman-jsonrpc)、 [workerman-thrift](http://www.workerman.net/workerman-thrift)]
 
+5、开发一些其它服务器或者中间件
+例如 开发[http代理](https://github.com/walkor/php-http-proxy)，[sock5代理](https://github.com/walkor/php-socks5)，[分布式通讯组件](https://github.com/walkor/Channel)，[分布式变量共享组件](https://github.com/walkor/GlobalData)，[消息队列](https://github.com/walkor/workerman-queue)等等
+
+显然传统的mvc框架很难实现以上的功能，所以这就是workerman诞生的原因。
 
 
-内核极简，通过组件扩充功能。
+# 理念
+易用、极简、稳定、高性能、分布式的开发理念。
 
-秉承极简、稳定、高性能的开发理念。
+### **易用**
+
+
+### **极简**
+内核极简，仅仅有几个文件。
 
 什么时候该用Workerman？
 
