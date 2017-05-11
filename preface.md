@@ -45,7 +45,7 @@ Workerman拥有完善的文档+权威的主页+活跃的社区+数个千人QQ群
 Workerman已经开源数年，被很多上市公司大规模使用，超级稳定。有些服务2年多没重启过仍然在飞速运行。没有coredump、没有内存泄漏、没有bug。
 
 ### **高性能**
-Workerman因为常住内存，不依赖apache/php-fpm，具有超高的性能，比起传统的MVC框架，性能要高数十倍，PHP7下通过ab压力测试QPS也略高于nginx。
+Workerman因为常住内存，本身不依赖apache/php-fpm，具有超高的性能，比起传统的MVC框架，性能要高数十倍，PHP7下通过ab压力测试QPS甚至高于nginx。
 
 ### **分布式**
 现在早已经不是单枪匹马的时代了，单台服务器性能再强悍也有极限，随着用户爆发式增长你发现单机无法满足需要了，这时候分布式多服务器部署才是王道。Workerman直接提供了一套长链接分布式通讯方案[GatewayWorker框架](http://www.workerman.net/gatewaydoc/)，加服务器只需要简单配置下然后启动即可，业务代码不用任何更改，系统承载能力成倍增加。如果你是开发TCP长链接应用，建议直接用[GatewayWorker](http://www.workerman.net/gatewaydoc/)，它是对Workerman的一个包装，针对长链接应用提供了更丰富的接口以及强悍的分布式处理能力。
