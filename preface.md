@@ -9,7 +9,7 @@ Workerman不是重复造轮子，它不是一个MVC框架，而是一个更底�
 
 实际上Workerman类似一个PHP版本的nginx，核心也是多进程+Epoll+非阻塞IO。Workerman每个进程能维持上万并发链接。由于本身常住内存，不依赖Apache、nginx、php-fpm这些容器，拥有超高的性能。同时支持TCP、UDP、UNIXSOCKET，支持长链接，支持Websocket、HTTP、WSS、HTTPS等通讯协以及各种自定义协议。拥有定时器、异步socket客户端、异步Mysql、异步Redis、异步Http、异步消息队列等众多高性能组件。
 
-# Workerman的一些应用方向
+## Workerman的一些应用方向
 Workerman不同于传统MVC框架，Workerman不仅可以用于Web开发，同时还有更广阔的应用领域，例如即时通讯类、物联网、游戏、服务治理、其它服务器或者中间件，这无疑大大提高了PHP开发者的视野。目前这些领域的PHP开发者奇缺，如果想在PHP领域有自己的技术优势，不满足于每天的增删改查工作，或者想向架构师方向或者技术大牛的方向发展，Workerman都是非值得学习的框架。建议开发者不仅会用，而且能基于Workerman开发出属于自己的开源项目，提升技能增加自己的影响力，比如[Beanbun多进程网络爬虫框架](https://github.com/kiddyuchina/Beanbun)就是一个很好的例子，刚刚上线不久就获得众多好评。
 
 Workerman的一些应用方向如下：
@@ -33,7 +33,7 @@ Workerman的一些应用方向如下：
 
 显然传统的mvc框架很难实现以上的功能，所以也就是workerman诞生的原因。
 
-# Workerman理念
+## Workerman理念
 极简、稳定、高性能、分布式。
 
 ### **极简**
@@ -50,16 +50,16 @@ Workerman因为常住内存，本身不依赖apache/nginx/php-fpm，没有容器
 ### **分布式**
 现在早已经不是单枪匹马的时代了，单台服务器性能再强悍也有极限，分布式多服务器部署才是王道。Workerman直接提供了一套长链接分布式通讯方案[GatewayWorker框架](http://www.workerman.net/gatewaydoc/)，加服务器只需要简单配置下然后启动即可，业务代码零更改，系统承载能力成倍增加。如果你是开发TCP长链接应用，建议直接用[GatewayWorker](http://www.workerman.net/gatewaydoc/)，它是对Workerman的一个包装，针对长链接应用提供了更丰富的接口以及强悍的分布式处理能力。
 
-# 本手册作用范围
+## 本手册作用范围
 WorkerMan有分为Linux版本[WorkerMan](https://github.com/walkor/workerman)和Windows版本[WorkerMan-for-win](https://github.com/walkor/workerman-for-win)，windows版本说明参见[这里](http://www.workerman.net/windows)。Linux版本可用于开发调试及正式环境部署，而由于PHP-CLI在windows系统无法实现多进程以及守护进程，所以windows版本Workerman建议仅作开发调试使用。
 
 注意：Windows版本WorkerMan无法在Linux平台使用，同时Linux版本WorkerMan也无法在Windows平台使用。
 
-# windows用户（必读）
+## windows用户（必读）
 
 windows用户需要使用windows版本的workerman，windows版本workerman本身**不依赖任何扩展**，只需要配置好PHP环境变量即可，**windows版本workerman安装及注意事项参见[windows用户必看](http://www.workerman.net/windows)。**
 
-# 客户端
+## 客户端
 
 WorkerMan的通信协议是开放的，又是可定制的，因此，理论上WorkerMan可以与使用任意协议的任意平台的客户端进行通信。当用户开发客户端时，可以根据相应的通信协议完成与服务端的通信。
 
