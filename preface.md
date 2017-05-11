@@ -43,7 +43,7 @@ Workerman拥有完善的文档+权威的主页+活跃的社区+数个千人QQ群
 Workerman已经开源数年，被很多上市公司大规模使用，超级稳定。有些服务2年多没重启过仍然在飞速运行。没有coredump、没有内存泄漏、没有bug。
 
 ### **高性能**
-Workerman因为常住内存，不依赖apache/php-fpm，具有超高的性能，比起传统的MVC框架，性能要高数十倍，PHP7下通过压力测试QPS略高于nginx。
+Workerman因为常住内存，不依赖apache/php-fpm，具有超高的性能，比起传统的MVC框架，性能要高数十倍，PHP7下通过ab压力测试QPS也略高于nginx。
 
 ### **分布式**
 
