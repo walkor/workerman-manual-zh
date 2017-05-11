@@ -8,12 +8,16 @@ Workerman是一款纯PHP开发的开源高性能的PHP socket 服务器框架。
 # Workerman应用的几个方向
 
 1、即时通讯
+例如网页即时聊天、即时消息推送、手机app消息推送、PC软件消息推送等等
 
 2、物联网
+例如Workerman与打印机通讯、与单片机通讯、智能手环、智能家居等等
 
 3、游戏服务器
+例如棋牌游戏、
 
 4、SOA服务化
+将业务解耦，分成不同的服务，
 
 workerman可以看作是一个PHP版本的nginx，核心是Epoll+非阻塞IO，能维持上万并发链接，并提供异步socket客户端、定时器等接口，自带一个WebServer。
 
