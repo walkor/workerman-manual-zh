@@ -10,23 +10,23 @@
 
 以debug（调试）方式启动
 
-```php start.php start```
+ ```php start.php start```
 
 以daemon（守护进程）方式启动
 
-```php start.php start -d```
+ ```php start.php start -d```
 
 ### 停止
-```php start.php stop```
+ ```php start.php stop```
 
 ### 重启
-```php start.php restart```
+ ```php start.php restart```
 
 ### 平滑重启
-```php start.php reload```
+ ```php start.php reload```
 
 ### 查看状态
-```php start.php status```
+ ```php start.php status```
 
 
 
