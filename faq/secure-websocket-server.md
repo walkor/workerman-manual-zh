@@ -10,7 +10,7 @@ Workerman如何创建一个wss服务，使得客户端可以用过wss协来连�
 wss协议实际是[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http://baike.baidu.com/item/ssl)，就是在websocket协议上加入[SSL](http://baike.baidu.com/item/ssl)层，类似[https](http://baike.baidu.com/item/https)([http](http://baike.baidu.com/item/http)+[SSL](http://baike.baidu.com/item/ssl))。Workerman支持[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http://baike.baidu.com/item/ssl)协议，同时也支持[SSL](http://baike.baidu.com/item/ssl)(```需要Workerman版本>=3.3.7```)，
 所以只需要在[websocket](http://baike.baidu.com/item/WebSocket)协议的基础上开启[SSL](http://baike.baidu.com/item/ssl)即可支持wss协议。
 
-## Workerman开启SSL
+## 方法一 ，直接用Workerman开启SSL
 
 
 **准备工作：**
@@ -78,9 +78,9 @@ ws.onmessage = function(e) {
 
 
 
-## 利用nginx作为SSL的代理。
+## 方法二、利用nginx作为SSL的代理
 
-除了用Workerman自身的SSL，也可以利用nginx作为SSL代理实现wss。
+除了用Workerman自身的SSL，也可以利用nginx作为SSL代理实现wss（注意如使用nginx代理SSL，则workerman部分不要设置ssl，避免会冲突）。
 
 通讯原理及流程是：
 
