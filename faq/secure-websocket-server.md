@@ -5,7 +5,6 @@
 Workerman如何创建一个wss服务，使得客户端可以用过wss协来连接通讯，比如在微信小程序中连接服务端。
 
 
-
 **答：**
 
 wss协议实际是[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http://baike.baidu.com/item/ssl)，就是在websocket协议上加入[SSL](http://baike.baidu.com/item/ssl)层，类似[https](http://baike.baidu.com/item/https)([http](http://baike.baidu.com/item/http)+[SSL](http://baike.baidu.com/item/ssl))。Workerman支持[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http://baike.baidu.com/item/ssl)协议，同时也支持[SSL](http://baike.baidu.com/item/ssl)(```需要Workerman版本>=3.3.7```)，
