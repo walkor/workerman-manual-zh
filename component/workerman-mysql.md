@@ -9,6 +9,7 @@
 命令行运行```php -m```会列出所有php cli已安装的扩展，如果没有pdo 或者 pdo_mysql，请自行安装。
 
 **centos系统**
+
 PHP5.x
 ```
 yum install php-pdo
