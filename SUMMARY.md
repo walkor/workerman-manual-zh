@@ -1,5 +1,6 @@
 * [序言](preface.md)
 * [原理](principle.md)
+* [开发必读](must-read.md)
 * [入门指引](getting-started.md)
     * [特性](feature.md)
     * [简单的开发示例](simple-example.md)
@@ -159,4 +160,3 @@
     * [text协议](appendices/about-text.md)
     * [frame协议](appendices/about-frame.md)
 * [版权信息](license.md)
-* [开发必读](must-read.md)
