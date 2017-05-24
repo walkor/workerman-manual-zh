@@ -1,12 +1,12 @@
 # workerman开发者必须知道的几个问题
 **1、workerman不依赖apache或者nginx**
 
-workerman本身已经是一个类似apache/nginx的socket服务器框架，只要[PHP环境OK](http://doc.workerman.net/315116)就可以运行。
+workerman本身已经是一个类似apache/nginx的容器，只要[PHP环境OK](http://doc.workerman.net/315116)workerman就可以运行。
 
 **2、workerman是命令行启动的**
 
-启动方式类似apache使用命令启动(一般网页空间无法使用workerman)。启动类似下面
-![](image/screenshot_1495620510498.png)
+启动方式类似apache使用命令启动(一般网页空间无法使用workerman)。启动界面类似下面
+![](image/screenshot_1495622774534.png)
 
 **3、长链接必须加心跳**
 
@@ -17,7 +17,7 @@ workerman本身已经是一个类似apache/nginx的socket服务器框架，只�
 **4、客户端和服务端协议一定要对应才能通讯**
 
 例如客户端是用websocket协议来通讯，服务端必须也是websocket协议(服务端```new Worker('websocket://0.0.0.0...')```)，否则肯定通讯不了。 
-不要在浏览器地址栏访问websocket协议端口，不要用webscoket协议访问裸tcp协议端口。
+不要在浏览器地址栏访问websocket协议端口，不要用webscoket协议访问裸tcp协议端口，协议一定要对应。
 
 **5、不要使用exit die语句**
 
