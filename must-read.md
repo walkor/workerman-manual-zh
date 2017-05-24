@@ -17,7 +17,7 @@ workerman本身已经是一个类似apache/nginx的容器，只要[PHP环境OK](
 **4、客户端和服务端协议一定要对应才能通讯**
 
 这个是开发者非常常见的问题。例如客户端是用websocket协议，服务端必须也是websocket协议(服务端```new Worker('websocket://0.0.0.0...')```)才能连得上，才能通讯。 
-不要在浏览器地址栏访问websocket协议端口，不要用webscoket协议访问裸tcp协议端口，协议一定要对应。
+不要尝试在浏览器地址栏访问websocket协议端口，不要尝试用webscoket协议访问裸tcp协议端口，协议一定要对应。
 
 **5、链接失败可能的原因**
 
