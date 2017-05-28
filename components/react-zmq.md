@@ -13,9 +13,9 @@ composer require react/zmq
 require_once __DIR__ . '/vendor/autoload.php';
 use Workerman\Worker;
 
-$worker = new Worker('text://0.0.0.0:6161');
+$consumer = new Worker();
 
-$worker->onWorkerStart = function() {
+$consumer->onWorkerStart = function() {
     global   $pull;
     $loop    = Worker::getEventLoop();
     $context = new React\ZMQ\Context($loop);
