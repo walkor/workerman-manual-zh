@@ -15,9 +15,9 @@ composer require react/stomp
 require_once __DIR__ . '/vendor/autoload.php';
 use Workerman\Worker;
 
-$worker = new Worker('text://0.0.0.0:6161');
+$consumer = new Worker();
 
-$worker->onWorkerStart = function() {
+$consumer->onWorkerStart = function() {
     global   $client;
     $loop    = Worker::getEventLoop();
     $factory = new React\Stomp\Factory($loop);
