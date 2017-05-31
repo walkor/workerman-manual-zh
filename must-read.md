@@ -40,7 +40,8 @@ workerman是常驻内存的框架，改代码要重启workerman才能看到新�
 
 很多发者使用workerman是要开发**长链接**应用，例如即时通讯、物联网等，**长链接**应用建议直接使用GatewayWorker框架，它专门在workerman的基础上再次封装，做起长链接应用后台更简单、更易用。
 
-**9、支持更高并发 **
+**9、支持更高并发**
+
 如果业务并发连接数超过1000同时在线，请务必优化[linux内核](http://doc.workerman.net/315302)，并[安装event扩展或者libevent扩展](http://doc.workerman.net/315116)。
 
 
