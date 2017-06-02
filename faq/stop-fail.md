@@ -3,7 +3,7 @@
 ## 现象：
 运行 ```php start.php stop``` 提示 ```stop fail```
 
-## 原因：两种可能性
+## 原因：几种可能性
 
 **第一种可能性：**<br>
 前提是以debug方式启动的workerman，开发者在终端按了```ctrl z```给workerman发送了```SIGSTOP```信号，导致workerman进入后台并挂起(暂停)，所以无法响应stop命令(```SIGINT```信号)。
@@ -24,5 +24,12 @@ ps aux|grep WorkerMan|awk '{print $2}'|xargs kill -9
 
 **解决：**
 切换到启动workerman的用户，或者用权限更高的用户停止workerman。
+
+<br>
+**第三种可能性：**<br>
+保存workerman主进程pid文件被删除，导致脚本找不到pid进程，导致停止失败。
+
+**解决：**
+将pid文件保存到安全的位置，参见手册[Worker::$pidFile](http://doc.workerman.net/315139)。
 
 
