@@ -98,11 +98,11 @@ Worker::runAll();
 $db = new Workerman\MySQL\Connection('host', 'port', 'user', 'password', 'db_name');
 
 // 获取所有数据
-$db->select('ID,Sex')->from('Persons')->where('sex= :sex')->bindValues(array('sex'=>'M'))->query();
+$db->select('ID,Sex')->from('Persons')->where('sex= :sex AND ID = :id')->bindValues(array('sex'=>'M', 'id' => 1))->query();
 //等价于
-$db->select('ID,Sex')->from('Persons')->where("sex= 'F' ")->query();
+$db->select('ID,Sex')->from('Persons')->where("sex= 'M' AND ID = 1")->query();
 //等价于
-$db->query("SELECT ID,Sex FROM `Persons` WHERE sex='M'");
+$db->query("SELECT ID,Sex FROM `Persons` WHERE sex='M' AND ID = 1");
 
 
 // 获取一行数据
