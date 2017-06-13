@@ -56,4 +56,16 @@ stream_socket_server 函数被php.ini禁用
 
 2、打开php.ini找到disable_functions一项，将stream_socket_server禁用项删掉
 
+## 现象4
+```php
+PHP Warning:  stream_socket_server(): unable to connect to tcp://0.0.0.0:xxx (Permission denied)
+```
+**失败原因**
+
+linux下监听端口如果小于1024，需要root权限。
+
+**解决办法**
+
+使用大于1024的端口或者使用root用户启动服务。
+
 
