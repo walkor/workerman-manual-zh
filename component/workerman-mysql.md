@@ -91,7 +91,6 @@ $worker->onMessage = function($connection, $data)
 // 运行worker
 Worker::runAll();
 ```
-
 ## 具体MySQL/Connection用法
 ```php
 // 初始化db连接
