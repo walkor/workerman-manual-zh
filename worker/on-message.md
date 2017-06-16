@@ -10,7 +10,7 @@ callback Worker::$onMessage
 
  ``` $connection ```
 
-连接对象，连接对象的说明见下一节
+连接对象，即[TcpConnection实例](http://doc.workerman.net/315157)
 
  ``` $data ```
 
