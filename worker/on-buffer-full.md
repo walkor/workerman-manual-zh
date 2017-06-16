@@ -19,7 +19,7 @@ callback Worker::$onBufferFull
 
  ``` $connection ```
 
-连接对象
+连接对象，即[TcpConnection实例](http://doc.workerman.net/315157)
 
 
 ## 范例
