@@ -8,15 +8,15 @@ callback Worker::$onError
 
 目前错误类型有
 
-1、调用Connection::send由于客户端连接断开导致的失败 ```
+1、调用Connection::send由于客户端连接断开导致的失败（紧接着会触发onClose回调） ```
 (code:WORKERMAN_SEND_FAIL msg:client closed)```
 
 
-2、在触发onBufferFull后，仍然调用Connection::send，并且发送缓冲区仍然是满的状态导致发送失败```
+2、在触发onBufferFull后，仍然调用Connection::send，并且发送缓冲区仍然是满的状态导致发送失败(不会触发onClose回调)```
 (code:WORKERMAN_SEND_FAIL msg:send buffer full and drop package)```
 
 
-3、使用AsyncTcpConnection异步连接失败时 ```
+3、使用AsyncTcpConnection异步连接失败时(紧接着会触发onClose回调) ```
 (code:WORKERMAN_CONNECT_FAIL msg:stream_socket_client返回的错误消息)```
 
 
