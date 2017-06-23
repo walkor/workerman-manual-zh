@@ -159,4 +159,5 @@
     * [ws协议](appendices/about-ws.md)
     * [text协议](appendices/about-text.md)
     * [frame协议](appendices/about-frame.md)
+    * [不支持的函数/特性](unavailable-functions.md)
 * [版权信息](license.md)
