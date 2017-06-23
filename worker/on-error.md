@@ -12,7 +12,7 @@ callback Worker::$onError
 (code:WORKERMAN_SEND_FAIL msg:client closed)```
 
 
-2、在触发onBufferFull后，仍然调用Connection::send，并且发送缓冲区仍然是满的状态导致发送失败(不会触发onClose回调)```
+2、在触发onBufferFull后(发送缓冲区已满)，仍然调用Connection::send，并且发送缓冲区仍然是满的状态导致发送失败(不会触发onClose回调)```
 (code:WORKERMAN_SEND_FAIL msg:send buffer full and drop package)```
 
 
