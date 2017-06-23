@@ -43,6 +43,8 @@ WorkerMan的WebServer默认使用index.php作为Web入口文件，例如配置``
 ### 6、可用的超全局变量
 可用的超全局变量有```$_SERVER、$_GET、$_POST、$_FILES、$_COOKIE、$_SESSION、$_REQUEST```。
 
+无法使用```php://input```，请用```$GLOBALS['HTTP_RAW_POST_DATA'] ```代替。
+
 注意HTTP文件上传中，WorkerMan的```$_FILES```结构与传统PHP中的```$_FILES```结构不同，WorkerMan中```$_FILES```结构类似
 ```php
 var_export($_FILES);
