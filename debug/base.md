@@ -21,6 +21,8 @@ $http_worker->onMessage = function($connection, $data)
 {
     $connection->send('hello world');
 };
+
+Worker::runAll();
 ```
 这样所有的```echo、var_dump、var_export```等函数打印会写入到```Worker::$stdoutFile```指定的文件中。注意```Worker::$stdoutFile```指定的路径要有可写权限。
 
