@@ -74,3 +74,34 @@ require_once __DIR__ . '/../Workerman/Autoloader.php';
 
     Worker::runAll();
 ```
+
+## 测试 （假设都是本机127.0.0.1运行）
+1、运行服务端
+```
+php start.php start
+Workerman[del.php] start in DEBUG mode
+----------------------- WORKERMAN -----------------------------
+Workerman version:3.4.2          PHP version:7.1.3
+------------------------ WORKERS -------------------------------
+user          worker         listen                    processes status
+liliang       ChannelServer  frame://0.0.0.0:2206       1         [OK] 
+liliang       none           websocket://0.0.0.0:1234   1         [OK] 
+----------------------------------------------------------------
+Press Ctrl-C to quit. Start success.
+
+```
+
+2、客户端连接服务端
+
+打开chrome浏览器，按F12打开调试控制台，在Console一栏输入(或者把下面代码放入到html页面用js运行)
+
+```javascript
+// 假设服务端ip为127.0.0.1，测试时请改成实际服务端ip
+ws = new WebSocket('ws://127.0.0.1:1234');
+ws.onmessage = function(data){console.log(data.data)};
+ws.onopen = function() {
+	ws.send('{"cmd":"add_group", "group_id":"123"}');
+    ws.send('{"cmd":"send_to_group", "group_id":"123", "message":"这个是消息"}');
+};
+
+```
