@@ -12,6 +12,7 @@ require_once __DIR__ . '/../Workerman/Autoloader.php';
     $channel_server = new Channel\Server('0.0.0.0', 2206);
 
     $worker = new Worker('websocket://0.0.0.0:1234');
+    $worker->count = 8;
     // 全局群组到链接的映射数组
     $group_con_map = array();
     $worker->onWorkerStart = function(){
@@ -85,7 +86,7 @@ Workerman version:3.4.2          PHP version:7.1.3
 ------------------------ WORKERS -------------------------------
 user          worker         listen                    processes status
 liliang       ChannelServer  frame://0.0.0.0:2206       1         [OK] 
-liliang       none           websocket://0.0.0.0:1234   1         [OK] 
+liliang       none           websocket://0.0.0.0:1234   12        [OK] 
 ----------------------------------------------------------------
 Press Ctrl-C to quit. Start success.
 
