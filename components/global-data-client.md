@@ -26,6 +26,9 @@ use Workerman\Worker;
 require_once __DIR__ . '/Workerman/Autoloader.php';
 require_once __DIR__ . '/GlobalData/src/Client.php';
 
+// GlobalData Server
+$global_worker = new GlobalData\Server('0.0.0.0', 2207);
+
 $worker = new Worker('tcp://0.0.0.0:6636');
 // 进程启动时
 $worker->onWorkerStart = function()
