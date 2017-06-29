@@ -107,7 +107,7 @@ $db->query("SELECT ID,Sex FROM `Persons` WHERE sex='M' AND ID = 1");
 // 获取一行数据
 $db->select('ID,Sex')->from('Persons')->where('sex= :sex')->bindValues(array('sex'=>'M'))->row();
 //等价于
-$db->select('ID,Sex')->from('Persons')->where("sex= 'F' ")->row();
+$db->select('ID,Sex')->from('Persons')->where("sex= 'M' ")->row();
 //等价于
 $db->row("SELECT ID,Sex FROM `Persons` WHERE sex='M'");
 
