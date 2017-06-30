@@ -182,7 +182,7 @@ brew install php70-event
 
 注意：
 1、libevnet扩展也同样依赖libevent库，所以首先需要安装libevent-devel包(并非扩展)。
-2、libevent扩展支持php5.3-5.6，目前还不支持php7，php7用户请不要装libevent扩展，否则会出现coredump错误。
+2、libevent扩展支持php5.3-5.6，目前还不支持php7。php7用户请使用event扩展，php7用户请不要装libevent扩展，否则会出现coredump错误。
 
 
 
