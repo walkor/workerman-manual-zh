@@ -26,6 +26,8 @@ killall php
 ps aux|grep WorkerMan|awk '{print $2}'|xargs kill -9
 ```
 
+如果确实没有程序监听这个端口，那么可能是开发者在workerman里设置了两个或两个以上的监听，并且监听的端口相同导致，请开发者自行检查启动脚本是否监听了相同的端口。
+
 
 
 ## 现象2
