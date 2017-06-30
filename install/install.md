@@ -40,7 +40,7 @@ yum install libevent-devel -y
 ```
 
 2、安装event扩展，命令行运行<br>
-(event扩展要求PHP>=5.4，PHP5.3用户请安装libevent扩展，见本页面底部)
+(event扩展要求PHP>=5.4，PHP5.3用户请安装libevent扩展(libevent扩展同时支持php5.4-5.6)，见本页面底部)
 ```shell
 pecl install event
 ```
@@ -61,7 +61,7 @@ apt-get install libevent-dev -y
 ```
 
 2、安装event扩展，命令行运行<br>
-(注意：event扩展要求PHP>=5.4，PHP5.3用户请安装libevent扩展，见本页面底部)）
+(注意：event扩展要求PHP>=5.4，PHP5.3用户请安装libevent扩展(libevent扩展同时支持php5.4-5.6)，见本页面底部)
 ```shell
 pecl install event
 ```
@@ -89,7 +89,7 @@ yum install php-cli php-process git gcc php-devel php-pear libevent-devel -y
 ```
 
 2、安装event扩展，命令行运行<br>
-(注意：event扩展要求PHP>=5.4，PHP5.3用户请安装libevent扩展，见本页面底部)
+(注意：event扩展要求PHP>=5.4，PHP5.3用户请安装libevent扩展(libevent扩展也支持php5.4-5.6)，见本页面底部)
 ```shell
 pecl install event
 ```
@@ -121,7 +121,7 @@ apt-get install php5-cli git gcc php-pear php5-dev libevent-dev -y
 ```
 
 2、安装event扩展，命令行运行<br>
-(注意：event扩展要求PHP>=5.4，PHP5.3用户请安装libevent扩展，见本页面底部)
+(注意：event扩展要求PHP>=5.4，PHP5.3用户请安装libevent扩展(libevent扩展也支持php5.4-5.6)，见本页面底部)
 ```shell
 pecl install event
 ```
@@ -180,7 +180,9 @@ brew install php70-event
 
 ### 安装libevnet扩展方法如下：
 
-注意：libevnet扩展也同样依赖libevent库，所以首先需要安装libevent-devel包(并非扩展)。
+注意：
+1、libevnet扩展也同样依赖libevent库，所以首先需要安装libevent-devel包(并非扩展)。
+2、libevent扩展支持php5.3-5.6，目前还不支持php7，php7用户请不要装libevent扩展，否则会出现coredump错误。
 
 
 
