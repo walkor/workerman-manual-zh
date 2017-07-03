@@ -180,26 +180,29 @@ brew install php70-event
 
 ### 安装libevnet扩展方法如下：
 
-注意：
+**注意：**
 1、libevnet扩展也同样依赖libevent库，所以首先需要安装libevent-devel包(并非扩展)。
 2、libevent扩展支持php5.3-5.6，目前还不支持php7。php7用户请使用event扩展，php7用户请不要装libevent扩展，否则会出现coredump错误。
 
 
 
-centos系统
+**centos系统**
 
 ```
 yum install libevent-devel
 pecl install channel://pecl.php.net/libevent-0.1.0 //提示libevent installation [autodetect]: 时按回车
 echo extension=libevent.so > /etc/php.d/libevent.ini
 ```
+如果ini文件位置不对，可以通过运行php --ini找到实际加载的ini文件路径
 
-debian/ubuntu系统
+**debian/ubuntu系统**
 
 ```
 apt-get install libevent-dev
 pecl install channel://pecl.php.net/libevent-0.1.0 //提示libevent installation [autodetect]: 时按回车
 echo extension=libevent.so > /etc/php5/cli/conf.d/libevent.ini
 ```
+
+如果ini文件位置不对，可以通过运行php --ini找到实际加载的ini文件路径
 
 
