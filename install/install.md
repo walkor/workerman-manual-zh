@@ -193,7 +193,7 @@ yum install libevent-devel
 pecl install channel://pecl.php.net/libevent-0.1.0 //提示libevent installation [autodetect]: 时按回车
 echo extension=libevent.so > /etc/php.d/libevent.ini
 ```
-如果ini文件位置不对，可以通过运行php --ini找到实际加载的ini文件路径
+如果ini文件位置不对，可以通过运行 ```php --ini``` 找到实际加载的ini文件路径
 
 **debian/ubuntu系统**
 
@@ -203,6 +203,6 @@ pecl install channel://pecl.php.net/libevent-0.1.0 //提示libevent installation
 echo extension=libevent.so > /etc/php5/cli/conf.d/libevent.ini
 ```
 
-如果ini文件位置不对，可以通过运行php --ini找到实际加载的ini文件路径
+如果ini文件位置不对，可以通过运行 ```php --ini``` 找到实际加载的ini文件路径
 
 
