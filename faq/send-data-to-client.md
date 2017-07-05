@@ -7,7 +7,7 @@ use Workerman\Worker;
 require_once __DIR__ . '/Workerman/Autoloader.php';
 // 初始化一个worker容器，监听1234端口
 $worker = new Worker('websocket://workerman.net:1234');
-// 进程数设置为1
+// ====这里进程数必须必须必须设置为1====
 $worker->count = 1;
 // 新增加一个属性，用来保存uid到connection的映射(uid是用户id或者客户端唯一标识)
 $worker->uidConnections = array();
@@ -82,6 +82,6 @@ Worker::runAll();
 以上例子可以针对uid推送，虽然是单进程，但是支持个10W在线是没问题的。
 
 
-注意这个例子只能单进程，要支持多进程或者服务器集群的话需要Channel组件完成进程间通讯，开发也非常简单，可以参考[Channel组件集群推送例子](315202)一节。
+注意这个例子只能单进程，也就是$worker->count 必须是1。要支持多进程或者服务器集群的话需要Channel组件完成进程间通讯，开发也非常简单，可以参考[Channel组件集群推送例子](315202)一节。
 
 **如果希望在其它系统中推送消息给客户端，可以参考[在其它项目中推送](315240)一节**
