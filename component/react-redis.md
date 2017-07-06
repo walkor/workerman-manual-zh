@@ -5,6 +5,8 @@
 composer require clue/redis-react
 ```
 
+注意：此组件为试验性质的第三方组件，可能有隐藏的bug，建议使用redis扩展。
+
 ## 示例：
 
 ```php
