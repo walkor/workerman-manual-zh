@@ -50,7 +50,7 @@ pecl install event
 
 3、命令行运行（如果ini文件位置不对，可以通过运行```php --ini```找到实际加载的ini文件路径）
 ```shell
-echo extension=event.so > /etc/php.d/event.ini
+echo extension=event.so > /etc/php.d/30-event.ini
 ```
 
 **debian/ubuntu系统安装**
@@ -71,7 +71,7 @@ pecl install event
 
 3、命令行运行(需要切换到root用户。如果ini文件位置不对，可以通过运行```php --ini```找到实际加载的ini文件路径)
 ```shell
-echo extension=event.so > /etc/php5/cli/conf.d/event.ini
+echo extension=event.so > /etc/php5/cli/conf.d/30-event.ini
 ```
 
 ### mac os 系统安装教程
@@ -100,7 +100,7 @@ pecl install event
 
 3、命令行运行（此步骤是配置event扩展的ini配置，如果ini文件位置不对，可以通过运行```php --ini```找到实际加载的ini文件路径）
 ```shell
-echo extension=event.so > /etc/php.d/event.ini
+echo extension=event.so > /etc/php.d/30-event.ini
 ```
 
 
@@ -132,7 +132,7 @@ pecl install event
 
 3、命令行运行（需要切换到root用户。此步骤是配置Event扩展的ini配置，如果ini文件位置不对，可以通过运行```php --ini```找到实际加载的ini文件路径）
 ```shell
-echo extension=event.so > /etc/php5/cli/conf.d/event.ini
+echo extension=event.so > /etc/php5/cli/conf.d/30-event.ini
 ```
 
 
