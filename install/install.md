@@ -13,6 +13,8 @@ Linux系统可以使用以下脚本测试本机PHP环境是否满足WorkerMan运
 
 上面脚本如果全部显示ok，则代表满足WorkerMan要求，直接到[官网](http://www.workerman.net/)下载例子即可运行。
 
+如果不是全部ok，则参考下面文档安装缺失的扩展即可。
+
 （注意：检测脚本中没有检测event扩展或者libevent扩展，如果业务并发连接数大于1024建议安装event扩展或者libevent扩展，安装方法参照下面说明）
 
 # 已有PHP环境安装缺失扩展
