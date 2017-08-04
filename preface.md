@@ -29,7 +29,7 @@ Workerman的一些应用方向如下：
 利用Workerman将现有业务不同功能单元封装起来，以服务的形式对外提供统一的接口，达到系统松耦合、易维护、高可用、易伸缩。[[示例 workerman-json-rpc](http://www.workerman.net/workerman-jsonrpc)、 [workerman-thrift](http://www.workerman.net/workerman-thrift)]
 
 5、开发一些其它服务器或者中间件
-例如 [GatewayWorker](http://www.workerman.net/gatewaydoc/)，[PHPSocket.IO](http://www.workerman.net/phpsocket_io)，[http代理](https://github.com/walkor/php-http-proxy)，[sock5代理](https://github.com/walkor/php-socks5)，[分布式通讯组件](https://github.com/walkor/Channel)，[分布式变量共享组件](https://github.com/walkor/GlobalData)，[消息队列](https://github.com/walkor/workerman-queue)，[异步MySQL组件](315213)，[异步redis组件](315215)，[异步http组件](315217)，[异步消息队列组件](315219)，[异步dns组件](315930)，[文件监控组件](315203)，还有很多第三方开发的组件框架等等
+例如 [GatewayWorker](http://doc2.workerman.net)，[PHPSocket.IO](http://www.workerman.net/phpsocket_io)，[http代理](https://github.com/walkor/php-http-proxy)，[sock5代理](https://github.com/walkor/php-socks5)，[分布式通讯组件](https://github.com/walkor/Channel)，[分布式变量共享组件](https://github.com/walkor/GlobalData)，[消息队列](https://github.com/walkor/workerman-queue)，[异步MySQL组件](315213)，[异步redis组件](315215)，[异步http组件](315217)，[异步消息队列组件](315219)，[异步dns组件](315930)，[文件监控组件](315203)，还有很多第三方开发的组件框架等等
 
 显然传统的mvc框架很难实现以上的功能，所以也就是workerman诞生的原因。
 
