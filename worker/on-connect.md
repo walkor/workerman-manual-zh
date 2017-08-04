@@ -6,13 +6,13 @@ callback Worker::$onConnect
 
 当客户端与Workerman建立链接时(TCP三次握手完成后)触发的回调函数。每个连接只会触发一次```onConnect```回调。
 
-注意：onConnect事件仅仅代表客户端与Workerman完成了TCP三次握手，这时客户端还没有发来任何数据，此时除了通过```$connection->getRemoteIp()```获得对方ip，没有其他可以鉴别客户端的数据或者信息，所以在onConnect事件里无法确认对方是谁。要想知道对方是谁，需要客户端发送鉴权数据，例如某个token或者用户名密码之类，在[onMessage回调](/315159)里做鉴权。
+注意：onConnect事件仅仅代表客户端与Workerman完成了TCP三次握手，这时客户端还没有发来任何数据，此时除了通过```$connection->getRemoteIp()```获得对方ip，没有其他可以鉴别客户端的数据或者信息，所以在onConnect事件里无法确认对方是谁。要想知道对方是谁，需要客户端发送鉴权数据，例如某个token或者用户名密码之类，在[onMessage回调](315159)里做鉴权。
 
 ## 回调函数的参数
 
  ``` $connection ```
 
-连接对象，即[TcpConnection实例](http://doc.workerman.net/315157)，用于操作客户端链接，如[发送数据](http://doc.workerman.net/315165)，[关闭链接](http://doc.workerman.net/315168)等
+连接对象，即[TcpConnection实例](315157)，用于操作客户端链接，如[发送数据](315165)，[关闭链接](315168)等
 
 
 ## 范例
@@ -29,4 +29,4 @@ $worker->onConnect = function($connection)
 // 运行worker
 Worker::runAll();
 ```
-提示：除了使用匿名函数作为回调，还可以[参考这里](/370558)使用其它回调写法。
+提示：除了使用匿名函数作为回调，还可以[参考这里](370558)使用其它回调写法。
