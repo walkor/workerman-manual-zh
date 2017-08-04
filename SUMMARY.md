@@ -152,6 +152,7 @@
     * [创建https服务](faq/secure-http-server.md)
     * [workerman作为客户端](faq/use-workerman-as-client-side.md)
     * [作为ws/wss客户端](faq/as-wss-client.md)
+    * [PHP的几种回调写法](callback_methods.md)
 * [附录](appendices.md)
     * [Linux内核调优](appendices/kernel-optimization.md)
     * [压力测试](appendices/stress-test.md)
