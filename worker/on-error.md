@@ -49,3 +49,4 @@ $worker->onError = function($connection, $code, $msg)
 // 运行worker
 Worker::runAll();
 ```
+提示：除了使用匿名函数作为回调，还可以[参考这里](/370558)使用其它回调写法。

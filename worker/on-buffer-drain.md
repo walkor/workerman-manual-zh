@@ -35,6 +35,8 @@ $worker->onBufferDrain = function($connection)
 // 运行worker
 Worker::runAll();
 ```
+提示：除了使用匿名函数作为回调，还可以[参考这里](/370558)使用其它回调写法。
 
 ## 参见
 onBufferFull 当连接的应用层发送缓冲区满时触发
+
