@@ -78,7 +78,7 @@
 * [Timer定时器类](timer.md)
     * [add](timer/add.md)
     * [del](timer/del.md)
-    * [注意事项](timer/notice.md)
+    * [定时器注意事项](timer/notice.md)
 * [WebServer](web-server.md)
 * [调试](debug.md)
     * [基本调试](debug/base.md)
