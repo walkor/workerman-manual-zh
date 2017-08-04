@@ -19,7 +19,7 @@ callback Worker::$onBufferFull
 
  ``` $connection ```
 
-连接对象，即[TcpConnection实例](http://doc.workerman.net/315157)，用于操作客户端链接，如[发送数据](http://doc.workerman.net/315165)，[关闭链接](http://doc.workerman.net/315168)等
+连接对象，即[TcpConnection实例]315157)，用于操作客户端链接，如[发送数据](315165)，[关闭链接](315168)等
 
 
 ## 范例
@@ -40,4 +40,4 @@ Worker::runAll();
 ## 参见
 onBufferDrain 当连接的应用层发送缓冲区数据全部发送完毕时触发
 
-提示：除了使用匿名函数作为回调，还可以[参考这里](/370558)使用其它回调写法。
+提示：除了使用匿名函数作为回调，还可以[参考这里](370558)使用其它回调写法。
