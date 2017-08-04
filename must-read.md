@@ -12,7 +12,7 @@ workerman本身已经是一个类似apache/nginx的容器，只要[PHP环境OK](
 
 长链接必须加心跳，长链接必须加心跳，长链接必须加心跳，重要的话说三遍。 
 长链接长时间不通讯肯定会被防火墙干掉而断开。不加心跳的长链接应用就等着老板KO你吧。
-[workerman心跳说明](315282)、 [gatewayWorker心跳说明](326139)
+[workerman心跳说明](315282)、 [gatewayWorker心跳说明](http://doc2.workerman.net/326139)
 
 **4、客户端和服务端协议一定要对应才能通讯**
 
