@@ -1,7 +1,7 @@
 # workerman开发者必须知道的几个问题
 **1、workerman不依赖apache或者nginx**
 
-workerman本身已经是一个类似apache/nginx的容器，只要[PHP环境OK](http://doc.workerman.net/315116) workerman就可以运行。
+workerman本身已经是一个类似apache/nginx的容器，只要[PHP环境OK](315116) workerman就可以运行。
 
 **2、workerman是命令行启动的**
 
@@ -12,7 +12,7 @@ workerman本身已经是一个类似apache/nginx的容器，只要[PHP环境OK](
 
 长链接必须加心跳，长链接必须加心跳，长链接必须加心跳，重要的话说三遍。 
 长链接长时间不通讯肯定会被防火墙干掉而断开。不加心跳的长链接应用就等着老板KO你吧。
-[workerman心跳说明](http://doc.workerman.net/315282)、 [gatewayWorker心跳说明](http://doc2.workerman.net/326139)
+[workerman心跳说明](315282)、 [gatewayWorker心跳说明](326139)
 
 **4、客户端和服务端协议一定要对应才能通讯**
 
@@ -44,7 +44,7 @@ workerman是常驻内存的框架，改代码要重启workerman才能看到新�
 
 **9、支持更高并发**
 
-如果业务并发连接数超过1000同时在线，请务必[优化linux内核](http://doc.workerman.net/315302)，并[安装event扩展或者libevent扩展](http://doc.workerman.net/315116)。
+如果业务并发连接数超过1000同时在线，请务必[优化linux内核](315302)，并[安装event扩展或者libevent扩展](315116)。
 
 
 
