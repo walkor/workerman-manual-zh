@@ -15,7 +15,7 @@ TodpoleBusinessWorker 0                4
 TodpoleBusinessWorker 9                1
 WebServer             0                2
 ---------------------------------------PROCESS STATUS-------------------------------------------
-pid     memory  listening                worker_name           connections total_request send_fail throw_exception
+pid     memory  listening                worker_name           connections total_request send_fail timers
 936     2.15M   Websocket://0.0.0.0:8585 TodpoleGateway        13         355            0         0
 937     2.03M   Websocket://0.0.0.0:8585 TodpoleGateway        5          181            0         0
 938     2M      Websocket://0.0.0.0:8585 TodpoleGateway        4          171            0         0
@@ -77,7 +77,7 @@ total_request：表示该进程从启动到现在一共接收了多少个请求�
 
 send_fail：该进程向客户端发送数据失败次数，失败原因一般为客户端连接断开，此项不为0一般属于正常状态，参见[手册常见问题send_fail原因](315284)
 
-throw_exception：该进程内业务未捕获的异常数量
+timers：该进程活动的定时器数量（不包括被删除的定时器以及已经运行过的一次性定时器）。注意：这个统计需要workerman版本>=3.4.7才支持
 
 ## 原理
 status脚本运行后，主进程会向所有worker进程发送一个```SIGUSR2```信号，随后status脚本进入100毫秒的睡眠阶段，以便等待各个worker进程状态统计结果。这时空闲的worker进程收到```SIGUSR2```信号后会立刻向特定的磁盘文件写入自己的运行状态（连接数、请求数等等），而正在处理业务逻辑的worker进程，则会等待业务逻辑处理完毕才会去写入自己的状态信息。sleep100毫秒后，status脚本开始读取磁盘中的状态文件，并展示结果到控制台。
