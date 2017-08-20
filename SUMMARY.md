@@ -118,7 +118,7 @@
         * [react/child-process](components/react-child-process.md)
 * [常见问题](faq.md)
     * [心跳](faq/heartbeat.md)
-    * [客户端链接失败原因](client-connect-fail.md)
+    * [客户端连接失败原因](client-connect-fail.md)
     * [是否支持多线程](faq/about-multi-thread.md)
     * [与其它框架整合](faq/work-with-other-framework.md)
     * [运行多个workerman](faq/running-concurent.md)
