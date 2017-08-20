@@ -13,7 +13,7 @@ require_once __DIR__ . '/../Workerman/Autoloader.php';
 
     $worker = new Worker('websocket://0.0.0.0:1234');
     $worker->count = 8;
-    // 全局群组到链接的映射数组
+    // 全局群组到连接的映射数组
     $group_con_map = array();
     $worker->onWorkerStart = function(){
         // Channel客户端连接到Channel服务端
@@ -40,12 +40,12 @@ require_once __DIR__ . '/../Workerman/Autoloader.php';
         $cmd = $data['cmd'];
         $group_id = $data['group_id'];
         switch($cmd) {
-            // 链接加入群组
+            // 连接加入群组
             case "add_group":
                 global $group_con_map;
-                // 将链接加入到对应的群组数组里
+                // 将连接加入到对应的群组数组里
                 $group_con_map[$group_id][$con->id] = $con;
-                // 记录这个链接加入了哪些群组，方便在onclose的时候清理group_con_map对应群组的数据
+                // 记录这个连接加入了哪些群组，方便在onclose的时候清理group_con_map对应群组的数据
                 $con->group_id = isset($con->group_id) ? $con->group_id : array();
                 $con->group_id[$group_id] = $group_id;
                 break;
@@ -59,10 +59,10 @@ require_once __DIR__ . '/../Workerman/Autoloader.php';
                 break;
         }
     };
-    // 这里很重要，链接关闭时把链接从全局群组数据中删除，避免内存泄漏
+    // 这里很重要，连接关闭时把连接从全局群组数据中删除，避免内存泄漏
     $worker->onClose = function($con){
         global $group_con_map;
-        // 遍历链接加入的所有群组，从group_con_map删除对应的数据
+        // 遍历连接加入的所有群组，从group_con_map删除对应的数据
         if (isset($con->group_id)) {
             foreach ($con->group_id as $group_id) {
                 unset($group_con_map[$group_id][$con->id]);

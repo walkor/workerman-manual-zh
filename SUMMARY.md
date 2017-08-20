@@ -146,7 +146,7 @@
     * [如何广播数据](faq/how-to-broadcast.md)
     * [如何建立udp服务](faq/how-to-create-udp-service.md)
     * [监听ipv6](faq/ipv6.md)
-    * [关闭未认证的链接](faq/close-unauthed-connections.md)
+    * [关闭未认证的连接](faq/close-unauthed-connections.md)
     * [传输加密-ssl/tsl](faq/ssl-support.md)
     * [创建wss服务](faq/secure-websocket-server.md)
     * [创建https服务](faq/secure-http-server.md)

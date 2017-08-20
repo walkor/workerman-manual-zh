@@ -41,7 +41,7 @@ $worker = new Worker('websocket://0.0.0.0:8080');
 
 $worker->onMessage = function($ws_connection, $message)
 {
-    // 与远程task服务建立异步链接，ip为远程task服务的ip，如果是本机就是127.0.0.1，如果是集群就是lvs的ip
+    // 与远程task服务建立异步连接，ip为远程task服务的ip，如果是本机就是127.0.0.1，如果是集群就是lvs的ip
     $task_connection = new AsyncTcpConnection('Text://127.0.0.1:12345');
     // 任务及参数数据
     $task_data = array(
@@ -55,12 +55,12 @@ $worker->onMessage = function($ws_connection, $message)
     {
          // 结果
          var_dump($task_result);
-         // 获得结果后记得关闭异步链接
+         // 获得结果后记得关闭异步连接
          $task_connection->close();
          // 通知对应的websocket客户端任务完成
          $ws_connection->send('task complete');
     };
-    // 执行异步链接
+    // 执行异步连接
     $task_connection->connect();
 }
 

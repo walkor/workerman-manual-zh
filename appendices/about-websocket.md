@@ -18,7 +18,7 @@ $ws->onConnect = function($connection)
     $connection->onWebSocketConnect = function($connection , $http_header)
     {
         // 可以在这里判断连接来源是否合法，不合法就关掉连接
-        // $_SERVER['HTTP_ORIGIN']标识来自哪个站点的页面发起的websocket链接
+        // $_SERVER['HTTP_ORIGIN']标识来自哪个站点的页面发起的websocket连接
         if($_SERVER['HTTP_ORIGIN'] != 'http://chat.workerman.net')
         {
             $connection->close();

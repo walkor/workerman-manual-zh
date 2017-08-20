@@ -30,7 +30,7 @@ $global_uid = 0;
 function handle_connection($connection)
 {
     global $text_worker, $global_uid;
-    // 为这个链接分配一个uid
+    // 为这个连接分配一个uid
     $connection->uid = ++$global_uid;
 }
 

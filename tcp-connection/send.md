@@ -18,7 +18,7 @@ mixed Connection::send(mixed $data [,$raw = false])
 
 ## 返回值
 
-true 表示数据已经成功写入到该链接的操作系统层的socket发送缓冲区
+true 表示数据已经成功写入到该连接的操作系统层的socket发送缓冲区
 
 null 表示数据已经写入到该连接的应用层发送缓冲区，等待向系统层socket发送缓冲区写入
 
