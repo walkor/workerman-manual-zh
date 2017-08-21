@@ -34,7 +34,7 @@ Linux系统可以使用以下脚本测试本机PHP环境是否满足WorkerMan运
 ## 安装event或者libevent扩展：
 为了能支持更大的并发连接数，建议安装event扩展或者libevent扩展(二者作用相同，二选一即可)。以Event为例，安装方法如下:
 
-**centos系统安装**
+**centos系统**
 
 1、安装event扩展依赖的libevent-devel包，命令行运行
 ```shell
@@ -76,7 +76,7 @@ pecl install event
 echo extension=event.so > /etc/php5/cli/conf.d/30-event.ini
 ```
 
-### mac os 系统安装教程
+**mac os 系统安装教程**
 
 mac 系统一般作为开发机，不必安装event扩展。
 
