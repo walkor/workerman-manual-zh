@@ -81,9 +81,9 @@ echo extension=event.so > /etc/php5/cli/conf.d/30-event.ini
 mac 系统一般作为开发机，不必安装event扩展。
 
 
-## 全新系统安装（全新安装PHP+扩展）
+# 全新系统安装（全新安装PHP+扩展）
 
-### centos系统安装教程
+## centos系统安装教程
 
 1、命令行运行（此步骤包含了安装php-cli主程序以及pcntl、posix、libevent库及git程序）
 ```shell
@@ -115,7 +115,7 @@ git clone https://github.com/walkor/Workerman
 或者从[官网](http://www.workerman.net/)下载打包好的demo运行。
 
 
-### debian/ubuntu系统安装教程
+## debian/ubuntu系统安装教程
 
 1、命令行运行（此步骤包含了安装php-cli主程序、libevent库及git程序）
 ```shell
@@ -146,7 +146,7 @@ git clone https://github.com/walkor/Workerman
 5、参考[入门指引--简单开发实例部分](315113)写入口文件运行。<br>
 或者从[官网](http://www.workerman.net/)下载打包好的demo运行。
 
-### mac os 系统安装教程
+## mac os 系统安装教程
 **方法1：** mac系统自带PHP Cli，但是可能缺少```pcntl```扩展。
 
 1、参考手册[附录-安装扩展](315304)一节中方法三源码编译安装```pcntl```扩展。
@@ -175,12 +175,12 @@ brew install php70-event
 4、到[官网](http://www.workerman.net/)下载例子运行
 
 
-## Event扩展说明
+# Event扩展说明
 [Event扩展](http://php.net/manual/zh/book.event.php)不是必须的，当业务需要支撑大于1000的并发连接时，推荐安装Event，能够支持巨大的并发连接。如果业务并发连接比较低，例如1000以下并发连接，则可以不用安装。
 
 如果无法安装[Event扩展](http://php.net/manual/zh/book.event.php)，可以用[libevent扩展](http://php.net/manual/zh/book.libevent.php)代替，注意目前libevent扩展不支持php7，php7用户只能使用Event扩展。
 
-### 安装libevnet扩展方法如下：
+## 安装libevnet扩展方法如下：
 
 **注意：**
 1、libevnet扩展也同样依赖libevent库，所以首先需要安装libevent-devel包(并非扩展)。
