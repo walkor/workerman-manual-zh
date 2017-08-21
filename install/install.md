@@ -147,7 +147,7 @@ git clone https://github.com/walkor/Workerman
 或者从[官网](http://www.workerman.net/)下载打包好的demo运行。
 
 ### mac os 系统安装教程
-**方法1：**mac系统自带PHP Cli，但是可能缺少```pcntl```扩展。
+**方法1：** mac系统自带PHP Cli，但是可能缺少```pcntl```扩展。
 
 1、参考手册[附录-安装扩展](315304)一节中方法三源码编译安装```pcntl```扩展。
 
@@ -155,7 +155,7 @@ git clone https://github.com/walkor/Workerman
 
 3、通过http://www.workerman.net/download/workermanzip 下载WorkerMan主程序，或者到[官网](http://www.workerman.net/)下载例子运行。
 
-**方法2：**通过```brew```命令安装php及对应扩展
+**方法2：** 通过```brew```命令安装php及对应扩展
 
 1、命令行运行以下命令安装```brew```工具(如果已经安装过```brew```可以跳过此步骤)
 ```
