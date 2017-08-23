@@ -27,6 +27,9 @@
 
 ### 查看状态
  ```php start.php status```
+ 
+### 查看连接状态（需要Workerman版本>=3.5.0）
+```php start.php connections```
 
 
 
