@@ -5,7 +5,7 @@
 
 ```
 ---------------------------------------GLOBAL STATUS--------------------------------------------
-Workerman version:3.0.3          PHP version:5.3.29-1~dotdeb.0
+Workerman version:3.5.0          PHP version:5.3.29-1~dotdeb.0
 start time:2015-02-21 18:05:47   run 86 days 22 hours
 load average: 0, 0, 0
 3 workers       10 processes
@@ -34,7 +34,7 @@ pid     memory  listening                worker_name           connections total
 
 从这以栏中我们可以看到
 
-WorkerMan的版本```version:3.0.3```
+WorkerMan的版本```version:3.5.0```
 
 启动时间 ```2015-02-21 18:05:47```，运行了```run 86 days 22 hours```
 
