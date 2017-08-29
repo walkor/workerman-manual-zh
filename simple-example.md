@@ -50,8 +50,8 @@ php http_test.php start
 use Workerman\Worker;
 require_once __DIR__ . '/Workerman/Autoloader.php';
 
-// 创建一个Worker监听2346端口，使用websocket协议通讯
-$ws_worker = new Worker("websocket://0.0.0.0:2346");
+// 注意：这里与上个例子不通，使用的是websocket协议
+$ws_worker = new Worker("websocket://0.0.0.0:2000");
 
 // 启动4个进程对外提供服务
 $ws_worker->count = 4;
@@ -79,7 +79,7 @@ php ws_test.php start
 
 ```javascript
 // 假设服务端ip为127.0.0.1
-ws = new WebSocket("ws://127.0.0.1:2346");
+ws = new WebSocket("ws://127.0.0.1:2000");
 ws.onopen = function() {
     alert("连接成功");
     ws.send('tom');
