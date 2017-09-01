@@ -116,6 +116,7 @@
         * [react/dns](components/react-dns.md)
     * [进程控制组件](components/process.md)
         * [react/child-process](components/react-child-process.md)
+    * [memcache](memcache.md)
 * [常见问题](faq.md)
     * [心跳](faq/heartbeat.md)
     * [客户端连接失败原因](client-connect-fail.md)
