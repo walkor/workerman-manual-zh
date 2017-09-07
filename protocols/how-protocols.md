@@ -23,6 +23,14 @@
 
 2、实现JsonNL类，以```namespace Protocols;```为命名空间，必须实现三个静态方法分别为 input、encode、decode
 
+注意：workerman会自动调用这三个静态方法，用来实现分包、解包、打包。具体流程参考下面执行流程说明。
+
+### workerman与协议类交互流程
+1、假设客户端发送一个数据包给服务端，服务端收到数据(可能是部分数据)后会立刻调用协议的```input```方法，用来检测这包的长度，```input```方法返回长度值```$length```给workerman框架。
+2、workerman框架得到这个```$length```值后判断当前数据缓冲区中是否已经接收到```$length```长度的数据，如果没有就会继续等待数据，直到缓冲区中的数据长度不小于```$length```。
+4、缓冲区的数据长度足够后，workerman就将```$length```长度的数据从缓冲区截取出来(即**分包**)，并调用协议的```decode```方法**解包**，解包后的数据为```$data```。
+3、解包后workerman将数据```$data```以回调```onMessage($connection, $data)```的形式传递给业务，业务在onMessage里就可以使用```$data```变量得到客户端发来的完整并且已经解包的数据了。
+4、当```onMessage```里业务需要通过调用```$connection->send($buffer)```方法给客户端发送数据时，workerman会自动利用协议的```encode```方法将```$buffer```**打包**后再发给客户端。
 
 ### 具体实现
 
