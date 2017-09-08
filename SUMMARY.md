@@ -82,7 +82,7 @@
 * [WebServer](web-server.md)
 * [调试](debug.md)
     * [基本调试](debug/base.md)
-    * [查看运行状态](debug/status.md)
+    * [status命令查看运行状态](debug/status.md)
     * [网络抓包](debug/tcpdump.md)
     * [跟踪系统调用](debug/strace.md)
 * [常用组件](components.md)
