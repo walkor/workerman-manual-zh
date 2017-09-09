@@ -190,7 +190,7 @@ brew install php70-event
 
 **centos系统**
 
-```
+```shell
 yum install libevent-devel
 pecl install channel://pecl.php.net/libevent-0.1.0 //提示libevent installation [autodetect]: 时按回车
 echo extension=libevent.so > /etc/php.d/libevent.ini
@@ -199,7 +199,7 @@ echo extension=libevent.so > /etc/php.d/libevent.ini
 
 **debian/ubuntu系统**
 
-```
+```shell
 apt-get install libevent-dev
 pecl install channel://pecl.php.net/libevent-0.1.0 //提示libevent installation [autodetect]: 时按回车
 echo extension=libevent.so > /etc/php5/cli/conf.d/libevent.ini
