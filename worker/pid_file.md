@@ -12,6 +12,8 @@ static string Worker::$pidFile
 
 如果不设置，WorkerMan默认会在与Workerman目录平行的位置（注意workerman3.2.3之前版本默认在```sys_get_temp_dir()```下）自动生成一个pid文件，并且为了避免启动多个WorkerMan实例导致pid冲突，WorkerMan生成pid文件包含了当前WorkerMan的路径
 
+注意：此属性必须在```Worker::runAll();```运行前设置才有效。
+
 
 ## 范例
 
