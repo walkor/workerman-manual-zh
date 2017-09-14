@@ -10,7 +10,7 @@ workerman可以作为客户端通过ws协议发起websocket连接，连到远程
 $worker = new Worker('ws://0.0.0.0:8080');
 ```
 
-如果想workerman作为websocket服务端，请使用[websocket协议](/appendices/about-websocket.html)。
+如果想workerman作为websocket服务端，请使用[websocket协议](315305)。
 
 **ws作为websocket客户端协议示例：**
 ```php
