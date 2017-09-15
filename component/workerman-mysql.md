@@ -65,7 +65,7 @@ require_once '/your/path/of/mysql-master/src/Connection.php';
 
 
 ## 注意
-强烈建议在onWorkerStart回调中初始化数据库连接，避免在```Worker::runAll();```运行前就初始化连接，在```Worker::runAll();```运行前初始化的连接属于主进程，子进程会继承这个连接，主进程和子进程共用相同的数据库连接会导致的错误。
+强烈建议在onWorkerStart回调中初始化数据库连接，避免在```Worker::runAll();```运行前就初始化连接，在```Worker::runAll();```运行前初始化的连接属于主进程，子进程会继承这个连接，主进程和子进程共用相同的数据库连接会导致错误。
 
 ## 示例
 ```php
