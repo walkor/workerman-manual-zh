@@ -18,7 +18,7 @@
 
 **基于GatewayWorker参考下面连接**
 
-[在其它项目中通过GatewayWorker推送](http://www.workerman.net/gatewaydoc/advanced/push.html)(支持多进程/服务器集群，支持分组、组播、单个发送)
+[在其它项目中通过GatewayWorker推送](http://doc2.workerman.net/326107)(支持多进程/服务器集群，支持分组、组播、单个发送)
 
 
 **基于PHPSocket.IO参考下面连接**
