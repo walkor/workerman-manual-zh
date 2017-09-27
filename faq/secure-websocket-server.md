@@ -37,7 +37,7 @@ $context = array(
         'verify_peer' => false,
     )
 );
-// 这里设置的是websocket协议
+// 这里设置的是websocket协议（端口任意，但是需要保证没被其它程序占用）
 $worker = new Worker('websocket://0.0.0.0:4431', $context);
 // 设置transport开启ssl，websocket+ssl即wss
 $worker->transport = 'ssl';
