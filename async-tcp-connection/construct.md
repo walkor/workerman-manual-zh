@@ -142,7 +142,7 @@ $worker->onWorkerStart = function($worker){
         )
     );
 
-    // ssl需要访问443端口
+    // 发起异步连接
     $con = new AsyncTcpConnection('ws://echo.websocket.org:443', $context_option);
 
     // 设置以ssl加密方式访问
