@@ -19,7 +19,7 @@ wss协议实际是[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http:
 
 2、PHP安装了openssl扩展
 
-3、已经申请了证书（pem/crt文件及key文件）放在了/etc/nginx/conf.d/ssl下
+3、已经申请了证书（pem/crt文件及key文件）放在了/etc/ssl下（路径随意）
 
 **代码：**
 
@@ -32,8 +32,8 @@ use Workerman\Worker;
 $context = array(
     'ssl' => array(
         // 使用绝对路径
-        'local_cert'  => '/etc/nginx/conf.d/ssl/server.pem', // 也可以是crt文件
-        'local_pk'    => '/etc/nginx/conf.d/ssl/server.key',
+        'local_cert'  => '/etc/ssl/server.pem', // 也可以是crt文件
+        'local_pk'    => '/etc/ssl/server.key',
         'verify_peer' => false,
     )
 );
@@ -111,8 +111,8 @@ server {
   listen 4431;
 
   ssl on;
-  ssl_certificate /etc/nginx/conf.d/ssl/server.pem;
-  ssl_certificate_key /etc/nginx/conf.d/ssl/laychat/server.key;
+  ssl_certificate /etc/ssl/server.pem;
+  ssl_certificate_key /etc/ssl/server.key;
   ssl_session_timeout 5m;
   ssl_session_cache shared:SSL:50m;
   ssl_protocols SSLv3 SSLv2 TLSv1 TLSv1.1 TLSv1.2;
