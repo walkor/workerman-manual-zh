@@ -130,8 +130,8 @@ $db->single("SELECT ID,Sex FROM `Persons` WHERE sex='M'");
 $db->select('*')->from('table1')->innerJoin('table2','table1.uid = table2.uid')->where('age > :age')->groupBy(array('aid'))->having('foo="foo"')->orderByASC/*orderByDESC*/(array('did'))
 ->limit(10)->offset(20)->bindValues(array('age' => 13));
 // 等价于
-$db->query(SELECT * FROM `table1` INNER JOIN `table2` ON `table1`.`uid` = `table2`.`uid`
-WHERE age > 13 GROUP BY aid HAVING foo="foo" ORDER BY did LIMIT 10 OFFSET 20“);
+$db->query("SELECT * FROM `table1` INNER JOIN `table2` ON `table1`.`uid` = `table2`.`uid`
+WHERE age > 13 GROUP BY aid HAVING foo="foo" ORDER BY did LIMIT 10 OFFSET 20");
 
 // 插入
 $insert_id = $db->insert('Persons')->cols(array(
