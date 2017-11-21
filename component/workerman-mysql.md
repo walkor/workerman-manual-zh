@@ -78,7 +78,7 @@ $worker->onWorkerStart = function($worker)
 {
     // 将db实例存储在全局变量中(也可以存储在某类的静态成员中)
     global $db;
-    $db = new Workerman\MySQL\Connection('host', 'port', 'user', 'password', 'db_name');
+    $db = new \Workerman\MySQL\Connection('host', 'port', 'user', 'password', 'db_name');
 };
 $worker->onMessage = function($connection, $data)
 {
@@ -94,7 +94,7 @@ Worker::runAll();
 ## 具体MySQL/Connection用法
 ```php
 // 初始化db连接
-$db = new Workerman\MySQL\Connection('host', 'port', 'user', 'password', 'db_name');
+$db = new \Workerman\MySQL\Connection('host', 'port', 'user', 'password', 'db_name');
 
 // 获取所有数据
 $db->select('ID,Sex')->from('Persons')->where('sex= :sex AND ID = :id')->bindValues(array('sex'=>'M', 'id' => 1))->query();
