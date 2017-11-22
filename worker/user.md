@@ -9,6 +9,8 @@ string Worker::$user
 
 建议```$user```设置权限较低的用户，例如www-data、apache、nobody等。
 
+注意：此属性必须在```Worker::runAll();```运行前设置才有效。windows系统不支持此特性。
+
 
 ## 范例
 
