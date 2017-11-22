@@ -8,7 +8,7 @@ static string Worker::$stdoutFile
 
 如果不设置，并且是以守护进程方式运行，则所有终端输出全部重定向到```/dev/null```
 
-注意：此属性必须在```Worker::runAll();```运行前设置才有效。
+注意：此属性必须在```Worker::runAll();```运行前设置才有效。windows系统不支持此特性。
 
 ## 范例
 
