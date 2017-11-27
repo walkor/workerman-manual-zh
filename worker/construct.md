@@ -9,7 +9,7 @@ Worker::__construct([string $listen , array $context])
 
 
 ## 参数
-#### **``` $listen ```**
+#### **``` $listen ```** （可选参数，不填写表示不监听任何端口）
 
 
 
