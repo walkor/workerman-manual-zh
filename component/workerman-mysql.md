@@ -120,11 +120,11 @@ $db->select('ID')->from('Persons')->where("sex= 'F' ")->column();
 $db->column("SELECT `ID` FROM `Persons` WHERE sex='M'");
 
 // 获取单个值
-$db->select('ID,Sex')->from('Persons')->where('sex= :sex')->bindValues(array('sex'=>'M'))->single();
+$db->select('ID')->from('Persons')->where('sex= :sex')->bindValues(array('sex'=>'M'))->single();
 //等价于
-$db->select('ID,Sex')->from('Persons')->where("sex= 'F' ")->single();
+$db->select('ID')->from('Persons')->where("sex= 'F' ")->single();
 //等价于
-$db->single("SELECT ID,Sex FROM `Persons` WHERE sex='M'");
+$db->single("SELECT ID FROM `Persons` WHERE sex='M'");
 
 // 复杂查询
 $db->select('*')->from('table1')->innerJoin('table2','table1.uid = table2.uid')->where('age > :age')->groupBy(array('aid'))->having('foo="foo"')->orderByASC/*orderByDESC*/(array('did'))
