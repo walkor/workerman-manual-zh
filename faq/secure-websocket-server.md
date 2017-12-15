@@ -32,8 +32,8 @@ use Workerman\Worker;
 $context = array(
     'ssl' => array(
         // 使用绝对路径
-        'local_cert'  => '/etc/ssl/server.pem', // 也可以是crt文件
-        'local_pk'    => '/etc/ssl/server.key',
+        'local_cert'  => '磁盘路径/server.pem', // 也可以是crt文件
+        'local_pk'    => '磁盘路径l/server.key',
         'verify_peer' => false,
     )
 );
