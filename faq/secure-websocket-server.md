@@ -19,7 +19,7 @@ wss协议实际是[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http:
 
 2、PHP安装了openssl扩展
 
-3、已经申请了证书（pem/crt文件及key文件）放在了/etc/ssl下（路径随意）
+3、已经申请了证书（pem/crt文件及key文件）放在磁盘任意目录
 
 **代码：**
 
@@ -33,7 +33,7 @@ $context = array(
     'ssl' => array(
         // 请使用绝对路径
         'local_cert'  => '磁盘路径/server.pem', // 也可以是crt文件
-        'local_pk'    => '磁盘路径l/server.key',
+        'local_pk'    => '磁盘路径/server.key',
         'verify_peer' => false,
     )
 );
