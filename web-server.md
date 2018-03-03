@@ -2,7 +2,7 @@
 
 WorkerMan自带了一个简单的Web服务器，同样也是基于Worker实现的。文件位置在Workerman/WebServer.php。这个WebServer开发的目的主要是为了方便运行一些简单的Web程序，例如workerman-todpole等web界面程序。
 
-注意：WebServer只能用http协议。
+注意：WebServer只能用http和https协议。
 
 ## 使用方法
 
