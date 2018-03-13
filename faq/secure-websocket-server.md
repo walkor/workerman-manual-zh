@@ -30,11 +30,13 @@ use Workerman\Worker;
 
 // 证书最好是申请的证书
 $context = array(
+    // 更多ssl选项请参考手册 http://php.net/manual/zh/context.ssl.php
     'ssl' => array(
         // 请使用绝对路径
-        'local_cert'  => '磁盘路径/server.pem', // 也可以是crt文件
-        'local_pk'    => '磁盘路径/server.key',
-        'verify_peer' => false,
+        'local_cert'                 => '磁盘路径/server.pem', // 也可以是crt文件
+        'local_pk'                   => '磁盘路径/server.key',
+        'verify_peer'               => false,
+        // 'allow_self_signed' => true, //如果是自签名证书需要开启此选项
     )
 );
 // 这里设置的是websocket协议（端口任意，但是需要保证没被其它程序占用）
@@ -77,12 +79,14 @@ ws.onmessage = function(e) {
 
 4、微信小程序要求PHP版本>=5.6，因为PHP5.6以下版本不支持tls1.2。
 
+5、微信小程序只能监听443端口，如果有apache/nginx占用了443，则workerman无法再次监听443端口，可以考虑用apache/nginx代理wss转发给workerman，参考[作为微信小程序后端](546032)。
+
 
 
 
 ## 方法二、利用nginx作为SSL的代理
 
-除了用Workerman自身的SSL，也可以利用nginx作为SSL代理实现wss（注意如使用nginx代理SSL，则workerman部分不要设置ssl，避免会冲突）。
+除了用Workerman自身的SSL，也可以利用nginx作为SSL代理实现wss（注意如使用nginx代理SSL，则workerman部分千万不要设置ssl，否则将无法连接）。
 
 通讯原理及流程是：
 
@@ -182,7 +186,3 @@ $gateway->onConnect = function($connection)
 
 这样就可以在Events.php中通过```$_SESSION['realIP']```得到客户端的真实ip了
 
-
-**微信小程序须知：**
-微信小程序只能使用443端口，如果是微信小程序请将例子中4431改成443。
-如果443端口被占用(表现为workerman失败)，说明这台服务器有nginx/apache占用了443端口。解决办法是用nginx/apache代理wss转发给workerman。nginx站点增加wss代理参考[workerman小程序nginx配置HTTPS WSS](http://wenda.workerman.net/?/question/1485)，apache站点增加wss代理参考这里[小程序与GatewayWorker建立连接及 apache 配置 wss 转发](http://wenda.workerman.net/?/article/24)。
