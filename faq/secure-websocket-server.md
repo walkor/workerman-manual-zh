@@ -35,7 +35,7 @@ $context = array(
         // 请使用绝对路径
         'local_cert'                 => '磁盘路径/server.pem', // 也可以是crt文件
         'local_pk'                   => '磁盘路径/server.key',
-        'verify_peer'               => false,
+        'verify_peer'                => false,
         // 'allow_self_signed' => true, //如果是自签名证书需要开启此选项
     )
 );
