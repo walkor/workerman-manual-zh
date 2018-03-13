@@ -58,6 +58,7 @@ Worker::runAll();
 
 ```javascript
 // 证书是会检查域名的，请使用域名连接
+// 如果服务端监听443端口，则可省略端口这样连接ws = new WebSocket("wss://域名");
 ws = new WebSocket("wss://域名:4431");
 ws.onopen = function() {
     alert("连接成功");
@@ -82,8 +83,6 @@ ws.onmessage = function(e) {
 5、微信小程序只能监听443端口，如果有apache/nginx占用了443，则workerman无法再次监听443端口，可以考虑用apache/nginx代理wss转发给workerman，参考[作为微信小程序后端](546032)。
 
 
-
-
 ## 方法二、利用nginx作为SSL的代理
 
 除了用Workerman自身的SSL，也可以利用nginx作为SSL代理实现wss（注意如使用nginx代理SSL，则workerman部分千万不要设置ssl，否则将无法连接）。
@@ -106,13 +105,14 @@ ws.onmessage = function(e) {
 
 2、已经申请了证书（pem/crt文件及key文件）放在了/etc/nginx/conf.d/ssl下
 
-3、打算利用nginx开启4431端口对外提供wss代理服务（端口可以根据需要修改）
+3、打算利用nginx开启443端口对外提供wss代理服务（端口可以根据需要修改）
+
+4、nginx一般作为网站服务器运行着其它服务，为了不影响原来的站点使用，这里使用路径 http://域名/wss 作为wss的代理入口。也就是客户端连接地址为 wss://域名/wss
 
 **nginx配置类似如下**：
-
 ```
 server {
-  listen 4431;
+  listen 443;
 
   ssl on;
   ssl_certificate /etc/ssl/server.pem;
@@ -122,7 +122,7 @@ server {
   ssl_protocols SSLv3 SSLv2 TLSv1 TLSv1.1 TLSv1.2;
   ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
 
-  location /
+  location /wss
   {
     proxy_pass http://127.0.0.1:8282;
     proxy_http_version 1.1;
@@ -130,7 +130,23 @@ server {
     proxy_set_header Connection "Upgrade";
     proxy_set_header X-Real-IP $remote_addr;
   }
+  
+  # location / {} 站点的其它配置...
 }
+```
+**测试**
+```javascript
+// 证书是会检查域名的，请使用域名连接
+ws = new WebSocket("wss://域名/wss");
+
+ws.onopen = function() {
+    alert("连接成功");
+    ws.send('tom');
+    alert("给服务端发送一个字符串：tom");
+};
+ws.onmessage = function(e) {
+    alert("收到服务端的消息：" + e.data);
+};
 ```
 
 ## 透过nginx wss代理如何获取客户端真实ip ?
@@ -186,3 +202,64 @@ $gateway->onConnect = function($connection)
 
 这样就可以在Events.php中通过```$_SESSION['realIP']```得到客户端的真实ip了
 
+
+## apache代理wss
+
+apache代理wss参考以下配置
+
+准备工作：
+1、GatewayWorker 监听 8282 端口(websocket协议)
+2、已经申请了ssl证书, 放在了/server/httpd/cert/ 下
+3、利用apache转发443端口至指定端口
+4、httpd-ssl.conf 已加载
+5、openssl 已安装
+
+启用 proxy_wstunnel_module 模块
+```
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_wstunnel_module modules/mod_proxy_wstunnel.so
+```
+
+配置SSL及代理
+
+```
+#extra/httpd-ssl.conf
+DocumentRoot "/网站/目录"
+ServerName 域名
+
+# Proxy Config
+SSLProxyEngine on
+
+ProxyRequests Off
+ProxyPass /wss ws://0.0.0.0:8282
+ProxyPassReverse /wss ws://0.0.0.0:8282
+
+# 添加 SSL 协议支持协议,去掉不安全的协议
+SSLProtocol all -SSLv2 -SSLv3
+# 修改加密套件如下
+SSLCipherSuite HIGH:!RC4:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!EXP:+MEDIUM
+SSLHonorCipherOrder on
+# 证书公钥配置
+SSLCertificateFile /server/httpd/cert/your.pem
+# 证书私钥配置
+SSLCertificateKeyFile /server/httpd/cert/your.key
+# 证书链配置,
+SSLCertificateChainFile /server/httpd/cert/chain.pem
+```
+
+**测试**
+```javascript
+// 证书是会检查域名的，请使用域名连接
+ws = new WebSocket("wss://域名/wss");
+
+ws.onopen = function() {
+    alert("连接成功");
+    ws.send('tom');
+    alert("给服务端发送一个字符串：tom");
+};
+ws.onmessage = function(e) {
+    alert("收到服务端的消息：" + e.data);
+};
+
+相关文章：
+[微信小程序 - websocket wss]https://sevming.github.io/Php/wxapp-websocket.html
