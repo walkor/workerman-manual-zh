@@ -10,8 +10,8 @@ Workerman如何创建一个wss服务，使得客户端可以用过wss协来连�
 wss协议实际是[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http://baike.baidu.com/item/ssl)，就是在websocket协议上加入[SSL](http://baike.baidu.com/item/ssl)层，类似[https](http://baike.baidu.com/item/https)([http](http://baike.baidu.com/item/http)+[SSL](http://baike.baidu.com/item/ssl))。Workerman支持[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http://baike.baidu.com/item/ssl)协议，同时也支持[SSL](http://baike.baidu.com/item/ssl)(```需要Workerman版本>=3.3.7```)，
 所以只需要在[websocket](http://baike.baidu.com/item/WebSocket)协议的基础上开启[SSL](http://baike.baidu.com/item/ssl)即可支持wss协议。
 
-## 方法一 ，直接用Workerman开启SSL
 
+## 方法一 ，直接用Workerman开启SSL
 
 **准备工作：**
 
@@ -78,12 +78,12 @@ ws.onmessage = function(e) {
 
 3、如果出现无法访问的情况，请检查服务器防火墙。
 
-4、微信小程序要求PHP版本>=5.6，因为PHP5.6以下版本不支持tls1.2。
+4、此方法要求PHP版本>=5.6，因为微信小程序要求tls1.2，而PHP5.6以下版本不支持tls1.2。
 
-5、微信小程序只能监听443端口，如果有apache/nginx占用了443，则workerman无法再次监听443端口，可以考虑用apache/nginx代理wss转发给workerman，参考[作为微信小程序后端](546032)。
+5、微信小程序只能监听443端口，如果有apache/nginx占用了443，则workerman无法再次监听443端口，可以考虑用apache/nginx代理wss转发给workerman，参考下面方法二 方法三。
 
 
-## 方法二、利用nginx作为SSL的代理
+## 方法二、利用nginx代理wss
 
 除了用Workerman自身的SSL，也可以利用nginx作为SSL代理实现wss（注意如使用nginx代理SSL，则workerman部分千万不要设置ssl，否则将无法连接）。
 
@@ -107,7 +107,7 @@ ws.onmessage = function(e) {
 
 3、打算利用nginx开启443端口对外提供wss代理服务（端口可以根据需要修改）
 
-4、nginx一般作为网站服务器运行着其它服务，为了不影响原来的站点使用，这里使用路径 http://域名/wss 作为wss的代理入口。也就是客户端连接地址为 wss://域名/wss
+4、nginx一般作为网站服务器运行着其它服务，为了不影响原来的站点使用，这里使用地址 ```域名/wss``` 作为wss的代理入口。也就是客户端连接地址为 wss://域名/wss
 
 **nginx配置类似如下**：
 ```
@@ -203,25 +203,28 @@ $gateway->onConnect = function($connection)
 这样就可以在Events.php中通过```$_SESSION['realIP']```得到客户端的真实ip了
 
 
-## apache代理wss
+## 方法三 利用apache代理wss
 
 apache代理wss参考以下配置
 
 准备工作：
 1、GatewayWorker 监听 8282 端口(websocket协议)
+
 2、已经申请了ssl证书, 放在了/server/httpd/cert/ 下
-3、利用apache转发443端口至指定端口
+
+3、利用apache转发443端口至指定端口8282
+
 4、httpd-ssl.conf 已加载
+
 5、openssl 已安装
 
-启用 proxy_wstunnel_module 模块
+**启用 proxy_wstunnel_module 模块**
 ```
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_wstunnel_module modules/mod_proxy_wstunnel.so
 ```
 
-配置SSL及代理
-
+**配置SSL及代理**
 ```
 #extra/httpd-ssl.conf
 DocumentRoot "/网站/目录"
@@ -260,6 +263,7 @@ ws.onopen = function() {
 ws.onmessage = function(e) {
     alert("收到服务端的消息：" + e.data);
 };
+```
 
 相关文章：
-[微信小程序 - websocket wss]https://sevming.github.io/Php/wxapp-websocket.html
+[微信小程序 - websocket wss](https://sevming.github.io/Php/wxapp-websocket.html)
