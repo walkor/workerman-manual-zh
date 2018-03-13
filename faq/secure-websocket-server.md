@@ -7,7 +7,7 @@ Workerman如何创建一个wss服务，使得客户端可以用过wss协来连�
 
 **答：**
 
-wss协议实际是[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http://baike.baidu.com/item/ssl)，就是在websocket协议上加入[SSL](http://baike.baidu.com/item/ssl)层，类似[https](http://baike.baidu.com/item/https)([http](http://baike.baidu.com/item/http)+[SSL](http://baike.baidu.com/item/ssl))。Workerman支持[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http://baike.baidu.com/item/ssl)协议，同时也支持[SSL](http://baike.baidu.com/item/ssl)(```需要Workerman版本>=3.3.7```)，
+wss协议实际是[websocket](http://baike.baidu.com/item/WebSocket)+[SSL](http://baike.baidu.com/item/ssl)，就是在websocket协议上加入[SSL](http://baike.baidu.com/item/ssl)层，类似[https](http://baike.baidu.com/item/https)([http](http://baike.baidu.com/item/http)+[SSL](http://baike.baidu.com/item/ssl))。
 所以只需要在[websocket](http://baike.baidu.com/item/WebSocket)协议的基础上开启[SSL](http://baike.baidu.com/item/ssl)即可支持wss协议。
 
 
@@ -40,7 +40,7 @@ $context = array(
     )
 );
 // 这里设置的是websocket协议（端口任意，但是需要保证没被其它程序占用）
-$worker = new Worker('websocket://0.0.0.0:4431', $context);
+$worker = new Worker('websocket://0.0.0.0:443', $context);
 // 设置transport开启ssl，websocket+ssl即wss
 $worker->transport = 'ssl';
 $worker->onMessage = function($con, $msg) {
@@ -58,8 +58,7 @@ Worker::runAll();
 
 ```javascript
 // 证书是会检查域名的，请使用域名连接
-// 如果服务端监听443端口，则可省略端口这样连接ws = new WebSocket("wss://域名");
-ws = new WebSocket("wss://域名:4431");
+ws = new WebSocket("wss://域名");
 ws.onopen = function() {
     alert("连接成功");
     ws.send('tom');
@@ -80,22 +79,22 @@ ws.onmessage = function(e) {
 
 4、此方法要求PHP版本>=5.6，因为微信小程序要求tls1.2，而PHP5.6以下版本不支持tls1.2。
 
-5、微信小程序只能监听443端口，如果有apache/nginx占用了443，则workerman无法再次监听443端口，可以考虑用apache/nginx代理wss转发给workerman，参考下面方法二 方法三。
+5、微信小程序要求连接wss时不带端口号，也就是wss端口只能是443。但是443端口一般被nginx/apache占用，此时可以考虑方法二。
 
 
-## 方法二、利用nginx代理wss
+## 方法二、利用nginx/apache代理wss
 
-除了用Workerman自身的SSL，也可以利用nginx作为SSL代理实现wss（注意如使用nginx代理SSL，则workerman部分千万不要设置ssl，否则将无法连接）。
+除了用Workerman自身的SSL，也可以利用nginx/apache作为wss代理转发给workerman（注意此方法workerman部分千万不要设置ssl，否则将无法连接）。
 
 通讯原理及流程是：
 
-1、客户端发起wss连接连到nginx
+1、客户端发起wss连接连到nginx/apache
 
-2、nginx将wss协议的数据转换成ws协议并转发到Workerman的websocket协议端口
+2、nginx/apache将wss协议的数据转换成ws协议数据并转发到Workerman的websocket协议端口
 
 3、Workerman收到数据后做业务逻辑处理
 
-4、Workerman给客户端发送消息时，则是相反的过程，数据经过nginx转换成wss协议然后发给客户端
+4、Workerman给客户端发送消息时，则是相反的过程，数据经过nginx/apache转换成wss协议然后发给客户端
 
 
 ## nginx配置参考
@@ -149,63 +148,9 @@ ws.onmessage = function(e) {
 };
 ```
 
-## 透过nginx wss代理如何获取客户端真实ip ?
-使用nginx作为wss代理，nginx实际上充当了workerman的客户端，所以在workerman上获取的客户端ip为nginx服务器的ip，并非实际的客户端ip。如何获取客户端真实ip可以参考下面的方法。
+## 利用apache代理wss
 
-**原理：**
-
-nginx将客户端真实ip通过http header传递进来，即上面nginx配置中location里的```proxy_set_header X-Real-IP $remote_addr;```设置。workerman通过读取这个header值，将此值保存到```$connection对象里```，(GatewayWorker可以保存到```$_SESSION```变量里)，使用的时候直接读取变量即可。
-
-**workerman从nginx设置的header里读取客户端ip**
-
-```php
-<?php
-require_once __DIR__ . '/../Workerman/Autoloader.php';
-use Workerman\Worker;
-$worker = new Worker('websocket://0.0.0.0:7272');
-
-// 客户端练上来时，即完成TCP三次握手后的回调
-$worker->onConnect = function($connection) {
-   /**
-    * 客户端websocket握手时的回调onWebSocketConnect
-    * 在onWebSocketConnect回调中获得nginx通过http头中的X_REAL_IP值
-    */
-   $connection->onWebSocketConnect = function($connection){
-       /**
-        * connection对象本没有realIP属性，这里给connection对象动态添加个realIP属性
-        * 记住php对象是可以动态添加属性的，你也可以用自己喜欢的属性名
-        */
-       $connection->realIP = $_SERVER['HTTP_X_REAL_IP'];
-   };
-};
-$worker->onMessage = function($connection, $data)
-{
-    // 当使用客户端真实ip时，直接使用$connection->realIP即可
-    $connection->send($connection->realIP);
-};
-Worker::runAll();
-```
-
-**GatewayWorker从nginx设置的header里获取客户端ip**
-
-在start_gateway.php加上下面的代码
-```php
-$gateway->onConnect = function($connection)
-{
-    $connection->onWebSocketConnect = function($connection , $http_header)
-    {
-        $_SESSION['realIP'] = $_SERVER['HTTP_X_REAL_IP'];
-    };
-};
-```
-代码加完后需要重启GatewayWorker。
-
-这样就可以在Events.php中通过```$_SESSION['realIP']```得到客户端的真实ip了
-
-
-## 方法三 利用apache代理wss
-
-apache代理wss参考以下配置
+也可以利用apache作为wss代理转发给workerman（注意如使用apache代理SSL，则workerman部分千万不要设置ssl，否则将无法连接）。
 
 准备工作：
 1、GatewayWorker 监听 8282 端口(websocket协议)
@@ -267,3 +212,56 @@ ws.onmessage = function(e) {
 
 相关文章：
 [微信小程序 - websocket wss](https://sevming.github.io/Php/wxapp-websocket.html)
+
+## 透过nginx wss代理如何获取客户端真实ip ?
+使用nginx作为wss代理，nginx实际上充当了workerman的客户端，所以在workerman上获取的客户端ip为nginx服务器的ip，并非实际的客户端ip。如何获取客户端真实ip可以参考下面的方法。
+
+**原理：**
+
+nginx将客户端真实ip通过http header传递进来，即上面nginx配置中location里的```proxy_set_header X-Real-IP $remote_addr;```设置。workerman通过读取这个header值，将此值保存到```$connection对象里```，(GatewayWorker可以保存到```$_SESSION```变量里)，使用的时候直接读取变量即可。
+
+**workerman从nginx设置的header里读取客户端ip**
+
+```php
+<?php
+require_once __DIR__ . '/../Workerman/Autoloader.php';
+use Workerman\Worker;
+$worker = new Worker('websocket://0.0.0.0:7272');
+
+// 客户端练上来时，即完成TCP三次握手后的回调
+$worker->onConnect = function($connection) {
+   /**
+    * 客户端websocket握手时的回调onWebSocketConnect
+    * 在onWebSocketConnect回调中获得nginx通过http头中的X_REAL_IP值
+    */
+   $connection->onWebSocketConnect = function($connection){
+       /**
+        * connection对象本没有realIP属性，这里给connection对象动态添加个realIP属性
+        * 记住php对象是可以动态添加属性的，你也可以用自己喜欢的属性名
+        */
+       $connection->realIP = $_SERVER['HTTP_X_REAL_IP'];
+   };
+};
+$worker->onMessage = function($connection, $data)
+{
+    // 当使用客户端真实ip时，直接使用$connection->realIP即可
+    $connection->send($connection->realIP);
+};
+Worker::runAll();
+```
+
+**GatewayWorker从nginx设置的header里获取客户端ip**
+
+在start_gateway.php加上下面的代码
+```php
+$gateway->onConnect = function($connection)
+{
+    $connection->onWebSocketConnect = function($connection , $http_header)
+    {
+        $_SESSION['realIP'] = $_SERVER['HTTP_X_REAL_IP'];
+    };
+};
+```
+代码加完后需要重启GatewayWorker。
+
+这样就可以在Events.php中通过```$_SESSION['realIP']```得到客户端的真实ip了
