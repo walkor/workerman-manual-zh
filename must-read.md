@@ -30,9 +30,9 @@ workerman本身已经是一个类似apache/nginx的容器，只要[PHP环境OK](
 4、服务端没启动 
 
 
-**6、不要使用exit die语句**
+**6、不要使用exit die sleep语句**
 
-否则进程会退出，并显示WORKER EXIT UNEXPECTED错误。当然，进程退出了会立刻重启一个新的进程继续服务。如果需要返回，可以调用return。
+业务执行exit die语句会导致进程退出，并显示WORKER EXIT UNEXPECTED错误。当然，进程退出了会立刻重启一个新的进程继续服务。如果需要返回，可以调用return。sleep语句会让进程睡眠，睡眠过程中不会执行任何业务，框架也会停止运行，会导致该进程的所有客户端请求都无法处理。
 
 **7、改代码要重启**
 
