@@ -35,7 +35,7 @@ Soft open files 修改方法：
 
 这只是在当前终端有效，退出之后，open files 又变为默认值。
 
-（2）将ulimit -HSn 102400写到/etc/profile中，这样每次登录终端时，都会自动执行/etc/profile。
+（2）在/etc/profile文件末尾添加一行ulimit -HSn 102400，这样每次登录终端时，都会自动执行/etc/profile。
 
 （3）令修改open files的数值永久生效，则必须修改配置文件：/etc/security/limits.conf. 在这个文件后加上：
 
