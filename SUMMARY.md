@@ -156,6 +156,7 @@
     * [PHP的几种回调写法](callback_methods.md)
     * [微信小程序](weixin-app.md)
     * [透过代理获取客户端真实ip](get-real-ip-from-proxy.md)
+    * [开机启动](start-with-system.md)
 * [附录](appendices.md)
     * [Linux内核调优](appendices/kernel-optimization.md)
     * [压力测试](appendices/stress-test.md)
