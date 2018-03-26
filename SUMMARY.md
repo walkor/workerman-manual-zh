@@ -148,7 +148,7 @@
     * [如何建立udp服务](faq/how-to-create-udp-service.md)
     * [监听ipv6](faq/ipv6.md)
     * [关闭未认证的连接](faq/close-unauthed-connections.md)
-    * [传输加密-ssl/tsl](faq/ssl-support.md)
+    * [传输加密-ssl/tls](faq/ssl-support.md)
     * [创建wss服务](faq/secure-websocket-server.md)
     * [创建https服务](faq/secure-http-server.md)
     * [workerman作为客户端](faq/use-workerman-as-client-side.md)
