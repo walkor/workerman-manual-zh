@@ -26,7 +26,7 @@ Worker::runAll();
 
 **命令行运行（windows用户用 [cmd命令行](http://baike.baidu.com/item/%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6?fromtitle=CMD&fromid=1193011&type=syn)，下同）**
 ```shell
-php http_test.php start
+php http_test.php
 
 ```
 
