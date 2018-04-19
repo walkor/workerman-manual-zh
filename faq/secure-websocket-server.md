@@ -181,8 +181,8 @@ ServerName 域名
 SSLProxyEngine on
 
 ProxyRequests Off
-ProxyPass /wss ws://0.0.0.0:8282
-ProxyPassReverse /wss ws://0.0.0.0:8282
+ProxyPass /wss ws://127.0.0.1:8282
+ProxyPassReverse /wss ws://127.0.0.1:8282
 
 # 添加 SSL 协议支持协议,去掉不安全的协议
 SSLProtocol all -SSLv2 -SSLv3
