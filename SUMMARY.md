@@ -105,6 +105,7 @@
     * [MySQL组件](components/mysql.md)
         * [workerman/mysql](component/workerman-mysql.md)
         * [react/mysql(异步)](components/react-mysql.md)
+        * [其它数据库类](other-mysql-class.md)
     * [redis组件](redis.md)
         * [react/redis](component/react-redis.md)
     * [异步http组件](components/async-http.md)
