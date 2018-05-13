@@ -1,7 +1,7 @@
 # 应该开启多少进程
 
 ## 如何设置进程数
-进程数是由```count```属性决定的，例如下面代码
+进程数是由```count```属性决定的(windows系统不支持进程数设置)，例如下面代码
 ```php
 use Workerman\Worker;
 require_once __DIR__ . '/Workerman/Autoloader.php';
