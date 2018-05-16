@@ -1,5 +1,7 @@
 # AsyncUdpConnection
 
+**(要求workerman>=3.0.8)**
+
 AsyncUdpConnection可以作为udp客户端与远程udp服务端进行通讯。
 
 其实udp是无连接的，但是为了易用性，这里与AsyncTcpConnection命名规则和接口保持基本一致。
