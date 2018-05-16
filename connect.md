@@ -29,6 +29,8 @@ $worker->onWorkerStart = function(){
         $udp_connection->onMessage = function($udp_connection, $data){
             // 收到服务端返回的数据 hello
             echo "recv $data\r\n";
+            // 关闭连接
+            $udp_connection->close();
         };
         $udp_connection->connect();
     }, null, false);
@@ -45,4 +47,3 @@ Worker::runAll();
 ```
 recv hello
 ```
-
