@@ -1,7 +1,7 @@
 # 环境要求
 
 ## Windows用户
-Windows用户只能使用windows版本的Workerman(```Workerman-for-win```)。
+workerman从3.5.3版本开始已经能够同时支持linux系统和windows系统。
 
 1、需要PHP>=5.3.3，并配置好PHP的环境变量。
 
