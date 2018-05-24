@@ -1,6 +1,6 @@
 # 序言
 
-**Workerman，让你看到PHP不为人知的一面。**
+**Workerman，高性能socket服务器框架**
 
 ## Workerman是什么？
 Workerman是一款纯PHP开发的开源高性能的PHP socket 服务框架。
