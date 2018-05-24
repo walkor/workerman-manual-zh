@@ -3,9 +3,10 @@ WorkerMan实际上就是一个PHP代码包，如果你的PHP环境已经装好�
 
 # windows用户（必读）
 
-windows用户需要使用windows版本的workerman，windows版本workerman本身**不依赖任何扩展**，只需要配置好PHP环境变量即可，**windows版本workerman安装及注意事项参见[windows用户必看](http://www.workerman.net/windows)。**
+从workerman3.5.3版已经可以同时支持windows和linux系统。
+windows用户需要配置下php环境变量。[php环境变量设置参见这里。](https://www.workerman.net/windows)
 
- ``` ===本页面以下仅适用于Linux版本workerman，windows用户请忽略=== ```
+ ``` ===本页面以下仅适用于Linux环境workerman，windows用户请忽略=== ```
 
 # Linux系统环境检测
 Linux系统可以使用以下脚本测试本机PHP环境是否满足WorkerMan运行要求。
