@@ -1,4 +1,4 @@
-* [序言](preface.md)
+* [序言](README.md)
 * [原理](principle.md)
 * [开发必读](must-read.md)
 * [入门指引](getting-started.md)
