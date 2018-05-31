@@ -120,8 +120,6 @@
         * [react/stomp](components/react-stomp.md)
     * [异步dns组件](components/async-dns.md)
         * [react/dns](components/react-dns.md)
-    * [进程控制组件](components/process.md)
-        * [react/child-process](components/react-child-process.md)
     * [memcache](components/memcache.md)
 * [常见问题](faq.md)
     * [心跳](faq/heartbeat.md)
