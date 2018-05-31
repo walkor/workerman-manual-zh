@@ -1,0 +1,2741 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>status命令查看运行状态 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tcpdump.html" />
+    
+    
+    <link rel="prev" href="base.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../preface.html">
+            
+                <a href="../preface.html">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../principle.html">
+            
+                <a href="../principle.html">
+            
+                    
+                    原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../must-read.html">
+            
+                <a href="../must-read.html">
+            
+                    
+                    开发必读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../getting-started.html">
+            
+                <a href="../getting-started.html">
+            
+                    
+                    入门指引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../getting-started/feature.html">
+            
+                <a href="../getting-started/feature.html">
+            
+                    
+                    特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../getting-started/simple-example.html">
+            
+                <a href="../getting-started/simple-example.html">
+            
+                    
+                    简单的开发示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../install.html">
+            
+                <a href="../install.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../install/requirement.html">
+            
+                <a href="../install/requirement.html">
+            
+                    
+                    环境要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../install/install.html">
+            
+                <a href="../install/install.html">
+            
+                    
+                    下载安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../install/start-and-stop.html">
+            
+                <a href="../install/start-and-stop.html">
+            
+                    
+                    启动停止
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../development.html">
+            
+                <a href="../development.html">
+            
+                    
+                    开发流程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../development/before-development.html">
+            
+                <a href="../development/before-development.html">
+            
+                    
+                    开发前必读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../development/directory-structure.html">
+            
+                <a href="../development/directory-structure.html">
+            
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../development/standard.html">
+            
+                <a href="../development/standard.html">
+            
+                    
+                    开发规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../development/process.html">
+            
+                <a href="../development/process.html">
+            
+                    
+                    基本流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../protocols.html">
+            
+                <a href="../protocols.html">
+            
+                    
+                    通讯协议
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../protocols/why-protocols.html">
+            
+                <a href="../protocols/why-protocols.html">
+            
+                    
+                    通讯协议作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../protocols/how-protocols.html">
+            
+                <a href="../protocols/how-protocols.html">
+            
+                    
+                    定制通讯协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../protocols/example.html">
+            
+                <a href="../protocols/example.html">
+            
+                    
+                    一些例子
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../worker.html">
+            
+                <a href="../worker.html">
+            
+                    
+                    Worker类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../worker/construct.html">
+            
+                <a href="../worker/construct.html">
+            
+                    
+                    构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../worker/properties.html">
+            
+                <a href="../worker/properties.html">
+            
+                    
+                    属性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../worker/workerid.html">
+            
+                <a href="../worker/workerid.html">
+            
+                    
+                    id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../worker/count.html">
+            
+                <a href="../worker/count.html">
+            
+                    
+                    count
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.3" data-path="../worker/name.html">
+            
+                <a href="../worker/name.html">
+            
+                    
+                    name
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.4" data-path="../worker/protocol.html">
+            
+                <a href="../worker/protocol.html">
+            
+                    
+                    protocol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.5" data-path="../worker/transport.html">
+            
+                <a href="../worker/transport.html">
+            
+                    
+                    transport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.6" data-path="../worker/reuse-port.html">
+            
+                <a href="../worker/reuse-port.html">
+            
+                    
+                    reusePort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.7" data-path="../worker/connections.html">
+            
+                <a href="../worker/connections.html">
+            
+                    
+                    connections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.8" data-path="../worker/stdout-file.html">
+            
+                <a href="../worker/stdout-file.html">
+            
+                    
+                    stdoutFile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.9" data-path="../worker/pid-file.html">
+            
+                <a href="../worker/pid-file.html">
+            
+                    
+                    pidFile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.10" data-path="../worker/log-file.html">
+            
+                <a href="../worker/log-file.html">
+            
+                    
+                    logFile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.11" data-path="../worker/user.html">
+            
+                <a href="../worker/user.html">
+            
+                    
+                    user
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.12" data-path="../worker/reloadable.html">
+            
+                <a href="../worker/reloadable.html">
+            
+                    
+                    reloadable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.13" data-path="../worker/daemonize.html">
+            
+                <a href="../worker/daemonize.html">
+            
+                    
+                    daemonize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.14" data-path="../worker/global-event.html">
+            
+                <a href="../worker/global-event.html">
+            
+                    
+                    globalEvent
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../worker/callbacks.html">
+            
+                <a href="../worker/callbacks.html">
+            
+                    
+                    回调属性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../worker/on-worker-start.html">
+            
+                <a href="../worker/on-worker-start.html">
+            
+                    
+                    onWorkerStart
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="../worker/on-worker-reload.html">
+            
+                <a href="../worker/on-worker-reload.html">
+            
+                    
+                    onWorkerReload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.3" data-path="../worker/on-connect.html">
+            
+                <a href="../worker/on-connect.html">
+            
+                    
+                    onConnect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4" data-path="../worker/on-message.html">
+            
+                <a href="../worker/on-message.html">
+            
+                    
+                    onMessage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.5" data-path="../worker/on-close.html">
+            
+                <a href="../worker/on-close.html">
+            
+                    
+                    onClose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.6" data-path="../worker/on-buffer-full.html">
+            
+                <a href="../worker/on-buffer-full.html">
+            
+                    
+                    onBufferFull
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.7" data-path="../worker/on-buffer-drain.html">
+            
+                <a href="../worker/on-buffer-drain.html">
+            
+                    
+                    onBufferDrain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.8" data-path="../worker/on-error.html">
+            
+                <a href="../worker/on-error.html">
+            
+                    
+                    onError
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../worker/methods.html">
+            
+                <a href="../worker/methods.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.4.1" data-path="../worker/run-all.html">
+            
+                <a href="../worker/run-all.html">
+            
+                    
+                    runAll
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.2" data-path="../worker/stop-all.html">
+            
+                <a href="../worker/stop-all.html">
+            
+                    
+                    stopAll
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.3" data-path="../worker/listen.html">
+            
+                <a href="../worker/listen.html">
+            
+                    
+                    listen
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../tcp-connection.html">
+            
+                <a href="../tcp-connection.html">
+            
+                    
+                    TcpConnection类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../properties.md">
+            
+                <span>
+            
+                    
+                    属性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../tcp-connection/id.html">
+            
+                <a href="../tcp-connection/id.html">
+            
+                    
+                    id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../tcp-connection/protocol.html">
+            
+                <a href="../tcp-connection/protocol.html">
+            
+                    
+                    protocol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../tcp-connection/worker.html">
+            
+                <a href="../tcp-connection/worker.html">
+            
+                    
+                    worker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../tcp-connection/max-send-buffer-size.html">
+            
+                <a href="../tcp-connection/max-send-buffer-size.html">
+            
+                    
+                    maxSendBufferSize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.5" data-path="../tcp-connection/default-max-send-buffer-size.html">
+            
+                <a href="../tcp-connection/default-max-send-buffer-size.html">
+            
+                    
+                    defaultMaxSendBufferSize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.6" data-path="../tcp-connection/max-package-size.html">
+            
+                <a href="../tcp-connection/max-package-size.html">
+            
+                    
+                    maxPackageSize
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../tcp-connection/callbacks.md">
+            
+                <span>
+            
+                    
+                    回调属性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../tcp-connection/on-message.html">
+            
+                <a href="../tcp-connection/on-message.html">
+            
+                    
+                    onMessage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" data-path="../tcp-connection/on-close.html">
+            
+                <a href="../tcp-connection/on-close.html">
+            
+                    
+                    onClose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.3" data-path="../tcp-connection/on-buffer-full.html">
+            
+                <a href="../tcp-connection/on-buffer-full.html">
+            
+                    
+                    onBufferFull
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.4" data-path="../tcp-connection/on-buffer-drain.html">
+            
+                <a href="../tcp-connection/on-buffer-drain.html">
+            
+                    
+                    onBufferDrain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.5" data-path="../tcp-connection/on-error.html">
+            
+                <a href="../tcp-connection/on-error.html">
+            
+                    
+                    onError
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../tcp-connection/methods.html">
+            
+                <a href="../tcp-connection/methods.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.3.1" data-path="../tcp-connection/send.html">
+            
+                <a href="../tcp-connection/send.html">
+            
+                    
+                    send
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.2" data-path="../tcp-connection/get-remote-ip.html">
+            
+                <a href="../tcp-connection/get-remote-ip.html">
+            
+                    
+                    getRemoteIp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.3" data-path="../tcp-connection/get-remote-port.html">
+            
+                <a href="../tcp-connection/get-remote-port.html">
+            
+                    
+                    getRemotePort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.4" data-path="../tcp-connection/close.html">
+            
+                <a href="../tcp-connection/close.html">
+            
+                    
+                    close
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.5" data-path="../tcp-connection/destroy.html">
+            
+                <a href="../tcp-connection/destroy.html">
+            
+                    
+                    destroy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.6" data-path="../tcp-connection/pause-recv.html">
+            
+                <a href="../tcp-connection/pause-recv.html">
+            
+                    
+                    pauseRecv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.7" data-path="../tcp-connection/resume-recv.html">
+            
+                <a href="../tcp-connection/resume-recv.html">
+            
+                    
+                    resumeRecv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.8" data-path="../tcp-connection/pipe.html">
+            
+                <a href="../tcp-connection/pipe.html">
+            
+                    
+                    pipe
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../async-tcp-connection.html">
+            
+                <a href="../async-tcp-connection.html">
+            
+                    
+                    AsyncTcpConnection类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../async-tcp-connection/construct.html">
+            
+                <a href="../async-tcp-connection/construct.html">
+            
+                    
+                    __construct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../async-tcp-connection/connect.html">
+            
+                <a href="../async-tcp-connection/connect.html">
+            
+                    
+                    connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../async-tcp-connection/reconnect.html">
+            
+                <a href="../async-tcp-connection/reconnect.html">
+            
+                    
+                    reconnect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../async-tcp-connection/transport.html">
+            
+                <a href="../async-tcp-connection/transport.html">
+            
+                    
+                    transport
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../async-udp-connection.html">
+            
+                <a href="../async-udp-connection.html">
+            
+                    
+                    AsyncUdpConnection类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../async-udp-connection/__construct.html">
+            
+                <a href="../async-udp-connection/__construct.html">
+            
+                    
+                    __construct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../async-udp-connection/connect.html">
+            
+                <a href="../async-udp-connection/connect.html">
+            
+                    
+                    connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../async-udp-connection/send.html">
+            
+                <a href="../async-udp-connection/send.html">
+            
+                    
+                    send
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../async-udp-connection/close.html">
+            
+                <a href="../async-udp-connection/close.html">
+            
+                    
+                    close
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../timer.html">
+            
+                <a href="../timer.html">
+            
+                    
+                    Timer定时器类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../timer/add.html">
+            
+                <a href="../timer/add.html">
+            
+                    
+                    add
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../timer/del.html">
+            
+                <a href="../timer/del.html">
+            
+                    
+                    del
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../timer/notice.html">
+            
+                <a href="../timer/notice.html">
+            
+                    
+                    定时器注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../web-server.html">
+            
+                <a href="../web-server.html">
+            
+                    
+                    WebServer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../debug.html">
+            
+                <a href="../debug.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="base.html">
+            
+                <a href="base.html">
+            
+                    
+                    基本调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15.2" data-path="status.html">
+            
+                <a href="status.html">
+            
+                    
+                    status命令查看运行状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="tcpdump.html">
+            
+                <a href="tcpdump.html">
+            
+                    
+                    网络抓包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="strace.html">
+            
+                <a href="strace.html">
+            
+                    
+                    跟踪系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../components.html">
+            
+                <a href="../components.html">
+            
+                    
+                    常用组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../components/global-data.html">
+            
+                <a href="../components/global-data.html">
+            
+                    
+                    GlobalData数据共享组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1.1" data-path="../components/global-data-server.html">
+            
+                <a href="../components/global-data-server.html">
+            
+                    
+                    GlobalDataServer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.1.2" data-path="../components/global-data-client.html">
+            
+                <a href="../components/global-data-client.html">
+            
+                    
+                    GlobalDataClient
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1.2.1" data-path="../components/global-data-client-add.html">
+            
+                <a href="../components/global-data-client-add.html">
+            
+                    
+                    add
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.1.2.2" data-path="../components/global-data-client-cas.html">
+            
+                <a href="../components/global-data-client-cas.html">
+            
+                    
+                    cas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.1.2.3" data-path="../components/global-data-client-increment.html">
+            
+                <a href="../components/global-data-client-increment.html">
+            
+                    
+                    increment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../components/channel.html">
+            
+                <a href="../components/channel.html">
+            
+                    
+                    Channel分布式通讯组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.2.1" data-path="../components/channel-server.html">
+            
+                <a href="../components/channel-server.html">
+            
+                    
+                    ChannelServer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.2" data-path="../components/channel-client.html">
+            
+                <a href="../components/channel-client.html">
+            
+                    
+                    channelClient
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.2.2.1" data-path="../components/channel-client-connect.html">
+            
+                <a href="../components/channel-client-connect.html">
+            
+                    
+                    connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.2.2" data-path="../components/channel-client-on.html">
+            
+                <a href="../components/channel-client-on.html">
+            
+                    
+                    on
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.2.3" data-path="../components/channel-client-publish.html">
+            
+                <a href="../components/channel-client-publish.html">
+            
+                    
+                    publish
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.2.4" data-path="../components/channel-client-unsubsribe.html">
+            
+                <a href="../components/channel-client-unsubsribe.html">
+            
+                    
+                    unsubsribe
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.3" data-path="../components/channel-examples.html">
+            
+                <a href="../components/channel-examples.html">
+            
+                    
+                    例子-集群推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.4" data-path="../components/channel-examples2.html">
+            
+                <a href="../components/channel-examples2.html">
+            
+                    
+                    例子-分组发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../components/file-monitor.html">
+            
+                <a href="../components/file-monitor.html">
+            
+                    
+                    FileMonitor文件监控组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../components/mysql.html">
+            
+                <a href="../components/mysql.html">
+            
+                    
+                    MySQL组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.4.1" data-path="../component/workerman-mysql.html">
+            
+                <a href="../component/workerman-mysql.html">
+            
+                    
+                    workerman/mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4.2" data-path="../components/react-mysql.html">
+            
+                <a href="../components/react-mysql.html">
+            
+                    
+                    react/mysql(异步)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4.3" data-path="../components/other-mysql-class.html">
+            
+                <a href="../components/other-mysql-class.html">
+            
+                    
+                    其它数据库类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../components/redis.html">
+            
+                <a href="../components/redis.html">
+            
+                    
+                    redis组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.5.1" data-path="../component/react-redis.html">
+            
+                <a href="../component/react-redis.html">
+            
+                    
+                    react/redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../components/async-http.md">
+            
+                <span>
+            
+                    
+                    异步http组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.6.1" data-path="../components/react-http-client.html">
+            
+                <a href="../components/react-http-client.html">
+            
+                    
+                    react/http-client
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../components/async-message-queue.html">
+            
+                <a href="../components/async-message-queue.html">
+            
+                    
+                    异步消息队列组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.7.1" data-path="../components/react-zmq.html">
+            
+                <a href="../components/react-zmq.html">
+            
+                    
+                    react/zmq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7.2" data-path="../components/react-stomp.html">
+            
+                <a href="../components/react-stomp.html">
+            
+                    
+                    react/stomp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../components/async-dns.md">
+            
+                <span>
+            
+                    
+                    异步dns组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.8.1" data-path="../components/react-dns.html">
+            
+                <a href="../components/react-dns.html">
+            
+                    
+                    react/dns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../components/process.html">
+            
+                <a href="../components/process.html">
+            
+                    
+                    进程控制组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.9.1" data-path="../components/react-child-process.html">
+            
+                <a href="../components/react-child-process.html">
+            
+                    
+                    react/child-process
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../components/memcache.html">
+            
+                <a href="../components/memcache.html">
+            
+                    
+                    memcache
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../faq.md">
+            
+                <span>
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../faq/heartbeat.html">
+            
+                <a href="../faq/heartbeat.html">
+            
+                    
+                    心跳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../faq/client-connect-fail.html">
+            
+                <a href="../faq/client-connect-fail.html">
+            
+                    
+                    客户端连接失败原因
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../faq/about-multi-thread.html">
+            
+                <a href="../faq/about-multi-thread.html">
+            
+                    
+                    是否支持多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../faq/work-with-other-framework.html">
+            
+                <a href="../faq/work-with-other-framework.html">
+            
+                    
+                    与其它框架整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../faq/running-concurent.html">
+            
+                <a href="../faq/running-concurent.html">
+            
+                    
+                    运行多个workerman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../faq/protocols.html">
+            
+                <a href="../faq/protocols.html">
+            
+                    
+                    支持哪些协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="../faq/processes-count.html">
+            
+                <a href="../faq/processes-count.html">
+            
+                    
+                    如何设置进程数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="../faq/connection-status.html">
+            
+                <a href="../faq/connection-status.html">
+            
+                    
+                    查看客户端连接数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.9" data-path="../faq/persistent-data-and-resources.html">
+            
+                <a href="../faq/persistent-data-and-resources.html">
+            
+                    
+                    对象和资源的持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.10" data-path="../faq/demo-not-work.html">
+            
+                <a href="../faq/demo-not-work.html">
+            
+                    
+                    例子无法工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.11" data-path="../faq/workerman-start-fail.html">
+            
+                <a href="../faq/workerman-start-fail.html">
+            
+                    
+                    启动失败
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.12" data-path="../faq/stop-fail.html">
+            
+                <a href="../faq/stop-fail.html">
+            
+                    
+                    停止失败
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.13" data-path="../faq/how-many-connections.html">
+            
+                <a href="../faq/how-many-connections.html">
+            
+                    
+                    支持多少并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.14" data-path="../faq/change-code-not-work.html">
+            
+                <a href="../faq/change-code-not-work.html">
+            
+                    
+                    更改代码不生效
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.15" data-path="../faq/send-data-to-client.html">
+            
+                <a href="../faq/send-data-to-client.html">
+            
+                    
+                    向指定客户端发送数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.16" data-path="../faq/active-push.html">
+            
+                <a href="../faq/active-push.html">
+            
+                    
+                    如何主动推送消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.17" data-path="../faq/push-in-other-project.html">
+            
+                <a href="../faq/push-in-other-project.html">
+            
+                    
+                    在其它项目中推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.18" data-path="../faq/async-task.html">
+            
+                <a href="../faq/async-task.html">
+            
+                    
+                    如何实现异步任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.19" data-path="../faq/about-send-fail.html">
+            
+                <a href="../faq/about-send-fail.html">
+            
+                    
+                    status里send_fail的原因
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.20" data-path="../faq/windows-to-linux.html">
+            
+                <a href="../faq/windows-to-linux.html">
+            
+                    
+                    Windows下开发Linux下部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.21" data-path="../faq/socketio-support.html">
+            
+                <a href="../faq/socketio-support.html">
+            
+                    
+                    是否支持socket.io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.22" data-path="../faq/ssh-close-and-workerman-stop.html">
+            
+                <a href="../faq/ssh-close-and-workerman-stop.html">
+            
+                    
+                    终端关闭导致workerman关闭
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.23" data-path="../faq/relationship-with-apache-nginx.html">
+            
+                <a href="../faq/relationship-with-apache-nginx.html">
+            
+                    
+                    与nginx apache的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.24" data-path="../faq/disable-function-check.html">
+            
+                <a href="../faq/disable-function-check.html">
+            
+                    
+                    禁用函数检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.25" data-path="../faq/reload-principle.html">
+            
+                <a href="../faq/reload-principle.html">
+            
+                    
+                    平滑重启原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.26" data-path="../faq/843-port-for-flash-socket-policy-file.html">
+            
+                <a href="../faq/843-port-for-flash-socket-policy-file.html">
+            
+                    
+                    为Flash开843端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.27" data-path="../faq/how-to-broadcast.html">
+            
+                <a href="../faq/how-to-broadcast.html">
+            
+                    
+                    如何广播数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.28" data-path="../faq/how-to-create-udp-service.html">
+            
+                <a href="../faq/how-to-create-udp-service.html">
+            
+                    
+                    如何建立udp服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.29" data-path="../faq/ipv6.html">
+            
+                <a href="../faq/ipv6.html">
+            
+                    
+                    监听ipv6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.30" data-path="../faq/close-unauthed-connections.html">
+            
+                <a href="../faq/close-unauthed-connections.html">
+            
+                    
+                    关闭未认证的连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.31" data-path="../faq/ssl-support.html">
+            
+                <a href="../faq/ssl-support.html">
+            
+                    
+                    传输加密-ssl/tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.32" data-path="../faq/secure-websocket-server.html">
+            
+                <a href="../faq/secure-websocket-server.html">
+            
+                    
+                    创建wss服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.33" data-path="../faq/secure-http-server.html">
+            
+                <a href="../faq/secure-http-server.html">
+            
+                    
+                    创建https服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.34" data-path="../faq/use-workerman-as-client-side.html">
+            
+                <a href="../faq/use-workerman-as-client-side.html">
+            
+                    
+                    workerman作为客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.35" data-path="../faq/as-wss-client.html">
+            
+                <a href="../faq/as-wss-client.html">
+            
+                    
+                    作为ws/wss客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.36" data-path="../faq/weixin-app.html">
+            
+                <a href="../faq/weixin-app.html">
+            
+                    
+                    微信小程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.37" data-path="../faq/callback_methods.html">
+            
+                <a href="../faq/callback_methods.html">
+            
+                    
+                    PHP的几种回调写法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.38" data-path="../faq/get-real-ip-from-proxy.html">
+            
+                <a href="../faq/get-real-ip-from-proxy.html">
+            
+                    
+                    透过代理获取客户端真实ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.39" data-path="../faq/start-with-system.html">
+            
+                <a href="../faq/start-with-system.html">
+            
+                    
+                    开机启动
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../appendices.md">
+            
+                <span>
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../appendices/kernel-optimization.html">
+            
+                <a href="../appendices/kernel-optimization.html">
+            
+                    
+                    Linux内核调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../appendices/stress-test.html">
+            
+                <a href="../appendices/stress-test.html">
+            
+                    
+                    压力测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../appendices/install-extension.html">
+            
+                <a href="../appendices/install-extension.html">
+            
+                    
+                    安装扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../appendices/about-websocket.html">
+            
+                <a href="../appendices/about-websocket.html">
+            
+                    
+                    websocket协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../appendices/about-ws.html">
+            
+                <a href="../appendices/about-ws.html">
+            
+                    
+                    ws协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../appendices/about-text.html">
+            
+                <a href="../appendices/about-text.html">
+            
+                    
+                    text协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../appendices/about-frame.html">
+            
+                <a href="../appendices/about-frame.html">
+            
+                    
+                    frame协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.8" data-path="../appendices/unavailable-functions.html">
+            
+                <a href="../appendices/unavailable-functions.html">
+            
+                    
+                    不支持的函数/特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../license.html">
+            
+                <a href="../license.html">
+            
+                    
+                    版权信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >status命令查看运行状态</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x67E5;&#x770B;&#x8FD0;&#x884C;&#x72B6;&#x6001;">&#x67E5;&#x770B;&#x8FD0;&#x884C;&#x72B6;&#x6001;</h1>
+<p>&#x8FD0;&#x884C; <code>php start.php status</code>
+&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5230;WorkerMan&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x7C7B;&#x4F3C;&#x5982;&#x4E0B;:</p>
+<pre><code>---------------------------------------GLOBAL STATUS--------------------------------------------
+Workerman version:3.5.0          PHP version:5.3.29-1~dotdeb.0
+start time:2015-02-21 18:05:47   run 86 days 22 hours
+load average: 0, 0, 0
+3 workers       10 processes
+worker_name           exit_status     exit_count
+TodpoleGateway        0                0
+TodpoleBusinessWorker 0                4
+TodpoleBusinessWorker 9                1
+WebServer             0                2
+---------------------------------------PROCESS STATUS-------------------------------------------
+pid     memory  listening                worker_name           connections total_request send_fail timers
+936     2.15M   Websocket://0.0.0.0:8585 TodpoleGateway        13         355            0         0
+937     2.03M   Websocket://0.0.0.0:8585 TodpoleGateway        5          181            0         0
+938     2M      Websocket://0.0.0.0:8585 TodpoleGateway        4          171            0         0
+939     2.03M   Websocket://0.0.0.0:8585 TodpoleGateway        5          177            0         0
+948     2.15M   none                     TodpoleBusinessWorker 4          32             0         0
+949     2.16M   none                     TodpoleBusinessWorker 4          54             0         0
+953     2.16M   none                     TodpoleBusinessWorker 4          50             0         0
+957     2.15M   none                     TodpoleBusinessWorker 4          53             0         0
+954     1.84M   http://0.0.0.0:8686      WebServer             0          61             0         0
+955     1.84M   http://0.0.0.0:8686      WebServer             1          59             0         0
+</code></pre><h2 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h2>
+<h3 id="global-status">GLOBAL STATUS</h3>
+<p>&#x4ECE;&#x8FD9;&#x4EE5;&#x680F;&#x4E2D;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;</p>
+<p>WorkerMan&#x7684;&#x7248;&#x672C;<code>version:3.5.0</code></p>
+<p>&#x542F;&#x52A8;&#x65F6;&#x95F4; <code>2015-02-21 18:05:47</code>&#xFF0C;&#x8FD0;&#x884C;&#x4E86;<code>run 86 days 22 hours</code></p>
+<p>&#x670D;&#x52A1;&#x5668;&#x8D1F;&#x8F7D; <code>load average: 0, 0, 0</code></p>
+<p> <code>3 workers</code>&#xFF08;3&#x79CD;&#x8FDB;&#x7A0B;&#xFF0C;&#x5305;&#x62EC;ChatGateway&#x3001;ChatBusinessWorker&#x3001;WebServer&#x8FDB;&#x7A0B;&#xFF09;</p>
+<p> <code>10 processes</code>(&#x5171;10&#x4E2A;&#x8FDB;&#x7A0B;)</p>
+<p> <code>worker_name</code>(worker&#x8FDB;&#x7A0B;&#x540D;)</p>
+<p> <code>exit_status</code>&#xFF08;worker&#x8FDB;&#x7A0B;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7801;&#xFF09;</p>
+<p> <code>exit_count</code>&#xFF08;&#x8BE5;&#x72B6;&#x6001;&#x7801;&#x7684;&#x9000;&#x51FA;&#x6B21;&#x6570;&#xFF09;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;exit_status&#x4E3A;0&#x8868;&#x793A;&#x4E3A;&#x6B63;&#x5E38;&#x9000;&#x51FA;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x5176;&#x5B83;&#x503C;&#xFF0C;&#x4EE3;&#x8868;&#x8FDB;&#x7A0B;&#x662F;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#x7684;&#xFF0C;&#x5E76;&#x4EA7;&#x751F;&#x4E00;&#x6761;&#x7C7B;&#x4F3C;<code>WORKER EXIT UNEXPECTED</code>&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x4F1A;&#x8BB0;&#x5F55;&#x5230;<a href="315140">Worker::logFile</a>&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p><strong>&#x5E38;&#x89C1;&#x7684;exit_status&#x53CA;&#x5176;&#x542B;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</strong></p>
+<ul>
+<li>0&#xFF1A;&#x8868;&#x793A;&#x6B63;&#x5E38;&#x9000;&#x51FA;&#xFF0C;&#x8FD0;&#x884C;reload&#x5E73;&#x6ED1;&#x91CD;&#x542F;&#x540E;&#x4F1A;&#x51FA;&#x73B0;&#x503C;&#x4E3A;0&#x7684;&#x9000;&#x51FA;&#x7801;&#xFF0C;&#x662F;&#x6B63;&#x5E38;&#x73B0;&#x8C61;&#x3002;&#x6CE8;&#x610F;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x8C03;&#x7528;exit&#x6216;die&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x9000;&#x51FA;&#x7801;&#x4E3A;0&#xFF0C;&#x5E76;&#x4EA7;&#x751F;&#x4E00;&#x6761;<code>WORKER EXIT UNEXPECTED</code>&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;workerman&#x4E2D;&#x4E0D;&#x5141;&#x8BB8;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x8C03;&#x7528;exit&#x6216;&#x8005;die&#x8BED;&#x53E5;&#x3002;</li>
+<li>9&#xFF1A;&#x8868;&#x793A;&#x8FDB;&#x7A0B;&#x88AB;SIGKILL&#x4FE1;&#x53F7;&#x6740;&#x6B7B;&#x4E86;&#x3002;&#x8FD9;&#x4E2A;&#x9000;&#x51FA;&#x7801;&#x4E3B;&#x8981;&#x53D1;&#x751F;&#x5728;stop&#x4EE5;&#x53CA;reload&#x5E73;&#x6ED1;&#x91CD;&#x542F;&#x65F6;&#xFF0C;&#x5BFC;&#x81F4;&#x8FD9;&#x4E2A;&#x9000;&#x51FA;&#x7801;&#x7684;&#x539F;&#x56E0;&#x662F;&#x7531;&#x4E8E;&#x5B50;&#x8FDB;&#x7A0B;&#x6CA1;&#x6709;&#x5728;&#x89C4;&#x5B9A;&#x65F6;&#x95F4;&#x5185;&#x54CD;&#x5E94;&#x4E3B;&#x8FDB;&#x7A0B;reload&#x4FE1;&#x53F7;(&#x4F8B;&#x5982;mysql&#x3001;curl&#x7B49;&#x957F;&#x65F6;&#x95F4;&#x963B;&#x585E;&#x7B49;&#x5F85;&#x6216;&#x8005;&#x4E1A;&#x52A1;&#x6B7B;&#x5FAA;&#x73AF;&#x7B49;)&#xFF0C;&#x88AB;&#x4E3B;&#x8FDB;&#x7A0B;&#x5F3A;&#x5236;&#x4F7F;&#x7528;SIGKILL&#x4FE1;&#x53F7;&#x6740;&#x6B7B;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x5F53;&#x5728;linux&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x4F7F;&#x7528;kill&#x547D;&#x4EE4;&#x53D1;&#x9001;SIGKILL&#x4FE1;&#x53F7;&#x7ED9;&#x5B50;&#x8FDB;&#x7A0B;&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD9;&#x4E2A;&#x9000;&#x51FA;&#x7801;&#x3002;</li>
+<li>65280&#xFF1A;&#x5BFC;&#x81F4;&#x8FD9;&#x4E2A;&#x9000;&#x51FA;&#x7801;&#x7684;&#x539F;&#x56E0;&#x662F;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x6709;&#x81F4;&#x547D;&#x9519;&#x8BEF;&#xFF0C;&#x4F8B;&#x5982;&#x8C03;&#x7528;&#x4E86;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x51FD;&#x6570;&#x3001;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#x7B49;&#xFF0C;&#x5177;&#x4F53;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x4F1A;&#x8BB0;&#x5F55;&#x5230;<a href="315140">Worker::logFile</a>&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;<a href="http://php.net/manual/zh/ini.list.php" target="_blank">php.ini</a>&#x4E2D;<a href="http://php.net/manual/zh/errorfunc.configuration.php#ini.error-log" target="_blank">error_log</a>&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4E2D;(&#x5982;&#x679C;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x8BDD;)&#x627E;&#x5230;&#x3002;</li>
+<li>64000&#xFF1A;&#x5BFC;&#x81F4;&#x8FD9;&#x4E2A;&#x9000;&#x51FA;&#x7801;&#x7684;&#x539F;&#x56E0;&#x662F;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x629B;&#x51FA;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;&#x4F46;&#x4E1A;&#x52A1;&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#xFF0C;&#x5BFC;&#x81F4;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;&#x3002;&#x5982;&#x679C;workerman&#x4EE5;debug&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;&#x8C03;&#x7528;&#x6808;&#x4F1A;&#x6253;&#x5370;&#x5230;&#x7EC8;&#x7AEF;&#xFF0C;daemon&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#x65F6;&#x5F02;&#x5E38;&#x8C03;&#x7528;&#x6808;&#x4F1A;&#x8BB0;&#x5F55;&#x5230;<a href="315138">Worker::stdoutFile</a>&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</li>
+</ul>
+<h2 id="process-status">PROCESS STATUS</h2>
+<p>pid&#xFF1A;&#x8FDB;&#x7A0B;pid</p>
+<p>memory&#xFF1A;&#x8BE5;&#x8FDB;&#x7A0B;&#x5F53;&#x524D;&#x5360;&#x7528;&#x5185;&#x5B58;&#xFF08;&#x4E0D;&#x5305;&#x62EC;php&#x81EA;&#x8EAB;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;&#xFF09;</p>
+<p>listening&#xFF1A;&#x4F20;&#x8F93;&#x5C42;&#x534F;&#x8BAE;&#x53CA;&#x76D1;&#x542C;ip&#x7AEF;&#x53E3;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x76D1;&#x542C;&#x4EFB;&#x4F55;&#x7AEF;&#x53E3;&#x5219;&#x663E;&#x793A;none&#x3002;&#x53C2;&#x89C1;<a href="315128l">Worker&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;</a></p>
+<p>worker_name&#xFF1A;&#x8BE5;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x7684;&#x670D;&#x52A1;&#x670D;&#x52A1;&#x540D;&#xFF0C;&#x89C1;<a href="315132">Worker&#x7C7B;name&#x5C5E;&#x6027;</a></p>
+<p>connections:&#x8BE5;&#x8FDB;&#x7A0B;&#x5F53;&#x524D;&#x6709;&#x591A;&#x5C11;&#x4E2A;TCP&#x8FDE;&#x63A5;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x6BCF;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x662F;&#x4E00;&#x4E2A;<a href="315157">TcpConnection</a>&#x8FDE;&#x63A5;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#xFF0C;&#x540C;&#x65F6;&#x6BCF;&#x4E2A;<a href="315173">AsyncTcpConnection</a>&#x8FDE;&#x63A5;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#xFF0C;&#x6240;&#x4EE5;connections&#x7684;&#x8BA1;&#x6570;&#x4E0D;&#x4E00;&#x5B9A;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x6570;&#x76F8;&#x7B49;&#xFF0C;&#x4F8B;&#x5982;GatewayWorker&#x4E2D;Gateway&#x8FDB;&#x7A0B;&#x7684;connections&#x8BA1;&#x6570;&#x5305;&#x542B;&#x4E86;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x6570;&#x548C;Gateway&#x4E0E;Worker&#x5185;&#x90E8;&#x901A;&#x8BAF;&#x8FDE;&#x63A5;&#x6570;&#x3002;</p>
+<p>total_request&#xFF1A;&#x8868;&#x793A;&#x8BE5;&#x8FDB;&#x7A0B;&#x4ECE;&#x542F;&#x52A8;&#x5230;&#x73B0;&#x5728;&#x4E00;&#x5171;&#x63A5;&#x6536;&#x4E86;&#x591A;&#x5C11;&#x4E2A;&#x8BF7;&#x6C42;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x8BF7;&#x6C42;&#x6570;&#x4E0D;&#x4EC5;&#x5305;&#x542B;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x6765;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4E5F;&#x5305;&#x542B;Workerman&#x5185;&#x90E8;&#x901A;&#x8BAF;&#x8BF7;&#x6C42;&#xFF0C;&#x4F8B;&#x5982;GatewayWorker&#x67B6;&#x6784;&#x91CC;Gateway&#x4E0E;BusinessWorker&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x8BAF;&#x8BF7;&#x6C42;&#x3002;</p>
+<p>send_fail&#xFF1A;&#x8BE5;&#x8FDB;&#x7A0B;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x6570;&#x636E;&#x5931;&#x8D25;&#x6B21;&#x6570;&#xFF0C;&#x5931;&#x8D25;&#x539F;&#x56E0;&#x4E00;&#x822C;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x65AD;&#x5F00;&#xFF0C;&#x6B64;&#x9879;&#x4E0D;&#x4E3A;0&#x4E00;&#x822C;&#x5C5E;&#x4E8E;&#x6B63;&#x5E38;&#x72B6;&#x6001;&#xFF0C;&#x53C2;&#x89C1;<a href="315284">&#x624B;&#x518C;&#x5E38;&#x89C1;&#x95EE;&#x9898;send_fail&#x539F;&#x56E0;</a></p>
+<p>timers&#xFF1A;&#x8BE5;&#x8FDB;&#x7A0B;&#x6D3B;&#x52A8;&#x7684;&#x5B9A;&#x65F6;&#x5668;&#x6570;&#x91CF;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5B9A;&#x65F6;&#x5668;&#x4EE5;&#x53CA;&#x5DF2;&#x7ECF;&#x8FD0;&#x884C;&#x8FC7;&#x7684;&#x4E00;&#x6B21;&#x6027;&#x5B9A;&#x65F6;&#x5668;&#xFF09;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x4E2A;&#x7EDF;&#x8BA1;&#x9700;&#x8981;workerman&#x7248;&#x672C;&gt;=3.4.7&#x624D;&#x652F;&#x6301;</p>
+<p>status: &#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#xFF0C;&#x5982;&#x679C;&#x662F;idle&#x4EE3;&#x8868;&#x7A7A;&#x95F2;&#xFF0C;&#x5982;&#x679C;&#x662F;busy&#x4EE3;&#x8868;&#x662F;&#x7E41;&#x5FD9;(&#x6216;&#x8005;&#x963B;&#x585E;&#x5728;&#x7F51;&#x7EDC;IO&#x4E0A;)&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x4E2A;&#x7EDF;&#x8BA1;&#x9700;&#x8981;workerman&#x7248;&#x672C;&gt;=3.5.0&#x624D;&#x652F;&#x6301;</p>
+<h2 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h2>
+<p>status&#x811A;&#x672C;&#x8FD0;&#x884C;&#x540E;&#xFF0C;&#x4E3B;&#x8FDB;&#x7A0B;&#x4F1A;&#x5411;&#x6240;&#x6709;worker&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x4E00;&#x4E2A;<code>SIGUSR2</code>&#x4FE1;&#x53F7;&#xFF0C;&#x968F;&#x540E;status&#x811A;&#x672C;&#x8FDB;&#x5165;100&#x6BEB;&#x79D2;&#x7684;&#x7761;&#x7720;&#x9636;&#x6BB5;&#xFF0C;&#x4EE5;&#x4FBF;&#x7B49;&#x5F85;&#x5404;&#x4E2A;worker&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x3002;&#x8FD9;&#x65F6;&#x7A7A;&#x95F2;&#x7684;worker&#x8FDB;&#x7A0B;&#x6536;&#x5230;<code>SIGUSR2</code>&#x4FE1;&#x53F7;&#x540E;&#x4F1A;&#x7ACB;&#x523B;&#x5411;&#x7279;&#x5B9A;&#x7684;&#x78C1;&#x76D8;&#x6587;&#x4EF6;&#x5199;&#x5165;&#x81EA;&#x5DF1;&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF08;&#x8FDE;&#x63A5;&#x6570;&#x3001;&#x8BF7;&#x6C42;&#x6570;&#x7B49;&#x7B49;&#xFF09;&#xFF0C;&#x800C;&#x6B63;&#x5728;&#x5904;&#x7406;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x7684;worker&#x8FDB;&#x7A0B;&#xFF0C;&#x5219;&#x4F1A;&#x7B49;&#x5F85;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#x624D;&#x4F1A;&#x53BB;&#x5199;&#x5165;&#x81EA;&#x5DF1;&#x7684;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x3002;sleep100&#x6BEB;&#x79D2;&#x540E;&#xFF0C;status&#x811A;&#x672C;&#x5F00;&#x59CB;&#x8BFB;&#x53D6;&#x78C1;&#x76D8;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5C55;&#x793A;&#x7ED3;&#x679C;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x3002;</p>
+<h2 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h2>
+<p>status &#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x73B0;&#x663E;&#x793A;&#x7684;&#x8FDB;&#x7A0B;&#x6570;&#x91CF;&#x5C11;&#x4E8E;&#x5B9E;&#x9645;&#x6570;&#x91CF;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x7531;&#x4E8E;&#x8FDB;&#x7A0B;&#x5FD9;&#x4E8E;&#x5904;&#x7406;&#x4E1A;&#x52A1;&#xFF08;&#x4F8B;&#x5982;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x957F;&#x65F6;&#x95F4;&#x963B;&#x585E;&#x5728;curl&#x6216;&#x8005;&#x6570;&#x636E;&#x5E93;&#x8BF7;&#x6C42;&#x4E0A;&#xFF09;&#xFF0C;&#x5BFC;&#x81F4;worker&#x8FDB;&#x7A0B;&#x65E0;&#x6CD5;&#x53CA;&#x65F6;&#xFF08;100&#x6BEB;&#x79D2;&#x5185;&#xFF09;&#x54CD;&#x5E94;status&#x547D;&#x4EE4;&#xFF0C;&#x6765;&#x4E0D;&#x53CA;&#x5C06;&#x81EA;&#x5DF1;&#x7684;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x5199;&#x5165;&#x78C1;&#x76D8;&#xFF0C;status&#x811A;&#x672C;&#x81EA;&#x7136;&#x7EDF;&#x8BA1;&#x4E0D;&#x5230;&#x5BF9;&#x5E94;worker&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x4E5F;&#x5C31;&#x65E0;&#x6CD5;&#x53CA;&#x65F6;&#x5C55;&#x793A;&#x5728;status&#x7ED3;&#x679C;&#x4E2D;&#x3002;</p>
+<p>&#x51FA;&#x73B0;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#x9700;&#x8981;&#x6392;&#x67E5;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#xFF0C;&#x770B;&#x54EA;&#x91CC;&#x5BFC;&#x4E1A;&#x52A1;&#x81F4;&#x957F;&#x65F6;&#x95F4;&#x963B;&#x585E;&#xFF0C;&#x5E76;&#x4E14;&#x8BC4;&#x4F30;&#x963B;&#x585E;&#x8017;&#x65F6;&#x662F;&#x5426;&#x5728;&#x9884;&#x671F;&#x5185;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="base.html" class="navigation navigation-prev " aria-label="Previous page: 基本调试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tcpdump.html" class="navigation navigation-next " aria-label="Next page: 网络抓包">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"status命令查看运行状态","level":"1.15.2","depth":2,"next":{"title":"网络抓包","level":"1.15.3","depth":2,"path":"debug/tcpdump.md","ref":"debug/tcpdump.md","articles":[]},"previous":{"title":"基本调试","level":"1.15.1","depth":2,"path":"debug/base.md","ref":"debug/base.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["highlight","livereload"],"pluginsConfig":{"highlight":{},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"debug/status.md","mtime":"2018-05-31T07:04:24.608Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-31T07:32:30.864Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
