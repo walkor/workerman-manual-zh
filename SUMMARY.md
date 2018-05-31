@@ -108,7 +108,7 @@
         * [例子-分组发送](components/channel-examples2.md)
     * [FileMonitor文件监控组件](components/file-monitor.md)
     * [MySQL组件](components/mysql.md)
-        * [workerman/mysql](component/workerman-mysql.md)
+        * [workerman/mysql](components/workerman-mysql.md)
         * [react/mysql(异步)](components/react-mysql.md)
         * [其它数据库类](components/other-mysql-class.md)
     * [redis组件](components/redis.md)
