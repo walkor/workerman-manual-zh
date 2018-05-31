@@ -112,7 +112,7 @@
         * [react/mysql(异步)](components/react-mysql.md)
         * [其它数据库类](components/other-mysql-class.md)
     * [redis组件](components/redis.md)
-        * [react/redis](component/react-redis.md)
+        * [react/redis](components/react-redis.md)
     * [异步http组件](components/async-http.md)
         * [react/http-client](components/react-http-client.md)
     * [异步消息队列组件](components/async-message-queue.md)
