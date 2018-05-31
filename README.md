@@ -34,7 +34,7 @@ Workerman的一些应用方向如下：
 例如 [GatewayWorker](http://doc2.workerman.net)，[PHPSocket.IO](http://www.workerman.net/phpsocket_io)，[http代理](https://github.com/walkor/php-http-proxy)，[sock5代理](https://github.com/walkor/php-socks5)，[分布式通讯组件](https://github.com/walkor/Channel)，[分布式变量共享组件](https://github.com/walkor/GlobalData)，[消息队列](https://github.com/walkor/workerman-queue)、DNS服务器、WebServer、CDN服务器、FTP服务器等等
 
 6、中间件  
-例如 [异步MySQL组件](/components/react-mysql.html)，[异步redis组件](//component/react-redis.html)，[异步http组件](//component/react-redis.html)，[异步消息队列组件](//components/react-zmq.html)，[异步dns组件](//components/react-dns.html)，[文件监控组件](//components/file-monitor.html)，还有很多第三方开发的组件框架等等
+例如 [异步MySQL组件](/components/react-mysql.html)，[异步redis组件](/components/react-redis.html)，[异步http组件](//component/react-redis.html)，[异步消息队列组件](//components/react-zmq.html)，[异步dns组件](//components/react-dns.html)，[文件监控组件](//components/file-monitor.html)，还有很多第三方开发的组件框架等等
 
 显然传统的mvc框架很难实现以上的功能，所以也就是workerman诞生的原因。
 
