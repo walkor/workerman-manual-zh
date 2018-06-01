@@ -26,10 +26,10 @@ Linux系统可以使用以下脚本测试本机PHP环境是否满足WorkerMan运
 如果php是通过yum安装的，则命令行运行 ```yum install php-process```即可安装pcntl和posix扩展。
 
 
-如果安装失败或者php本身不是用yum安装的请参考手册[附录-安装扩展](315304)一节中方法三源码编译安装。
+如果安装失败或者php本身不是用yum安装的请参考手册[附录-安装扩展](appendices/install-extension.md)一节中方法三源码编译安装。
 
 **debian/ubuntu/mac os系统**<br>
-参考手册[附录-安装扩展](315304)一节中方法三源码编译安装。
+参考手册[附录-安装扩展](appendices/install-extension.md)一节中方法三源码编译安装。
 
 
 ## 安装event或者libevent扩展：
@@ -112,7 +112,7 @@ echo extension=event.so > /etc/php.d/30-event.ini
 git clone https://github.com/walkor/Workerman
 ```
 
-5、参考[入门指引--简单开发实例部分](315113)写入口文件运行。<br>
+5、参考[入门指引--简单开发实例部分](getting-started/simple-example.md)写入口文件运行。<br>
 或者从[官网](http://www.workerman.net/)下载打包好的demo运行。
 
 
@@ -144,13 +144,13 @@ echo extension=event.so > /etc/php5/cli/conf.d/30-event.ini
 git clone https://github.com/walkor/Workerman
 ```
 
-5、参考[入门指引--简单开发实例部分](315113)写入口文件运行。<br>
+5、参考[入门指引--简单开发实例部分](getting-started/simple-example.md)写入口文件运行。<br>
 或者从[官网](http://www.workerman.net/)下载打包好的demo运行。
 
 ## mac os 系统安装教程
 **方法1：** mac系统自带PHP Cli，但是可能缺少```pcntl```扩展。
 
-1、参考手册[附录-安装扩展](315304)一节中方法三源码编译安装```pcntl```扩展。
+1、参考手册[附录-安装扩展](appendices/install-extension.md)一节中方法三源码编译安装```pcntl```扩展。
 
 2、参考手册[附录-安装扩展](315304)一节中方法四利用phpize安装```event```扩展（作为开发机此可省略）。
 
