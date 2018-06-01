@@ -4,7 +4,7 @@
 callback Connection::$onClose
 ```
 
-此回调与[Worker::$onClose](315149)回调作用相同，区别是只针对当前连接有效,也就是可以针对某个连接的设置onClose回调。
+此回调与[Worker::$onClose](worker/on-close.md)回调作用相同，区别是只针对当前连接有效,也就是可以针对某个连接的设置onClose回调。
 
 ## 范例
 
