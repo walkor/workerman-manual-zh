@@ -11,7 +11,7 @@ int Connection::$id
 如果想要不重复的connection id 可以根据需要给connection->id重新赋值，例如加上worker->id前缀。
 
 ## 参见
-[Worker的connections属性](worker/connections.md)
+[Worker的connections属性](../worker/connections.md)
 
 
 ## 范例
