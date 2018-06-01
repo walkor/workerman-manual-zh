@@ -14,7 +14,7 @@ callback Worker::$onBufferDrain
 
  ``` $connection ```
 
-连接对象，即[TcpConnection实例](315157)，用于操作客户端连接，如[发送数据](315165)，[关闭连接](315168)等
+连接对象，即[TcpConnection实例](tcp-connection.md)，用于操作客户端连接，如[发送数据](tcp-connection/send.md)，[关闭连接](tcp-connection/close.md)等
 
 
 ## 范例
@@ -35,7 +35,8 @@ $worker->onBufferDrain = function($connection)
 // 运行worker
 Worker::runAll();
 ```
-提示：除了使用匿名函数作为回调，还可以[参考这里](370558)使用其它回调写法。
+
+提示：除了使用匿名函数作为回调，还可以[参考这里](faq/callback_methods.md)使用其它回调写法。
 
 ## 参见
 onBufferFull 当连接的应用层发送缓冲区满时触发
