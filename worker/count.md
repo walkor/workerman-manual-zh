@@ -7,7 +7,7 @@ int Worker::$count
 
 设置当前Worker实例启动多少个进程，不设置时默认为1。
 
-如何设置进程数，请参考[**这里**](315230) 。
+如何设置进程数，请参考[**这里**](faq/processes-count.md) 。
 
 注意：此属性必须在```Worker::runAll();```运行前设置才有效。windows系统不支持此特性。
 
