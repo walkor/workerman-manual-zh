@@ -33,4 +33,4 @@ $worker->onWorkerStart = function($worker)
 Worker::runAll();
 ```
 
-提示：除了使用匿名函数作为回调，还可以[参考这里](/370558)使用其它回调写法。
+提示：除了使用匿名函数作为回调，还可以[参考这里](faq/callback_methods.md)使用其它回调写法。
