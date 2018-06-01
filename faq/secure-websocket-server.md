@@ -213,7 +213,7 @@ ws.onmessage = function(e) {
 ```
 
 相关文章：
-[透过代理获取客户端真实ip](faq/get-real-ip-from-proxy.md)
+[透过代理获取客户端真实ip](get-real-ip-from-proxy.md)
 [workerman的ssl上下文选项参考](http://php.net/manual/zh/context.ssl.php)
 [微信小程序 - websocket wss](https://sevming.github.io/Php/wxapp-websocket.html)
 

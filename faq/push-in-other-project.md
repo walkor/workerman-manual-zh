@@ -10,7 +10,7 @@
 
 **基于Workerman可以参考以下连接**
 
-1、[Channel组件推送例子](components/channel-examples.md)（支持多进程/服务器集群，需要下载Channel组件）
+1、[Channel组件推送例子](../components/channel-examples.md)（支持多进程/服务器集群，需要下载Channel组件）
 
 2、[基于Worker推送](http://wenda.workerman.net/?/question/508)(单进程，最简单)
 
