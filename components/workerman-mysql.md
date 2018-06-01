@@ -39,7 +39,7 @@ apt-get install php7.0-mysql
 
 **以上方法无法安装？**
 
-如果以上方法无法安装，请参考[workerman手册-附录-扩展安装-方法三源码编译安装](315304)。
+如果以上方法无法安装，请参考[workerman手册-附录-扩展安装-方法三源码编译安装](appendices/install-extension.md)。
 
 ## 安装 Workerman/MySQL
 **方法1：**
