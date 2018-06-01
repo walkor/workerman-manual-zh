@@ -10,7 +10,7 @@ callback Worker::$onMessage
 
  ``` $connection ```
 
-连接对象，即[TcpConnection实例](315157)，用于操作客户端连接，如[发送数据](315165)，[关闭连接](315168)等
+连接对象，即[TcpConnection实例](tcp-connection.md)，用于操作客户端连接，如[发送数据](tcp-connection/send.md)，[关闭连接](tcp-connection/close.md)等
 
  ``` $data ```
 
