@@ -12,7 +12,7 @@ workerman本身已经是一个类似apache/nginx的容器，只要[PHP环境OK](
 
 长连接必须加心跳，长连接必须加心跳，长连接必须加心跳，重要的话说三遍。 
 长连接长时间不通讯肯定会被防火墙干掉而断开。不加心跳的长连接应用就等着老板KO你吧。
-[workerman心跳说明](315282)、 [gatewayWorker心跳说明](http://doc2.workerman.net/326139)
+[workerman心跳说明](faq/heartbeat.md)、 [gatewayWorker心跳说明](http://doc2.workerman.net/326139)
 
 **4、客户端和服务端协议一定要对应才能通讯**
 
@@ -48,7 +48,7 @@ workerman是常驻内存的框架，改代码要重启workerman才能看到新�
 
 **10、支持更高并发**
 
-如果业务并发连接数超过1000同时在线，请务必[优化linux内核](315302)，并[安装event扩展或者libevent扩展](315116)。
+如果业务并发连接数超过1000同时在线，请务必[优化linux内核](appendices/kernel-optimization.md)，并[安装event扩展或者libevent扩展](appendices/install-extension.md)。
 
 
 
