@@ -5,7 +5,7 @@ callback Connection::$onMessage
 ```
 
 
-作用与[Worker::$onMessage](worker/on-message.md)回调相同，区别是只针对当前连接有效，也就是可以针对某个连接的设置onMessage回调。
+作用与[Worker::$onMessage](../worker/on-message.md)回调相同，区别是只针对当前连接有效，也就是可以针对某个连接的设置onMessage回调。
 
 
 ## 范例
