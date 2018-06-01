@@ -6,13 +6,13 @@ callback Worker::$onClose
 
 当客户端连接与Workerman断开时触发的回调函数。不管连接是如何断开的，只要断开就会触发```onClose```。每个连接只会触发一次```onClose```。
 
-注意：如果对端是由于断网或者断电等极端情况断开的连接，这时由于无法及时发送tcp的fin包给workerman，workerman就无法得知连接已经断开，也就无法及时触发```onClose```。这种情况需要通过应用层心跳来解决。workerman中连接的心跳实现参见[这里](315282)。如果使用的是GatewayWorker框架，则直接使用GatewayWorker框架的心跳机制即可，参见[这里](http://workerman.net/gatewaydoc/gateway-worker-development/heartbeat.html)。
+注意：如果对端是由于断网或者断电等极端情况断开的连接，这时由于无法及时发送tcp的fin包给workerman，workerman就无法得知连接已经断开，也就无法及时触发```onClose```。这种情况需要通过应用层心跳来解决。workerman中连接的心跳实现参见[这里](faq/heartbeat.md)。如果使用的是GatewayWorker框架，则直接使用GatewayWorker框架的心跳机制即可，参见[这里](http://doc2.workerman.net/326139)。
 
 ## 回调函数的参数
 
  ``` $connection ```
 
-连接对象，即[TcpConnection实例](315157)，用于操作客户端连接，如[发送数据](315165)，[关闭连接](315168)等
+连接对象，即[TcpConnection实例](tcp-connection.md)，用于操作客户端连接，如[发送数据](tcp-connection/send.md)，[关闭连接](tcp-connection/close.md)等
 
 
 ## 范例
