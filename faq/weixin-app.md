@@ -1,3 +1,3 @@
 # 微信小程序
 
-workerman可以作为微信小程序wss后端，参考 [创建wss服务](315297)一节。
+workerman可以作为微信小程序wss后端，参考 [创建wss服务](faq/secure-websocket-server.md)一节。
