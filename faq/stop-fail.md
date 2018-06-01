@@ -28,7 +28,7 @@ ps aux|grep WorkerMan|awk '{print $2}'|xargs kill -9
 **第三种可能性：**
 保存workerman主进程pid文件被删除，导致脚本找不到pid进程，导致停止失败。
 **解决：**
-将pid文件保存到安全的位置，参见手册[Worker::$pidFile](315139)。
+将pid文件保存到安全的位置，参见手册[Worker::$pidFile](worker/pid-file.md)。
 
 <br>
 
