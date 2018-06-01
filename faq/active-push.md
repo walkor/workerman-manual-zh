@@ -19,4 +19,4 @@ Worker::runAll();
 ```
 
 2、其它项目中发生某个事件时通知workerman推送数据
-参见 [常见问题-在其它项目中推送](315240)
+参见 [常见问题-在其它项目中推送](push-in-other-project.md)

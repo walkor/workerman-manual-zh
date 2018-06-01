@@ -51,6 +51,6 @@ libevent扩展(或者event扩展)使得PHP可以使用系统[Epoll](http://baike
 
 ## 如何安装扩展
 
-参见 [附录-安装扩展](appendices/install-extension.html) 章节
+参见[安装扩展](../appendices/install-extension.md)章节
 
 

@@ -17,6 +17,8 @@ $task_worker = new Worker('Text://0.0.0.0:12345');
 // task进程数可以根据需要多开一些
 $task_worker->count = 100;
 $task_worker->name = 'TaskWorker';
+//只有php7才支持task->reusePort，可以让每个task进程均衡的接收任务
+//$task->reusePort = true;
 $task_worker->onMessage = function($connection, $task_data)
 {
      // 假设发来的是json数据

@@ -28,15 +28,15 @@ AsyncTcpConnection可以让Workerman作为客户端向远程服务端发起异�
 
 ## 注意
 
-目前AsyncTcpConnection支持的协议有[tcp](http://baike.baidu.com/subview/32754/8048820.htm)、[ssl](http://baike.baidu.com/view/525499.htm)、[ws](315306)、[frame](315308)、[text](315307)。
+目前AsyncTcpConnection支持的协议有[tcp](http://baike.baidu.com/subview/32754/8048820.htm)、[ssl](http://baike.baidu.com/view/525499.htm)、[ws](appendices/about-ws.md)、[frame](appendices/about-frame.md)、[text](appendices/about-text.md)。
 
-同时支持自定义协议，参见[如何自定义协议](315125)
+同时支持自定义协议，参见[如何自定义协议](../protocols/how-protocols.md)
 
 其中[ssl](http://baike.baidu.com/view/525499.htm)要求Workerman>=3.3.4，并安装[openssl扩展](http://php.net/manual/zh/book.openssl.php)。
 
 目前不支持[http](http://baike.baidu.com/view/9472.htm)协议的AsyncTcpConnection。
 
-可以用```new AsyncTcpConnection('ws://...')```像浏览器一样在workerman里发起websocket连接远程websocket服务器，见[示例](315306)。但是不能以 ```new AsyncTcpConnection('websocket://...')```的形式在workerman里发起websocket连接。
+可以用```new AsyncTcpConnection('ws://...')```像浏览器一样在workerman里发起websocket连接远程websocket服务器，见[示例](../appendices/about-ws.md)。但是不能以 ```new AsyncTcpConnection('websocket://...')```的形式在workerman里发起websocket连接。
 
 
 ## 示例

@@ -2,7 +2,7 @@
 
 注意Workerman启动停止等命令都是在命令行中完成的。
 
-要启动Workerman，首先需要有一个启动入口文件，里面定义了服务监听的端口及协议。可以参考[入门指引--简单开发实例部分](getting-started/simple-example.md)
+要启动Workerman，首先需要有一个启动入口文件，里面定义了服务监听的端口及协议。可以参考[入门指引--简单开发实例部分](../getting-started/simple-example.md)
 
 
 这里以[workerman-chat](http://www.workerman.net/workerman-chat)为例，它的启动入口为start.php。
